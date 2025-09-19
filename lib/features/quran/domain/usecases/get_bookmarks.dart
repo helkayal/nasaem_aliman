@@ -1,9 +1,9 @@
 import '../entities/bookmark.dart';
 import '../repositories/quran_repository.dart';
 
-class GetBookmarks {
+class GetBookmarksUseCase {
   final QuranRepository repository;
-  GetBookmarks(this.repository);
+  GetBookmarksUseCase(this.repository);
 
   Future<List<Bookmark>> call() {
     return repository.getBookmarks();

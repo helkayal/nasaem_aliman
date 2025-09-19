@@ -42,14 +42,14 @@ Future<void> init() async {
   );
 
   // Usecases
-  sl.registerLazySingleton(() => GetAllSurahs(sl()));
-  sl.registerLazySingleton(() => GetSurah(sl()));
-  sl.registerLazySingleton(() => GetAllJuz(sl()));
-  sl.registerLazySingleton(() => GetJuz(sl()));
-  sl.registerLazySingleton(() => GetBookmarks(sl()));
-  sl.registerLazySingleton(() => AddBookmark(sl()));
-  sl.registerLazySingleton(() => RemoveBookmark(sl()));
-  sl.registerLazySingleton(() => GetLastRead(sl()));
+  sl.registerLazySingleton(() => GetAllSurahsUseCase(sl()));
+  sl.registerLazySingleton(() => GetSurahUseCase(sl()));
+  sl.registerLazySingleton(() => GetAllJuzUseCase(sl()));
+  sl.registerLazySingleton(() => GetJuzUseCase(sl()));
+  sl.registerLazySingleton(() => GetBookmarksUseCase(sl()));
+  sl.registerLazySingleton(() => AddBookmarkUseCase(sl()));
+  sl.registerLazySingleton(() => RemoveBookmarkUseCase(sl()));
+  sl.registerLazySingleton(() => GetLastReadUseCase(sl()));
 
   // Repository
   sl.registerLazySingleton<QuranRepository>(() => QuranRepositoryImpl(sl()));

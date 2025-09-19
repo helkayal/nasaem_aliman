@@ -1,9 +1,9 @@
 import '../entities/bookmark.dart';
 import '../repositories/quran_repository.dart';
 
-class RemoveBookmark {
+class RemoveBookmarkUseCase {
   final QuranRepository repository;
-  RemoveBookmark(this.repository);
+  RemoveBookmarkUseCase(this.repository);
 
   Future<void> call(List<Bookmark> current, String bookmarkId) async {
     final updated = current.where((b) => b.id != bookmarkId).toList();

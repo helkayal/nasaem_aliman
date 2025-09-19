@@ -1,9 +1,9 @@
 import '../entities/bookmark.dart';
 import '../repositories/quran_repository.dart';
 
-class GetLastRead {
+class GetLastReadUseCase {
   final QuranRepository repository;
-  GetLastRead(this.repository);
+  GetLastReadUseCase(this.repository);
 
   Future<Bookmark?> call() async {
     final bookmarks = await repository.getBookmarks();

@@ -13,14 +13,14 @@ import 'package:nasaem_aliman/features/quran/domain/usecases/remove_bookmark.dar
 import 'quran_state.dart';
 
 class QuranCubit extends Cubit<QuranState> {
-  final GetAllSurahs getAllSurahs;
-  final GetSurah getSurah;
+  final GetAllSurahsUseCase getAllSurahs;
+  final GetSurahUseCase getSurah;
   // final GetAllJuz getAllJuz;
-  final GetJuz getJuz;
-  final GetBookmarks getBookmarks;
-  final AddBookmark addBookmark;
-  final RemoveBookmark removeBookmark;
-  final GetLastRead getLastRead;
+  final GetJuzUseCase getJuz;
+  final GetBookmarksUseCase getBookmarks;
+  final AddBookmarkUseCase addBookmark;
+  final RemoveBookmarkUseCase removeBookmark;
+  final GetLastReadUseCase getLastRead;
 
   List<Bookmark> _currentBookmarks = [];
 
