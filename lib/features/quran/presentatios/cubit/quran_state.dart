@@ -14,21 +14,31 @@ class QuranError extends QuranState {
 }
 
 // Surahs
+
+class SurahListLoading extends QuranState {}
+
 class SurahListLoaded extends QuranState {
   final List<Surah> surahs;
   SurahListLoaded(this.surahs);
 }
 
-class SurahLoaded extends QuranState {
-  final Surah surah;
-  SurahLoaded(this.surah);
-}
+// class SurahLoading extends QuranState {}
+
+// class SurahLoaded extends QuranState {
+//   final Surah surah;
+//   SurahLoaded(this.surah);
+// }
 
 // Juz
+
+class JuzLoading extends QuranState {}
+
 class JuzListLoaded extends QuranState {
   final List<Juz> juzList;
   JuzListLoaded(this.juzList);
 }
+
+class JuzAyahsLoading extends QuranState {}
 
 class JuzAyahsLoaded extends QuranState {
   final int juzId;

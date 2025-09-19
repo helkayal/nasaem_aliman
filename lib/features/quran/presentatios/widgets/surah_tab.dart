@@ -41,7 +41,7 @@ class SurahTab extends StatelessWidget {
       create: (_) => sl<QuranCubit>()..fetchAllSurahs(),
       child: BlocBuilder<QuranCubit, QuranState>(
         builder: (context, state) {
-          if (state is QuranLoading) {
+          if (state is SurahListLoading) {
             return const Center(child: CircularProgressIndicator());
           } else if (state is SurahListLoaded) {
             return SurahsList(surahsList: state.surahs);

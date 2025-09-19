@@ -4,13 +4,14 @@ import 'package:get_it/get_it.dart';
 import 'package:nasaem_aliman/features/quran/data/datasources/quran_local_datasource.dart';
 import 'package:nasaem_aliman/features/quran/data/repositories/quran_repository_impl.dart';
 import 'package:nasaem_aliman/features/quran/domain/repositories/quran_repository.dart';
+import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_cubit.dart';
+import 'package:nasaem_aliman/features/quran/presentatios/cubit/surah_details_cubit.dart';
 
 // UseCases
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_all_surahs.dart';
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_all_juz.dart';
-
-// Cubit
-import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_cubit.dart';
+import 'package:nasaem_aliman/features/quran/domain/usecases/get_juz_ayahs.dart';
+import 'package:nasaem_aliman/features/quran/domain/usecases/get_surah.dart';
 
 // Azkar
 import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_cubit.dart';
@@ -21,9 +22,6 @@ import 'package:nasaem_aliman/features/sebha/presentatios/cubit/sebha_cubit.dart
 // Asmaa Allah
 import 'package:nasaem_aliman/features/asmaa_allah/presentatios/cubit/asmaa_cubit.dart';
 
-import '../../features/quran/domain/usecases/get_juz_ayahs.dart';
-import '../../features/quran/domain/usecases/get_surah.dart';
-
 final sl = GetIt.instance;
 
 Future<void> init() async {
@@ -31,6 +29,7 @@ Future<void> init() async {
 
   // Cubit
   sl.registerFactory(() => QuranCubit(sl(), sl(), sl(), sl()));
+  sl.registerFactory(() => SurahDetailsCubit(sl()));
 
   // UseCases
   sl.registerLazySingleton(() => GetAllSurahs(sl()));

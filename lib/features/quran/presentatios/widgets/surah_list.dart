@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/di/di.dart';
 import '../../domain/entities/surah.dart';
-// import '../screens/surah_details_screen.dart';
+import '../../domain/usecases/get_surah.dart';
+import '../cubit/surah_details_cubit.dart';
+import '../screens/surah_details_screen.dart';
 
 class SurahsList extends StatelessWidget {
   final List<Surah> surahsList;
@@ -17,12 +21,15 @@ class SurahsList extends StatelessWidget {
           title: Text('${surah.id}. ${surah.name}'),
           subtitle: Text(surah.name, textAlign: TextAlign.right),
           onTap: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (_) => SurahDetailsScreen(surah: surah),
-            //   ),
-            // );
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => BlocProvider(
+                  create: (_) => sl<SurahDetailsCubit>(),
+                  child: SurahDetailsScreen(surahId: surah.id),
+                ),
+              ),
+            );
           },
         );
       },

@@ -30,9 +30,12 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
   }
 
   @override
-  Future<SurahModel> getSurah(int id) async {
-    final surahs = await getAllSurahs();
-    return surahs.firstWhere((s) => s.id == id);
+  Future<SurahModel> getSurah(int surahId) async {
+    final data = await rootBundle.loadString("assets/data/quran.json");
+    final List<dynamic> jsonList = jsonDecode(data);
+
+    final surahJson = jsonList.firstWhere((s) => s['id'] == surahId);
+    return SurahModel.fromQuranJson(surahJson);
   }
 
   @override
