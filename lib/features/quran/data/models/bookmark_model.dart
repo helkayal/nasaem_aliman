@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import '../../domain/entities/bookmark.dart';
 
 class BookmarkModel extends Bookmark {
@@ -8,17 +7,8 @@ class BookmarkModel extends Bookmark {
     required super.ayahId,
     required super.name,
     required super.color,
-    super.isLastRead,
+    required super.isLastRead,
   });
-
-  Map<String, dynamic> toJson() => {
-    "id": id,
-    "surahId": surahId,
-    "ayahId": ayahId,
-    "name": name,
-    "color": color,
-    "isLastRead": isLastRead,
-  };
 
   factory BookmarkModel.fromJson(Map<String, dynamic> json) {
     return BookmarkModel(
@@ -26,8 +16,17 @@ class BookmarkModel extends Bookmark {
       surahId: json['surahId'],
       ayahId: json['ayahId'],
       name: json['name'],
-      color: Color(json['color']),
-      isLastRead: json['isLastRead'] ?? false,
+      color: json['color'],
+      isLastRead: json['isLastRead'],
     );
   }
+
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'surahId': surahId,
+    'ayahId': ayahId,
+    'name': name,
+    'color': color,
+    'isLastRead': isLastRead,
+  };
 }

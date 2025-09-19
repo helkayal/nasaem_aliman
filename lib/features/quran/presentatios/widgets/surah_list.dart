@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nasaem_aliman/features/quran/domain/entities/surah.dart';
-import 'package:nasaem_aliman/features/quran/presentatios/screens/surah_details_screen.dart';
+
+import '../../domain/entities/surah.dart';
+// import '../screens/surah_details_screen.dart';
 
 class SurahsList extends StatelessWidget {
   final List<Surah> surahsList;
@@ -13,12 +14,16 @@ class SurahsList extends StatelessWidget {
       itemBuilder: (context, i) {
         final Surah surah = surahsList[i];
         return ListTile(
-          title: Text('${surah.id}. ${surah.nameEn}'),
+          title: Text('${surah.id}. ${surah.name}'),
           subtitle: Text(surah.name, textAlign: TextAlign.right),
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => SurahDetailsScreen(surah: surah)),
-          ),
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (_) => SurahDetailsScreen(surah: surah),
+            //   ),
+            // );
+          },
         );
       },
     );

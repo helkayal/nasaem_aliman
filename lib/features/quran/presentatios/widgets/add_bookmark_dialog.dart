@@ -67,14 +67,15 @@ class _AddBookmarkDialogState extends State<AddBookmarkDialog> {
           child: const Text("Save"),
           onPressed: () {
             final bookmark = Bookmark(
-              id: const Uuid().v4(),
+              id: int.parse(Uuid().v4()),
               surahId: widget.surah.id,
               ayahId:
                   1, // default: first Ayah (we can extend to allow selection)
               name: _nameController.text.isEmpty
                   ? "Bookmark"
                   : _nameController.text,
-              color: _selectedColor, // still save as int in entity
+              // color: _selectedColor,
+              color: 1,
               isLastRead: false,
             );
             Navigator.pop(context, bookmark);

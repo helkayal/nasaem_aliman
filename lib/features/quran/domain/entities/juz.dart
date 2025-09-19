@@ -1,15 +1,9 @@
+import 'surah_range.dart';
+
 class Juz {
-  final int number;
+  final int id;
   final String name;
-  final List<JuzSurah> surahs;
+  final List<SurahRange> surahRanges;
 
-  Juz({required this.number, required this.name, required this.surahs});
-}
-
-class JuzSurah {
-  final int sura;
-  final String suraName;
-  final List<int> aya;
-
-  JuzSurah({required this.sura, required this.suraName, required this.aya});
+  Juz({required this.id, required this.name, required this.surahRanges});
 }

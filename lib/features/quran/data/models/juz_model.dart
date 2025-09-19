@@ -1,37 +1,28 @@
-import 'package:nasaem_aliman/features/quran/domain/entities/juz.dart';
+// data/models/juz_model.dart
+import '../../domain/entities/juz.dart';
+import '../../domain/entities/surah_range.dart';
 
 class JuzModel extends Juz {
   JuzModel({
-    required super.number,
+    required super.id,
     required super.name,
-    required List<JuzSurahModel> super.surahs,
+    required super.surahRanges,
   });
 
   factory JuzModel.fromJson(Map<String, dynamic> json) {
     return JuzModel(
-      number: json['number'] ?? 0,
-      name: json['name'] ?? '',
-      surahs:
-          (json['surahs'] as List<dynamic>?)
-              ?.map((e) => JuzSurahModel.fromJson(e))
-              .toList() ??
-          [],
-    );
-  }
-}
-
-class JuzSurahModel extends JuzSurah {
-  JuzSurahModel({
-    required super.sura,
-    required super.suraName,
-    required super.aya,
-  });
-
-  factory JuzSurahModel.fromJson(Map<String, dynamic> json) {
-    return JuzSurahModel(
-      sura: json['sura'] ?? 0,
-      suraName: json['sura_name'] ?? '',
-      aya: json['aya'] != null ? List<int>.from(json['aya']) : [],
+      id: json['number'] as int,
+      name: json['name'] as String,
+      surahRanges: (json['surahs'] as List)
+          .map(
+            (s) => SurahRange(
+              surahId: s['sura'] as int,
+              surahName: s['sura_name'] as String,
+              startAyah: s['aya'][0] as int,
+              endAyah: s['aya'][1] as int,
+            ),
+          )
+          .toList(),
     );
   }
 }

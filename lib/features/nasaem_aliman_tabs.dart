@@ -38,7 +38,7 @@ class _NasaemAlimanTabsState extends State<NasaemAlimanTabs> {
       child: const AzkarScreen(),
     ),
     BlocProvider(
-      create: (_) => di.sl<QuranCubit>()..fetchSurahs(),
+      create: (_) => di.sl<QuranCubit>()..fetchAllSurahs(),
       child: const QuranScreen(),
     ),
   ];

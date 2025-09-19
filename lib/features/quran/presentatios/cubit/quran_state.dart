@@ -1,12 +1,8 @@
-import 'package:equatable/equatable.dart';
-import 'package:nasaem_aliman/features/quran/domain/entities/bookmark.dart';
-import 'package:nasaem_aliman/features/quran/domain/entities/juz.dart';
-import 'package:nasaem_aliman/features/quran/domain/entities/surah.dart';
+import '../../domain/entities/surah.dart';
+import '../../domain/entities/ayah.dart';
+import '../../domain/entities/juz.dart';
 
-abstract class QuranState extends Equatable {
-  @override
-  List<Object?> get props => [];
-}
+abstract class QuranState {}
 
 class QuranInitial extends QuranState {}
 
@@ -15,47 +11,39 @@ class QuranLoading extends QuranState {}
 class QuranError extends QuranState {
   final String message;
   QuranError(this.message);
-
-  @override
-  List<Object?> get props => [message];
 }
 
-class SurahsLoaded extends QuranState {
+// Surahs
+class SurahListLoaded extends QuranState {
   final List<Surah> surahs;
-  SurahsLoaded(this.surahs);
-
-  @override
-  List<Object?> get props => [surahs];
+  SurahListLoaded(this.surahs);
 }
 
 class SurahLoaded extends QuranState {
   final Surah surah;
   SurahLoaded(this.surah);
-
-  @override
-  List<Object?> get props => [surah];
 }
 
-class JuzLoaded extends QuranState {
+// Juz
+class JuzListLoaded extends QuranState {
   final List<Juz> juzList;
-  JuzLoaded(this.juzList);
-
-  @override
-  List<Object?> get props => [juzList];
+  JuzListLoaded(this.juzList);
 }
 
+class JuzAyahsLoaded extends QuranState {
+  final int juzId;
+  final List<Ayah> ayahs;
+  JuzAyahsLoaded(this.juzId, this.ayahs);
+}
+
+// Bookmarks
 class BookmarksLoaded extends QuranState {
-  final List<Bookmark> bookmarks;
+  final List<Ayah> bookmarks;
   BookmarksLoaded(this.bookmarks);
-
-  @override
-  List<Object?> get props => [bookmarks];
 }
 
+// Last Read
 class LastReadLoaded extends QuranState {
-  final Bookmark? lastRead;
+  final Ayah? lastRead;
   LastReadLoaded(this.lastRead);
-
-  @override
-  List<Object?> get props => [lastRead];
 }

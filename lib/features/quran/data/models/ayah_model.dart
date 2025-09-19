@@ -3,17 +3,17 @@ import '../../domain/entities/ayah.dart';
 class AyahModel extends Ayah {
   AyahModel({
     required super.id,
-    required super.textAr,
-    required super.textEn,
-    required super.audioPath,
+    required super.surahId,
+    required super.number,
+    required super.text,
   });
 
-  factory AyahModel.fromJson(Map<String, dynamic> json) {
+  factory AyahModel.fromJson(Map<String, dynamic> json, int surahId) {
     return AyahModel(
-      id: json['id'],
-      textAr: json['ar'],
-      textEn: json['en'],
-      audioPath: json['path'],
+      id: json['id'] as int,
+      surahId: surahId,
+      number: json['id'] as int,
+      text: json['ar'] as String,
     );
   }
 }

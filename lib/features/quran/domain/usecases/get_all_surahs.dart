@@ -1,11 +1,11 @@
 import '../entities/surah.dart';
 import '../repositories/quran_repository.dart';
 
-class GetAllSurahsUseCase {
+class GetAllSurahs {
   final QuranRepository repository;
-  GetAllSurahsUseCase(this.repository);
+  GetAllSurahs(this.repository);
 
   Future<List<Surah>> call() {
-    return repository.getAllSurahs();
+    return repository.getSurahList();
   }
 }

@@ -1,60 +1,37 @@
-import '../../domain/entities/bookmark.dart';
 import '../../domain/entities/juz.dart';
 import '../../domain/entities/surah.dart';
+import '../../domain/entities/ayah.dart';
 import '../../domain/repositories/quran_repository.dart';
 import '../datasources/quran_local_datasource.dart';
-import '../models/bookmark_model.dart';
+import '../models/surah_model.dart';
 
 class QuranRepositoryImpl implements QuranRepository {
   final QuranLocalDataSource localDataSource;
-  QuranRepositoryImpl(this.localDataSource);
+
+  QuranRepositoryImpl({required this.localDataSource});
 
   @override
-  Future<List<Surah>> getAllSurahs() => localDataSource.getAllSurahs();
-
-  @override
-  Future<Surah> getSurah(int id) => localDataSource.getSurah(id);
-
-  @override
-  Future<List<Juz>> getAllJuz() => localDataSource.getAllJuz();
-
-  @override
-  Future<List<Juz>> getJuz() async {
-    return await localDataSource.getJuz();
+  Future<List<Juz>> getJuzList() async {
+    return await localDataSource.getAllJuz();
   }
 
   @override
-  Future<List<Bookmark>> getBookmarks() async {
-    final models = await localDataSource.getBookmarks();
-    return models
-        .map(
-          (m) => Bookmark(
-            id: m.id,
-            surahId: m.surahId,
-            ayahId: m.ayahId,
-            name: m.name,
-            color: m.color,
-            isLastRead: m.isLastRead,
-          ),
-        )
-        .toList();
+  Future<List<Surah>> getSurahList() async {
+    return await localDataSource.getAllSurahs();
   }
 
   @override
-  Future<void> saveBookmarks(List<Bookmark> bookmarks) {
-    final models = bookmarks
-        .map(
-          (b) => BookmarkModel(
-            id: b.id,
-            surahId: b.surahId,
-            ayahId: b.ayahId,
-            name: b.name,
-            color: b.color,
-            isLastRead: b.isLastRead,
-          ),
-        )
-        .toList();
+  Future<SurahModel> getSurah(int id) async {
+    return await localDataSource.getSurah(id);
+  }
 
-    return localDataSource.saveBookmarks(models);
+  @override
+  Future<List<Ayah>> getSurahAyahs(int surahId) async {
+    return await localDataSource.getSurahAyahs(surahId);
+  }
+
+  @override
+  Future<List<Ayah>> getJuzAyahs(int juzId) async {
+    return await localDataSource.getJuzAyahs(juzId);
   }
 }

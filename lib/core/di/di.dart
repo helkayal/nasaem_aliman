@@ -4,14 +4,12 @@ import 'package:get_it/get_it.dart';
 import 'package:nasaem_aliman/features/quran/data/datasources/quran_local_datasource.dart';
 import 'package:nasaem_aliman/features/quran/data/repositories/quran_repository_impl.dart';
 import 'package:nasaem_aliman/features/quran/domain/repositories/quran_repository.dart';
+
+// UseCases
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_all_surahs.dart';
-import 'package:nasaem_aliman/features/quran/domain/usecases/get_surah.dart';
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_all_juz.dart';
-import 'package:nasaem_aliman/features/quran/domain/usecases/get_juz.dart';
-import 'package:nasaem_aliman/features/quran/domain/usecases/get_bookmarks.dart';
-import 'package:nasaem_aliman/features/quran/domain/usecases/add_bookmark.dart';
-import 'package:nasaem_aliman/features/quran/domain/usecases/remove_bookmark.dart';
-import 'package:nasaem_aliman/features/quran/domain/usecases/get_last_read.dart';
+
+// Cubit
 import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_cubit.dart';
 
 // Azkar
@@ -23,36 +21,27 @@ import 'package:nasaem_aliman/features/sebha/presentatios/cubit/sebha_cubit.dart
 // Asmaa Allah
 import 'package:nasaem_aliman/features/asmaa_allah/presentatios/cubit/asmaa_cubit.dart';
 
+import '../../features/quran/domain/usecases/get_juz_ayahs.dart';
+import '../../features/quran/domain/usecases/get_surah.dart';
+
 final sl = GetIt.instance;
 
 Future<void> init() async {
   //! ---------------- Quran ----------------
-  // Cubit
-  sl.registerFactory(
-    () => QuranCubit(
-      sl(), // GetAllSurahs
-      sl(), // GetSurah
-      // sl(), // GetAllJuz
-      sl(), // GetJuz
-      sl(), // GetBookmarks
-      sl(), // AddBookmark
-      sl(), // RemoveBookmark
-      sl(), // GetLastRead
-    ),
-  );
 
-  // Usecases
-  sl.registerLazySingleton(() => GetAllSurahsUseCase(sl()));
-  sl.registerLazySingleton(() => GetSurahUseCase(sl()));
-  sl.registerLazySingleton(() => GetAllJuzUseCase(sl()));
-  sl.registerLazySingleton(() => GetJuzUseCase(sl()));
-  sl.registerLazySingleton(() => GetBookmarksUseCase(sl()));
-  sl.registerLazySingleton(() => AddBookmarkUseCase(sl()));
-  sl.registerLazySingleton(() => RemoveBookmarkUseCase(sl()));
-  sl.registerLazySingleton(() => GetLastReadUseCase(sl()));
+  // Cubit
+  sl.registerFactory(() => QuranCubit(sl(), sl(), sl(), sl()));
+
+  // UseCases
+  sl.registerLazySingleton(() => GetAllSurahs(sl()));
+  sl.registerLazySingleton(() => GetSurah(sl()));
+  sl.registerLazySingleton(() => GetAllJuz(sl()));
+  sl.registerLazySingleton(() => GetJuzAyahs(sl()));
 
   // Repository
-  sl.registerLazySingleton<QuranRepository>(() => QuranRepositoryImpl(sl()));
+  sl.registerLazySingleton<QuranRepository>(
+    () => QuranRepositoryImpl(localDataSource: sl()),
+  );
 
   // Datasource
   sl.registerLazySingleton<QuranLocalDataSource>(

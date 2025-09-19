@@ -1,11 +1,12 @@
 import '../entities/juz.dart';
 import '../repositories/quran_repository.dart';
 
-class GetAllJuzUseCase {
+class GetAllJuz {
   final QuranRepository repository;
-  GetAllJuzUseCase(this.repository);
 
-  Future<List<Juz>> call() {
-    return repository.getAllJuz();
+  GetAllJuz(this.repository);
+
+  Future<List<Juz>> call() async {
+    return await repository.getJuzList();
   }
 }

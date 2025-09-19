@@ -1,11 +1,9 @@
-import 'package:flutter/material.dart';
-
 class Bookmark {
-  final String id;
+  final int id;
   final int surahId;
   final int ayahId;
   final String name;
-  final Color color;
+  final int color;
   final bool isLastRead;
 
   Bookmark({
@@ -14,6 +12,6 @@ class Bookmark {
     required this.ayahId,
     required this.name,
     required this.color,
-    this.isLastRead = false,
+    required this.isLastRead,
   });
 }

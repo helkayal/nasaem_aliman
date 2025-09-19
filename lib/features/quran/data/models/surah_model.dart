@@ -5,32 +5,30 @@ class SurahModel extends Surah {
   SurahModel({
     required super.id,
     required super.name,
-    required super.nameEn,
-    required super.nameTranslation,
-    required super.bismillahPre,
-    required super.words,
-    required super.letters,
-    required super.pages,
-    required super.type,
+    required super.versesCount,
     required super.ayahs,
   });
 
-  factory SurahModel.fromJson(Map<String, dynamic> json) {
+  /// From `surahs.json` (list of surah info, without ayahs)
+  factory SurahModel.fromSurahListJson(Map<String, dynamic> json) {
     return SurahModel(
-      id: json['id'] ?? 0,
-      name: json['name'] ?? '',
-      nameEn: json['name_en'] ?? '',
-      nameTranslation: json['name_translation'] ?? '',
-      bismillahPre: json['bismillah_pre'] ?? false,
-      words: json['words'] ?? 0,
-      letters: json['letters'] ?? 0,
-      pages: json['pages'] != null ? List<int>.from(json['pages']) : [],
-      type: json['type'] ?? '',
-      ayahs:
-          (json['ayahs'] as List<dynamic>?)
-              ?.map((e) => AyahModel.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          [],
+      id: json['id'] as int,
+      name: json['name_arabic'] as String,
+      versesCount: json['verses_count'] as int,
+      ayahs: [], // no ayahs in this file
+    );
+  }
+
+  /// From `quran.json` (surah with ayahs)
+  factory SurahModel.fromQuranJson(Map<String, dynamic> json) {
+    final surahId = json['id'] as int;
+    return SurahModel(
+      id: surahId,
+      name: json['name'] as String,
+      versesCount: (json['ayahs'] as List).length,
+      ayahs: (json['ayahs'] as List)
+          .map((a) => AyahModel.fromJson(a, surahId))
+          .toList(),
     );
   }
 }
