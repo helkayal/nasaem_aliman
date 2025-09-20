@@ -26,16 +26,6 @@ class QuranCubit extends Cubit<QuranState> {
     }
   }
 
-  // Future<void> fetchSurah(int id) async {
-  //   emit(SurahLoading());
-  //   try {
-  //     final surah = await getSurah(id);
-  //     emit(SurahLoaded(surah));
-  //   } catch (e) {
-  //     emit(QuranError(e.toString()));
-  //   }
-  // }
-
   // ---------------- Juz ----------------
   Future<void> fetchAllJuz() async {
     emit(QuranLoading());

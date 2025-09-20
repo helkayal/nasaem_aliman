@@ -12,6 +12,7 @@ import 'package:nasaem_aliman/features/quran/domain/usecases/get_all_surahs.dart
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_all_juz.dart';
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_juz_ayahs.dart';
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_surah.dart';
+import 'package:nasaem_aliman/features/quran/domain/usecases/group_ayas_per_page.dart';
 
 // Azkar
 import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_cubit.dart';
@@ -36,6 +37,7 @@ Future<void> init() async {
   sl.registerLazySingleton(() => GetSurah(sl()));
   sl.registerLazySingleton(() => GetAllJuz(sl()));
   sl.registerLazySingleton(() => GetJuzAyahs(sl()));
+  sl.registerLazySingleton(() => GroupAyahsByPage(sl()));
 
   // Repository
   sl.registerLazySingleton<QuranRepository>(

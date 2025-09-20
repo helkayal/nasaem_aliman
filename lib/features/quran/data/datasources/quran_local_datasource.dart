@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import '../../domain/entities/ayah.dart';
+import '../models/ayah_model.dart';
+import '../models/page_entry_model.dart';
 import '../models/surah_model.dart';
 import '../models/juz_model.dart';
 
@@ -10,6 +12,10 @@ abstract class QuranLocalDataSource {
   Future<List<JuzModel>> getAllJuz();
   Future<List<Ayah>> getSurahAyahs(int surahId);
   Future<List<Ayah>> getJuzAyahs(int juzId);
+  Future<Map<int, List<AyahModel>>> groupAyahsByPage(
+    List<AyahModel> ayahs,
+    int surahNumber,
+  );
 
   // Future<List<BookmarkModel>> getBookmarks();
   // Future<void> saveBookmark(Ayah ayah);
@@ -68,6 +74,36 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
       );
     }
     return ayahs;
+  }
+
+  @override
+  Future<Map<int, List<AyahModel>>> groupAyahsByPage(
+    List<AyahModel> ayahs,
+    int surahNumber,
+  ) async {
+    final String jsonStr = await rootBundle.loadString(
+      'assets/data/pages.json',
+    );
+    final List<dynamic> jsonList = json.decode(jsonStr);
+
+    final pageMappings = jsonList
+        .map((e) => PageEntryModel.fromJson(e))
+        .where((e) => e.suraNumber == surahNumber)
+        .toList();
+
+    final Map<int, List<AyahModel>> pages = {};
+
+    for (final mapping in pageMappings) {
+      final ayah = ayahs.firstWhere(
+        (a) => a.number == mapping.ayahNumber,
+        orElse: () => AyahModel(id: 0, surahId: 0, number: 0, text: ''),
+      );
+      if (ayah.number == 0) continue;
+
+      pages.putIfAbsent(mapping.pageNumber, () => []).add(ayah);
+    }
+
+    return pages;
   }
 
   // @override

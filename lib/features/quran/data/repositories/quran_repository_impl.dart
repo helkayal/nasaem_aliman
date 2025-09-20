@@ -1,3 +1,5 @@
+import 'package:nasaem_aliman/features/quran/data/models/ayah_model.dart';
+
 import '../../domain/entities/juz.dart';
 import '../../domain/entities/surah.dart';
 import '../../domain/entities/ayah.dart';
@@ -33,5 +35,13 @@ class QuranRepositoryImpl implements QuranRepository {
   @override
   Future<List<Ayah>> getJuzAyahs(int juzId) async {
     return await localDataSource.getJuzAyahs(juzId);
+  }
+
+  @override
+  Future<Map<int, List<AyahModel>>> groupAyahsByPage(
+    List<AyahModel> ayahs,
+    int surahNumber,
+  ) {
+    return localDataSource.groupAyahsByPage(ayahs, surahNumber);
   }
 }

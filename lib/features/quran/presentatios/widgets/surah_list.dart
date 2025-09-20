@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/di/di.dart';
 import '../../domain/entities/surah.dart';
-import '../../domain/usecases/get_surah.dart';
 import '../cubit/surah_details_cubit.dart';
 import '../screens/surah_details_screen.dart';
 
