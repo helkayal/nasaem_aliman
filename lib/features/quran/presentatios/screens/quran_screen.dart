@@ -14,17 +14,6 @@ class QuranScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text("القران الكريم"),
           shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.bookmarks),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const BookmarksScreen()),
-                );
-              },
-            ),
-          ],
           bottom: TabBar(
             tabs: [
               Tab(text: "السور"),

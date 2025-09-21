@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import '../../domain/entities/ayah.dart';
+
 import '../models/ayah_model.dart';
 import '../models/page_entry_model.dart';
 import '../models/surah_model.dart';
@@ -10,18 +10,12 @@ abstract class QuranLocalDataSource {
   Future<List<SurahModel>> getAllSurahs();
   Future<SurahModel> getSurah(int id);
   Future<List<JuzModel>> getAllJuz();
-  Future<List<Ayah>> getSurahAyahs(int surahId);
-  Future<List<Ayah>> getJuzAyahs(int juzId);
+  Future<List<AyahModel>> getSurahAyahs(int surahId);
+  Future<List<AyahModel>> getJuzAyahs(int juzId);
   Future<Map<int, List<AyahModel>>> groupAyahsByPage(
     List<AyahModel> ayahs,
     int surahNumber,
   );
-
-  // Future<List<BookmarkModel>> getBookmarks();
-  // Future<void> saveBookmark(Ayah ayah);
-  // Future<void> removeBookmark(int ayahId);
-  // Future<void> setLastRead(Ayah ayah);
-  // Future<Ayah?> getLastRead();
 }
 
 class QuranLocalDataSourceImpl implements QuranLocalDataSource {
@@ -51,24 +45,24 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
     return data.map((e) => JuzModel.fromJson(e)).toList();
   }
 
-  // 🔹 get ayahs of a surah
+  /// 🔹 Get all ayahs of a surah
   @override
-  Future<List<Ayah>> getSurahAyahs(int surahId) async {
+  Future<List<AyahModel>> getSurahAyahs(int surahId) async {
     final surah = await getSurah(surahId);
-    return surah.ayahs; // already List<Ayah>
+    return surah.ayahModels; // ✅ ensures List<AyahModel>
   }
 
+  /// 🔹 Get all ayahs of a juz
   @override
-  Future<List<Ayah>> getJuzAyahs(int juzId) async {
-    final allSurahs = await getAllSurahs();
+  Future<List<AyahModel>> getJuzAyahs(int juzId) async {
     final allJuz = await getAllJuz();
     final juz = allJuz.firstWhere((j) => j.id == juzId);
 
-    final ayahs = <Ayah>[];
+    final ayahs = <AyahModel>[];
     for (var range in juz.surahRanges) {
-      final surah = allSurahs.firstWhere((s) => s.id == range.surahId);
+      final surah = await getSurah(range.surahId);
       ayahs.addAll(
-        surah.ayahs.where(
+        surah.ayahModels.where(
           (a) => a.number >= range.startAyah && a.number <= range.endAyah,
         ),
       );
@@ -76,6 +70,7 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
     return ayahs;
   }
 
+  /// 🔹 Group ayahs by page using pages.json
   @override
   Future<Map<int, List<AyahModel>>> groupAyahsByPage(
     List<AyahModel> ayahs,
@@ -105,45 +100,4 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
 
     return pages;
   }
-
-  // @override
-  // Future<List<BookmarkModel>> getBookmarks() async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   final data = prefs.getStringList(bookmarksKey) ?? [];
-  //   return data.map((e) => BookmarkModel.fromJson(jsonDecode(e))).toList();
-  // }
-
-  // @override
-  // Future<void> saveBookmark(Ayah ayah) async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   final bookmarks = prefs.getStringList(bookmarksKey) ?? [];
-  //   bookmarks.add(jsonEncode(ayah.toJson()));
-  //   await prefs.setStringList(bookmarksKey, bookmarks);
-  // }
-
-  // @override
-  // Future<void> removeBookmark(int ayahId) async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   final bookmarks = prefs.getStringList(bookmarksKey) ?? [];
-  //   final updated = bookmarks.where((b) {
-  //     final map = jsonDecode(b);
-  //     return map['id'] != ayahId;
-  //   }).toList();
-  //   await prefs.setStringList(bookmarksKey, updated);
-  // }
-
-  // @override
-  // Future<void> setLastRead(Ayah ayah) async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   await prefs.setString(lastReadKey, jsonEncode(ayah.toJson()));
-  // }
-
-  // @override
-  // Future<Ayah?> getLastRead() async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   final data = prefs.getString(lastReadKey);
-  //   if (data == null) return null;
-  //   final map = jsonDecode(data);
-  //   return Ayah.fromJson(map);
-  // }
 }

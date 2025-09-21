@@ -23,6 +23,8 @@ import 'package:nasaem_aliman/features/sebha/presentatios/cubit/sebha_cubit.dart
 // Asmaa Allah
 import 'package:nasaem_aliman/features/asmaa_allah/presentatios/cubit/asmaa_cubit.dart';
 
+import '../../features/quran/presentatios/cubit/ayahs_cubit.dart';
+
 final sl = GetIt.instance;
 
 Future<void> init() async {
@@ -31,6 +33,7 @@ Future<void> init() async {
   // Cubit
   sl.registerFactory(() => QuranCubit(sl(), sl(), sl(), sl()));
   sl.registerFactory(() => SurahDetailsCubit(sl()));
+  sl.registerFactory(() => AyahsCubit(sl()));
 
   // UseCases
   sl.registerLazySingleton(() => GetAllSurahs(sl()));

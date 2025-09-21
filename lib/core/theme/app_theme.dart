@@ -76,6 +76,21 @@ ThemeData lightTheme() {
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
+      titleSmall: TextStyle(
+        fontSize: 20.sp,
+        color: AppColors.darkBlue,
+        fontFamily: AppConstants.quranFontFamily,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 24.sp,
+        color: AppColors.darkBlue,
+        fontFamily: AppConstants.quranFontFamily,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 28.sp,
+        color: AppColors.darkBlue,
+        fontFamily: AppConstants.quranFontFamily,
+      ),
     ),
     colorScheme: const ColorScheme(
       brightness: Brightness.light,
@@ -119,6 +134,12 @@ ThemeData lightTheme() {
       unselectedLabelColor: AppColors.lightBlue,
       unselectedLabelStyle: TextStyle(fontSize: 20.sp),
       labelPadding: const EdgeInsets.symmetric(vertical: 8),
+    ),
+    dividerTheme: DividerThemeData(
+      color: AppColors.darkBlue,
+      thickness: 1.5,
+      indent: 20.w,
+      endIndent: 20.w,
     ),
   );
 }
@@ -195,6 +216,21 @@ ThemeData darkTheme() {
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
+      titleSmall: TextStyle(
+        fontSize: 20.sp,
+        color: AppColors.darkBlue,
+        fontFamily: AppConstants.quranFontFamily,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 24.sp,
+        color: AppColors.darkBlue,
+        fontFamily: AppConstants.quranFontFamily,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 28.sp,
+        color: AppColors.darkBlue,
+        fontFamily: AppConstants.quranFontFamily,
+      ),
     ),
     colorScheme: const ColorScheme(
       brightness: Brightness.dark,
@@ -238,6 +274,12 @@ ThemeData darkTheme() {
       unselectedLabelColor: AppColors.lightBlue,
       unselectedLabelStyle: TextStyle(fontSize: 20.sp),
       labelPadding: const EdgeInsets.symmetric(vertical: 8),
+    ),
+    dividerTheme: DividerThemeData(
+      color: AppColors.lightBlue,
+      thickness: 1.5,
+      indent: 20.w,
+      endIndent: 20.w,
     ),
   );
 }

@@ -6,12 +6,6 @@ class AppDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Divider(
-      color: Theme.of(context).dividerColor,
-      height: 8.h,
-      thickness: 1.5,
-      indent: MediaQuery.of(context).size.width * .1,
-      endIndent: MediaQuery.of(context).size.width * .1,
-    );
+    return Divider(height: 10.h);
   }
 }

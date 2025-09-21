@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/widgets/app_error.dart';
 import '../../../../core/widgets/app_loading.dart';
-import '../../data/models/ayah_model.dart';
+import '../../domain/entities/ayah.dart';
 import '../cubit/ayahs_cubit.dart';
 import '../cubit/ayahs_state.dart';
 
@@ -15,7 +15,7 @@ class SurahText extends StatefulWidget {
     required this.surahName,
   });
 
-  final List<AyahModel> filteredAyahs;
+  final List<Ayah> filteredAyahs;
   final int surahNumber;
   final String surahName;
 

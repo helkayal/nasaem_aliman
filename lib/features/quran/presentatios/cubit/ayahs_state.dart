@@ -1,4 +1,4 @@
-import 'package:nasaem_aliman/features/quran/data/models/ayah_model.dart';
+import '../../domain/entities/ayah.dart';
 
 abstract class AyahsStates {}
 
@@ -7,7 +7,7 @@ class AyahStateInitial extends AyahsStates {}
 class AyahStateLoading extends AyahsStates {}
 
 class AyahStateLoaded extends AyahsStates {
-  final Map<int, List<AyahModel>> ayahs;
+  final Map<int, List<Ayah>> ayahs;
   AyahStateLoaded(this.ayahs);
 }
 

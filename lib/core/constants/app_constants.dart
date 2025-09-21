@@ -7,6 +7,7 @@ class AppConstants {
   static const double defaultPadding = 10.0;
   static const double defaultRadius = 10.0;
 
-  static String textFontFamily = GoogleFonts.rubik().fontFamily!;
+  // static String textFontFamily = GoogleFonts.amiri().fontFamily!;
+  static String textFontFamily = GoogleFonts.cairo().fontFamily!;
   static String quranFontFamily = GoogleFonts.amiri().fontFamily!;
 }
