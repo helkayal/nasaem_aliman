@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nasaem_aliman/features/quran/presentatios/screens/bookmarks_screen.dart';
-import 'package:nasaem_aliman/features/quran/presentatios/widgets/juza_tab.dart';
-import 'package:nasaem_aliman/features/quran/presentatios/widgets/surah_tab.dart';
+
+import '../widgets/juza_tab.dart';
+import '../widgets/surah_tab.dart';
 
 class QuranScreen extends StatelessWidget {
   const QuranScreen({super.key});
