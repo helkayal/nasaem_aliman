@@ -9,8 +9,8 @@ import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_cubit.dart
 import 'package:nasaem_aliman/features/azkar/presentatios/screens/azkar_screen.dart';
 import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_cubit.dart';
 import 'package:nasaem_aliman/features/quran/presentatios/screens/quran_screen.dart';
-import 'package:nasaem_aliman/features/sebha/presentatios/cubit/sebha_cubit.dart';
-import 'package:nasaem_aliman/features/sebha/presentatios/screens/sebha_screen.dart';
+import 'package:nasaem_aliman/features/sebha/cubit/sebha_cubit.dart';
+import 'package:nasaem_aliman/features/sebha/screens/sebha_screen.dart';
 
 class NasaemAlimanTabs extends StatefulWidget {
   const NasaemAlimanTabs({super.key});

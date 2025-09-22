@@ -25,7 +25,7 @@ class SebhaScreen extends StatefulWidget {
 
 class _SebhaScreenState extends State<SebhaScreen> {
   int counter = 0;
-  String? zekr; // 🔹 null means no zekr yet
+  String? zekr; // null means no zekr yet
   final int totalBeads = 33;
 
   @override
@@ -51,7 +51,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
   }
 
   void _incrementCounter() {
-    if (zekr == null || zekr!.isEmpty) return; // 🚫 block increment
+    if (zekr == null || zekr!.isEmpty) return; // block increment
     setState(() {
       counter++;
     });
@@ -142,7 +142,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
         ],
       ),
       body: AbsorbPointer(
-        absorbing: zekr == null || zekr!.isEmpty, // 🚫 disable taps if no zekr
+        absorbing: zekr == null || zekr!.isEmpty, // disable taps if no zekr
         child: GestureDetector(
           onTap: _incrementCounter,
           child: Container(
@@ -201,7 +201,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
       children: [
         if (zekr != null && zekr.isNotEmpty) ...[
           GestureDetector(
-            onLongPress: () => _editZekrInline(), // 👈 long press to edit
+            onLongPress: () => _editZekrInline(), // long press to edit
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 800),
               transitionBuilder: (child, animation) {
@@ -279,7 +279,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
           ],
         ),
         child: Opacity(
-          opacity: enabled ? 1.0 : 0.4, // 🔹 dim beads if disabled
+          opacity: enabled ? 1.0 : 0.4, // dim beads if disabled
           child: Image.asset("assets/images/sebha_bead.png"),
         ),
       ),

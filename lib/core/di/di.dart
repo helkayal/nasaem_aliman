@@ -19,7 +19,7 @@ import 'package:nasaem_aliman/features/quran/domain/usecases/group_ayas_per_page
 import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_cubit.dart';
 
 // Sebha
-import 'package:nasaem_aliman/features/sebha/presentatios/cubit/sebha_cubit.dart';
+import 'package:nasaem_aliman/features/sebha/cubit/sebha_cubit.dart';
 
 final sl = GetIt.instance;
 
