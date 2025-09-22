@@ -5,8 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nasaem_aliman/core/constants/app_constants.dart';
 import 'package:nasaem_aliman/core/di/di.dart' as di;
 import 'package:nasaem_aliman/core/theme/app_colors.dart';
-import 'package:nasaem_aliman/features/asmaa_allah/presentatios/cubit/asmaa_cubit.dart';
-import 'package:nasaem_aliman/features/asmaa_allah/presentatios/screens/asmaa_screen.dart';
 import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_cubit.dart';
 import 'package:nasaem_aliman/features/azkar/presentatios/screens/azkar_screen.dart';
 import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_cubit.dart';
@@ -22,24 +20,20 @@ class NasaemAlimanTabs extends StatefulWidget {
 }
 
 class _NasaemAlimanTabsState extends State<NasaemAlimanTabs> {
-  int _currentIndex = 3;
+  int _currentIndex = 1;
 
   final List<Widget> _screens = [
-    BlocProvider(
-      create: (_) => di.sl<AsmaaCubit>()..fetchNames(),
-      child: const AsmaaScreen(),
-    ),
     BlocProvider(
       create: (_) => di.sl<SebhaCubit>(),
       child: const SebhaScreen(),
     ),
     BlocProvider(
-      create: (_) => di.sl<AzkarCubit>()..fetchAzkar(),
-      child: const AzkarScreen(),
-    ),
-    BlocProvider(
       create: (_) => di.sl<QuranCubit>()..fetchAllSurahs(),
       child: const QuranScreen(),
+    ),
+    BlocProvider(
+      create: (_) => di.sl<AzkarCubit>()..fetchAzkar(),
+      child: const AzkarScreen(),
     ),
   ];
 
@@ -71,20 +65,16 @@ class _NasaemAlimanTabsState extends State<NasaemAlimanTabs> {
             },
             items: [
               BottomNavigationBarItem(
-                icon: Icon(FlutterIslamicIcons.solidAllah),
-                label: "أسماه الله",
-              ),
-              BottomNavigationBarItem(
                 icon: Icon(FlutterIslamicIcons.solidTasbih2),
                 label: "السبحه",
               ),
               BottomNavigationBarItem(
-                icon: Icon(FlutterIslamicIcons.solidTasbihHand),
-                label: "الأذكار",
-              ),
-              BottomNavigationBarItem(
                 icon: Icon(FlutterIslamicIcons.solidQuran2),
                 label: "القران",
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(FlutterIslamicIcons.solidTasbihHand),
+                label: "الأذكار",
               ),
             ],
           ),
