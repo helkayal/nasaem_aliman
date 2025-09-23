@@ -54,6 +54,60 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
     }
   }
 
+  // @override
+  // Widget build(BuildContext context) {
+  //   return PageView.builder(
+  //     controller: _pageController,
+  //     scrollDirection: Axis.horizontal,
+  //     reverse: true,
+  //     itemCount: widget.category.azkar.length,
+  //     itemBuilder: (context, index) {
+  //       final zekr = widget.category.azkar[index];
+  //       final counter = _counters[index];
+
+  //       return GestureDetector(
+  //         behavior: HitTestBehavior.opaque,
+  //         onTap: () => _handleTap(index),
+  //         child: SizedBox.expand(
+  //           child: Stack(
+  //             children: [
+  //               Padding(
+  //                 padding: EdgeInsets.symmetric(
+  //                   horizontal: 16.w,
+  //                   vertical: 20.h,
+  //                 ),
+  //                 child: SingleChildScrollView(
+  //                   child: Column(
+  //                     spacing: 20.h,
+  //                     children: [
+  //                       RichText(
+  //                         textAlign: TextAlign.center,
+  //                         text: TextSpan(
+  //                           style: Theme.of(
+  //                             context,
+  //                           ).textTheme.titleLarge!.copyWith(height: 2.5),
+  //                           children: _buildZekrText(zekr.text),
+  //                         ),
+  //                       ),
+  //                       if (zekr.count > 1) const AppDivider(),
+  //                       if (zekr.count > 1)
+  //                         Text(
+  //                           'التكرار: ${zekr.count}',
+  //                           style: Theme.of(context).textTheme.bodyMedium,
+  //                         ),
+  //                     ],
+  //                   ),
+  //                 ),
+  //               ),
+  //               if (zekr.count > 1) _buildButtons(context, counter, index),
+  //             ],
+  //           ),
+  //         ),
+  //       );
+  //     },
+  //   );
+  // }
+
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
@@ -68,90 +122,103 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
         return GestureDetector(
           behavior: HitTestBehavior.opaque,
           onTap: () => _handleTap(index),
-          child: SizedBox.expand(
-            child: Stack(
-              children: [
-                Padding(
+          child: Column(
+            children: [
+              // Scrollable zekr content
+              Expanded(
+                child: SingleChildScrollView(
                   padding: EdgeInsets.symmetric(
                     horizontal: 16.w,
                     vertical: 20.h,
                   ),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      spacing: 20.h,
-                      children: [
-                        RichText(
-                          textAlign: TextAlign.center,
-                          text: TextSpan(
-                            style: Theme.of(
-                              context,
-                            ).textTheme.titleLarge!.copyWith(height: 2.5),
-                            children: _buildZekrText(zekr.text),
-                          ),
+                  child: Column(
+                    spacing: 20.h,
+                    children: [
+                      RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(
+                          style: Theme.of(
+                            context,
+                          ).textTheme.titleLarge!.copyWith(height: 2.5),
+                          children: _buildZekrText(zekr.text),
                         ),
-                        if (zekr.count > 1) const AppDivider(),
-                        if (zekr.count > 1)
-                          Text(
-                            'التكرار: ${zekr.count}',
-                            style: Theme.of(context).textTheme.bodyMedium,
-                          ),
-                      ],
-                    ),
+                      ),
+                      if (zekr.count > 1) const AppDivider(),
+                      if (zekr.count > 1)
+                        Text(
+                          'التكرار: ${zekr.count}',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                    ],
                   ),
                 ),
-                if (zekr.count > 1) _buildButtons(context, counter, index),
-              ],
-            ),
+              ),
+
+              // Fixed bottom bar (only if zekr.count > 1)
+              if (zekr.count > 1) _buildBottomButtons(context, counter, index),
+            ],
           ),
         );
       },
     );
   }
 
-  Positioned _buildButtons(BuildContext context, int counter, int index) {
-    return Positioned(
-      bottom: 40,
-      left: 0,
-      right: 0,
-      child: Center(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          spacing: 20,
-          children: [
-            Container(
-              width: 80.w,
-              height: 80.h,
+  Container _buildBottomButtons(BuildContext context, int counter, int index) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 6.h),
+      width: double.infinity,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.primary,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black26,
+            offset: Offset(0, -1),
+            blurRadius: 4,
+          ),
+        ],
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        spacing: 20,
+        children: [
+          Container(
+            width: 40.w,
+            height: 40.h,
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.onPrimary,
+              shape: BoxShape.circle,
+            ),
+            alignment: Alignment.center,
+            child: Text(
+              '$counter',
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                _counters[index] = 0;
+              });
+            },
+            child: Container(
+              width: 24.w,
+              height: 24.h,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.onPrimary,
                 shape: BoxShape.circle,
               ),
-              alignment: Alignment.center,
-              child: Text(
-                '$counter',
-                style: Theme.of(context).textTheme.headlineSmall,
+              child: Icon(
+                Icons.refresh,
+                size: 16.h,
+                color: Theme.of(context).colorScheme.primary,
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                setState(() {
-                  _counters[index] = 0;
-                });
-              },
-              child: Container(
-                width: 48.w,
-                height: 48.h,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.onPrimary,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  Icons.refresh,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

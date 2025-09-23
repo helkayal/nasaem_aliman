@@ -20,7 +20,7 @@ class AzkarList extends StatelessWidget {
           child: Text(
             zekr.text,
             textAlign: TextAlign.right,
-            style: Theme.of(context).textTheme.titleLarge!.copyWith(height: 2),
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(height: 2),
           ),
         );
       },

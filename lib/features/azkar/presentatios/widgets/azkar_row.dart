@@ -26,18 +26,18 @@ class AzkarRow extends StatelessWidget {
               shape: BoxShape.circle,
             ),
             child: Padding(
-              padding: EdgeInsets.only(top: 14.h),
+              padding: EdgeInsets.only(top: 10.h),
               child: Text(
                 category.azkar.length.toString(),
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.titleLarge,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
             ),
           ),
           Expanded(
             child: Text(
               category.category,
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.bodyMedium,
               textAlign: TextAlign.right,
             ),
           ),
