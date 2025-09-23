@@ -1,4 +1,8 @@
 import 'package:get_it/get_it.dart';
+import 'package:nasaem_aliman/features/azkar/data/datasources/azkar_category_local_datasource.dart';
+import 'package:nasaem_aliman/features/azkar/data/repositories/azkar_category_repository_impl.dart';
+import 'package:nasaem_aliman/features/azkar/domain/repositories/azkar_category_repository.dart';
+import 'package:nasaem_aliman/features/azkar/domain/usecases/get_azkar_categories.dart';
 
 // Quran
 import 'package:nasaem_aliman/features/quran/data/datasources/quran_local_datasource.dart';
@@ -16,7 +20,7 @@ import 'package:nasaem_aliman/features/quran/domain/usecases/get_surah.dart';
 import 'package:nasaem_aliman/features/quran/domain/usecases/group_ayas_per_page.dart';
 
 // Azkar
-import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_cubit.dart';
+import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_category_cubit.dart';
 
 // Sebha
 import 'package:nasaem_aliman/features/sebha/cubit/sebha_cubit.dart';
@@ -49,7 +53,22 @@ Future<void> init() async {
   );
 
   //! ---------------- Azkar ----------------
-  sl.registerFactory(() => AzkarCubit());
+
+  // Cubit
+  sl.registerFactory(() => AzkarCategoriesCubit(sl()));
+
+  // UseCases
+  sl.registerLazySingleton(() => GetAzkarCategories(sl()));
+
+  // Repository
+  sl.registerLazySingleton<AzkarCategoriesRepository>(
+    () => AzkarCategoriesRepositoryImpl(sl()),
+  );
+
+  // Datasource
+  sl.registerLazySingleton<AzkarCategoriesLocalDataSource>(
+    () => AzkarCategoriesLocalDataSourceImpl(),
+  );
 
   //! ---------------- Sebha ----------------
   sl.registerFactory(() => SebhaCubit());

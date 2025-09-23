@@ -1,6 +1,6 @@
 import '../../domain/entities/page_entry.dart';
 
-class PageEntryModel extends PageEntry {
+class PageEntryModel extends PageEntryEntity {
   PageEntryModel({
     required super.ayahNumber,
     required super.suraNumber,

@@ -1,11 +1,11 @@
 // domain/entities/surah_range.dart
-class SurahRange {
+class SurahRangeEntity {
   final int surahId;
   final String surahName;
   final int startAyah;
   final int endAyah;
 
-  SurahRange({
+  SurahRangeEntity({
     required this.surahId,
     required this.surahName,
     required this.startAyah,

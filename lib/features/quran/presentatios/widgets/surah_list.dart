@@ -11,7 +11,7 @@ import '../screens/surah_details_screen.dart';
 import 'list_row.dart';
 
 class SurahsList extends StatelessWidget {
-  final List<Surah> surahsList;
+  final List<SurahEntity> surahsList;
   const SurahsList({super.key, required this.surahsList});
 
   @override
@@ -19,7 +19,7 @@ class SurahsList extends StatelessWidget {
     return ListView.builder(
       itemCount: surahsList.length,
       itemBuilder: (context, i) {
-        final Surah surah = surahsList[i];
+        final SurahEntity surah = surahsList[i];
         return InkWell(
           onTap: () {
             Navigator.push(

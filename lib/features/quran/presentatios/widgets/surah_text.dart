@@ -15,7 +15,7 @@ class SurahText extends StatefulWidget {
     required this.surahName,
   });
 
-  final List<Ayah> filteredAyahs;
+  final List<AyahEntity> filteredAyahs;
   final int surahNumber;
   final String surahName;
 

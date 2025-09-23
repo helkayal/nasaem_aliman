@@ -6,7 +6,7 @@ class GetAllJuz {
 
   GetAllJuz(this.repository);
 
-  Future<List<Juz>> call() async {
+  Future<List<JuzEntity>> call() async {
     return await repository.getJuzList();
   }
 }

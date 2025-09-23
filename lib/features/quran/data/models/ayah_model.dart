@@ -1,6 +1,6 @@
 import '../../domain/entities/ayah.dart';
 
-class AyahModel extends Ayah {
+class AyahModel extends AyahEntity {
   AyahModel({
     required super.id,
     required super.surahId,

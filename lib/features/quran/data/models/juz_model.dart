@@ -2,7 +2,7 @@
 import '../../domain/entities/juz.dart';
 import '../../domain/entities/surah_range.dart';
 
-class JuzModel extends Juz {
+class JuzModel extends JuzEntity {
   JuzModel({
     required super.id,
     required super.name,
@@ -15,7 +15,7 @@ class JuzModel extends Juz {
       name: json['name'] as String,
       surahRanges: (json['surahs'] as List)
           .map(
-            (s) => SurahRange(
+            (s) => SurahRangeEntity(
               surahId: s['sura'] as int,
               surahName: s['sura_name'] as String,
               startAyah: s['aya'][0] as int,

@@ -5,7 +5,7 @@ class GetAllSurahs {
   final QuranRepository repository;
   GetAllSurahs(this.repository);
 
-  Future<List<Surah>> call() {
+  Future<List<SurahEntity>> call() {
     return repository.getSurahList();
   }
 }

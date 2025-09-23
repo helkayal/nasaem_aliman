@@ -1,9 +1,9 @@
-class PageEntry {
+class PageEntryEntity {
   final int ayahNumber;
   final int suraNumber;
   final int pageNumber;
 
-  PageEntry({
+  PageEntryEntity({
     required this.ayahNumber,
     required this.suraNumber,
     required this.pageNumber,

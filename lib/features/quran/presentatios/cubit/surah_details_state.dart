@@ -7,7 +7,7 @@ class SurahDetailsInitial extends SurahDetailsState {}
 class SurahDetailsLoading extends SurahDetailsState {}
 
 class SurahDetailsLoaded extends SurahDetailsState {
-  final Surah surah;
+  final SurahEntity surah;
   SurahDetailsLoaded(this.surah);
 }
 

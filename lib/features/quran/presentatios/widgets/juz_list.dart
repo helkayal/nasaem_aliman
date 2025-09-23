@@ -11,7 +11,7 @@ import '../screens/surah_details_screen.dart';
 import 'list_row.dart';
 
 class JuzasList extends StatefulWidget {
-  final List<Juz> juzList;
+  final List<JuzEntity> juzList;
   const JuzasList({super.key, required this.juzList});
 
   @override

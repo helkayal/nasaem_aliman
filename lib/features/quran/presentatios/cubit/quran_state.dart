@@ -18,7 +18,7 @@ class QuranError extends QuranState {
 class SurahListLoading extends QuranState {}
 
 class SurahListLoaded extends QuranState {
-  final List<Surah> surahs;
+  final List<SurahEntity> surahs;
   SurahListLoaded(this.surahs);
 }
 
@@ -34,7 +34,7 @@ class SurahListLoaded extends QuranState {
 class JuzLoading extends QuranState {}
 
 class JuzListLoaded extends QuranState {
-  final List<Juz> juzList;
+  final List<JuzEntity> juzList;
   JuzListLoaded(this.juzList);
 }
 
@@ -42,18 +42,18 @@ class JuzAyahsLoading extends QuranState {}
 
 class JuzAyahsLoaded extends QuranState {
   final int juzId;
-  final List<Ayah> ayahs;
+  final List<AyahEntity> ayahs;
   JuzAyahsLoaded(this.juzId, this.ayahs);
 }
 
 // Bookmarks
 class BookmarksLoaded extends QuranState {
-  final List<Ayah> bookmarks;
+  final List<AyahEntity> bookmarks;
   BookmarksLoaded(this.bookmarks);
 }
 
 // Last Read
 class LastReadLoaded extends QuranState {
-  final Ayah? lastRead;
+  final AyahEntity? lastRead;
   LastReadLoaded(this.lastRead);
 }

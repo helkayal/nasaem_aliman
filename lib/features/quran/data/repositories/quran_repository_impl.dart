@@ -13,12 +13,12 @@ class QuranRepositoryImpl implements QuranRepository {
   QuranRepositoryImpl({required this.localDataSource});
 
   @override
-  Future<List<Juz>> getJuzList() async {
+  Future<List<JuzEntity>> getJuzList() async {
     return await localDataSource.getAllJuz();
   }
 
   @override
-  Future<List<Surah>> getSurahList() async {
+  Future<List<SurahEntity>> getSurahList() async {
     return await localDataSource.getAllSurahs();
   }
 
@@ -28,11 +28,11 @@ class QuranRepositoryImpl implements QuranRepository {
   }
 
   @override
-  Future<List<Ayah>> getSurahAyahs(int surahId) async {
+  Future<List<AyahEntity>> getSurahAyahs(int surahId) async {
     final models = await localDataSource.getSurahAyahs(surahId);
     return models
         .map(
-          (m) => Ayah(
+          (m) => AyahEntity(
             id: m.id,
             surahId: m.surahId,
             number: m.number,
@@ -43,11 +43,11 @@ class QuranRepositoryImpl implements QuranRepository {
   }
 
   @override
-  Future<List<Ayah>> getJuzAyahs(int juzId) async {
+  Future<List<AyahEntity>> getJuzAyahs(int juzId) async {
     final models = await localDataSource.getJuzAyahs(juzId);
     return models
         .map(
-          (m) => Ayah(
+          (m) => AyahEntity(
             id: m.id,
             surahId: m.surahId,
             number: m.number,
@@ -58,8 +58,8 @@ class QuranRepositoryImpl implements QuranRepository {
   }
 
   @override
-  Future<Map<int, List<Ayah>>> groupAyahsByPage(
-    List<Ayah> ayahs,
+  Future<Map<int, List<AyahEntity>>> groupAyahsByPage(
+    List<AyahEntity> ayahs,
     int surahNumber,
   ) async {
     // Convert entities to models before passing
@@ -85,7 +85,7 @@ class QuranRepositoryImpl implements QuranRepository {
         page,
         ayahModels
             .map(
-              (m) => Ayah(
+              (m) => AyahEntity(
                 id: m.id,
                 surahId: m.surahId,
                 number: m.number,

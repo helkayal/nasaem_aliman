@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nasaem_aliman/core/constants/app_constants.dart';
 import 'package:nasaem_aliman/core/di/di.dart' as di;
 import 'package:nasaem_aliman/core/theme/app_colors.dart';
-import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_cubit.dart';
+import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_category_cubit.dart';
 import 'package:nasaem_aliman/features/azkar/presentatios/screens/azkar_screen.dart';
 import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_cubit.dart';
 import 'package:nasaem_aliman/features/quran/presentatios/screens/quran_screen.dart';
@@ -32,7 +32,7 @@ class _NasaemAlimanTabsState extends State<NasaemAlimanTabs> {
       child: const QuranScreen(),
     ),
     BlocProvider(
-      create: (_) => di.sl<AzkarCubit>()..fetchAzkar(),
+      create: (_) => di.sl<AzkarCategoriesCubit>()..loadAzkarCategories(),
       child: const AzkarScreen(),
     ),
   ];

@@ -5,7 +5,10 @@ class GroupAyahsByPage {
   final QuranRepository repository;
   GroupAyahsByPage(this.repository);
 
-  Future<Map<int, List<Ayah>>> call(List<Ayah> ayahs, int surahNumber) async {
+  Future<Map<int, List<AyahEntity>>> call(
+    List<AyahEntity> ayahs,
+    int surahNumber,
+  ) async {
     return await repository.groupAyahsByPage(ayahs, surahNumber);
   }
 }

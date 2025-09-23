@@ -48,7 +48,7 @@ class QuranCubit extends Cubit<QuranState> {
   }
 
   // ---------------- Helpers ----------------
-  Surah? findSurahById(int surahId) {
+  SurahEntity? findSurahById(int surahId) {
     if (state is SurahListLoaded) {
       final surahs = (state as SurahListLoaded).surahs;
       try {

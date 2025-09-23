@@ -8,7 +8,7 @@ class AyahsCubit extends Cubit<AyahsStates> {
 
   AyahsCubit(this.groupAyahsByPage) : super(AyahStateInitial());
 
-  Future<void> fetchAyahsByPage(List<Ayah> ayahs, int surahNumber) async {
+  Future<void> fetchAyahsByPage(List<AyahEntity> ayahs, int surahNumber) async {
     emit(AyahStateLoading());
     try {
       final groupedAyahs = await groupAyahsByPage(ayahs, surahNumber);
