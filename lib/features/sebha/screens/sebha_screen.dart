@@ -70,7 +70,10 @@ class _SebhaScreenState extends State<SebhaScreen> {
     final newZekr = await showDialog<String>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(isNew ? "إضافة الذكر" : "تعديل الذكر"),
+        title: Text(
+          isNew ? "إضافة الذكر" : "تعديل الذكر",
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
         content: TextField(
           controller: controller,
           decoration: const InputDecoration(hintText: "أدخل الذكر"),
@@ -79,11 +82,11 @@ class _SebhaScreenState extends State<SebhaScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx),
-            child: const Text("إلغاء"),
+            child: Text("إلغاء", style: Theme.of(context).textTheme.bodySmall),
           ),
           ElevatedButton(
             onPressed: () => Navigator.pop(ctx, controller.text.trim()),
-            child: const Text("حفظ"),
+            child: Text("حفظ", style: Theme.of(context).textTheme.bodySmall),
           ),
         ],
       ),

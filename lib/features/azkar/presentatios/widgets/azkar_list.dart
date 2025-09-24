@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/widgets/app_divider.dart';
 import '../../domain/entities/azkar_category_entiti.dart';
@@ -20,7 +21,9 @@ class AzkarList extends StatelessWidget {
           child: Text(
             zekr.text,
             textAlign: TextAlign.right,
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(height: 2),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium!.copyWith(height: 1.6.h),
           ),
         );
       },

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/constants/app_assets.dart';
 import '../../../../core/widgets/app_error.dart';
 import '../../../../core/widgets/app_loading.dart';
 import '../../domain/entities/ayah.dart';
@@ -43,6 +45,8 @@ class _SurahTextState extends State<SurahText> {
         } else if (state is AyahStateError) {
           return AppError(message: state.message);
         } else if (state is AyahStateLoaded) {
+          final isDark = Theme.of(context).brightness == Brightness.dark;
+
           final pagesMap = state.ayahs;
           final pageNumbers = pagesMap.keys.toList()..sort();
 
@@ -90,17 +94,17 @@ class _SurahTextState extends State<SurahText> {
                             WidgetSpan(
                               alignment: PlaceholderAlignment.middle,
                               child: Container(
-                                margin: const EdgeInsets.symmetric(
-                                  horizontal: 4,
-                                ),
-                                width: 40,
-                                height: 40,
-                                decoration: const BoxDecoration(
+                                margin: EdgeInsets.symmetric(horizontal: 6.w),
+                                width: 42.w,
+                                height: 50.h,
+                                decoration: BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
-                                      'assets/images/number_bg.png',
+                                      isDark
+                                          ? AppAssets.numberBgDark
+                                          : AppAssets.numberBg,
                                     ),
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.fill,
                                   ),
                                   shape: BoxShape.circle,
                                 ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/widgets/app_divider.dart';
@@ -24,24 +25,38 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
     _counters = List.generate(widget.category.azkar.length, (_) => 0);
   }
 
-  void _handleTap(int index) {
+  void _handleTap(int index, bool isDoubleTap) {
     final zekr = widget.category.azkar[index];
+    final current = _counters[index];
 
-    // If zekr is already completed, do nothing
-    if (_counters[index] >= zekr.count) {
+    // Already completed → do nothing
+    if (current >= zekr.count) return;
+
+    // ✅ Special case: if zekr.count == 1 → just complete and move on
+    if (zekr.count == 1) {
+      setState(() {
+        _counters[index] = 1;
+      });
+      HapticFeedback.mediumImpact();
+      _goToNext(index);
       return;
     }
 
-    if (zekr.count == 1) {
+    // Normal case (zekr.count > 1)
+    int increment = isDoubleTap ? 2 : 1;
+    int newValue = current + increment;
+
+    if (newValue >= zekr.count) {
+      // clamp to zekr.count
+      setState(() {
+        _counters[index] = zekr.count;
+      });
+      HapticFeedback.mediumImpact();
       _goToNext(index);
     } else {
       setState(() {
-        _counters[index]++;
+        _counters[index] = newValue;
       });
-
-      if (_counters[index] >= zekr.count) {
-        _goToNext(index);
-      }
     }
   }
 
@@ -53,60 +68,6 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
       );
     }
   }
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return PageView.builder(
-  //     controller: _pageController,
-  //     scrollDirection: Axis.horizontal,
-  //     reverse: true,
-  //     itemCount: widget.category.azkar.length,
-  //     itemBuilder: (context, index) {
-  //       final zekr = widget.category.azkar[index];
-  //       final counter = _counters[index];
-
-  //       return GestureDetector(
-  //         behavior: HitTestBehavior.opaque,
-  //         onTap: () => _handleTap(index),
-  //         child: SizedBox.expand(
-  //           child: Stack(
-  //             children: [
-  //               Padding(
-  //                 padding: EdgeInsets.symmetric(
-  //                   horizontal: 16.w,
-  //                   vertical: 20.h,
-  //                 ),
-  //                 child: SingleChildScrollView(
-  //                   child: Column(
-  //                     spacing: 20.h,
-  //                     children: [
-  //                       RichText(
-  //                         textAlign: TextAlign.center,
-  //                         text: TextSpan(
-  //                           style: Theme.of(
-  //                             context,
-  //                           ).textTheme.titleLarge!.copyWith(height: 2.5),
-  //                           children: _buildZekrText(zekr.text),
-  //                         ),
-  //                       ),
-  //                       if (zekr.count > 1) const AppDivider(),
-  //                       if (zekr.count > 1)
-  //                         Text(
-  //                           'التكرار: ${zekr.count}',
-  //                           style: Theme.of(context).textTheme.bodyMedium,
-  //                         ),
-  //                     ],
-  //                   ),
-  //                 ),
-  //               ),
-  //               if (zekr.count > 1) _buildButtons(context, counter, index),
-  //             ],
-  //           ),
-  //         ),
-  //       );
-  //     },
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +82,8 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
 
         return GestureDetector(
           behavior: HitTestBehavior.opaque,
-          onTap: () => _handleTap(index),
+          onTap: () => _handleTap(index, false),
+          onDoubleTap: () => _handleTap(index, true),
           child: Column(
             children: [
               // Scrollable zekr content
@@ -139,7 +101,7 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
                         text: TextSpan(
                           style: Theme.of(
                             context,
-                          ).textTheme.titleLarge!.copyWith(height: 2.5),
+                          ).textTheme.bodyMedium!.copyWith(height: 1.6.h),
                           children: _buildZekrText(zekr.text),
                         ),
                       ),
@@ -183,43 +145,46 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
         mainAxisSize: MainAxisSize.min,
         spacing: 20,
         children: [
-          Container(
-            width: 40.w,
-            height: 40.h,
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.onPrimary,
-              shape: BoxShape.circle,
-            ),
-            alignment: Alignment.center,
-            child: Text(
-              '$counter',
-              style: Theme.of(
-                context,
-              ).textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _counters[index] = 0;
-              });
-            },
-            child: Container(
-              width: 24.w,
-              height: 24.h,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.onPrimary,
-                shape: BoxShape.circle,
-              ),
-              child: Icon(
-                Icons.refresh,
-                size: 16.h,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            ),
-          ),
+          _buildCounterContainer(context, counter),
+          counter > 0 ? _buildResetButton(index, context) : SizedBox.shrink(),
         ],
       ),
+    );
+  }
+
+  GestureDetector _buildResetButton(int index, BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _counters[index] = 0;
+        });
+      },
+      child: Container(
+        width: 24.w,
+        height: 24.h,
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.onPrimary,
+          shape: BoxShape.circle,
+        ),
+        child: Icon(
+          Icons.refresh,
+          size: 16.h,
+          color: Theme.of(context).colorScheme.primary,
+        ),
+      ),
+    );
+  }
+
+  Container _buildCounterContainer(BuildContext context, int counter) {
+    return Container(
+      width: 40.w,
+      height: 40.h,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.onPrimary,
+        shape: BoxShape.circle,
+      ),
+      alignment: Alignment.center,
+      child: Text('$counter', style: Theme.of(context).textTheme.headlineSmall),
     );
   }
 
@@ -230,7 +195,7 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
     if (text.startsWith(start1)) {
       return [
         TextSpan(
-          text: "$start1\n",
+          text: "$start1\n\n",
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         TextSpan(text: text.substring(start1.length).trim()),
@@ -238,7 +203,7 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
     } else if (text.startsWith(start2)) {
       return [
         TextSpan(
-          text: "$start2\n",
+          text: "$start2\n\n",
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         TextSpan(text: text.substring(start2.length).trim()),

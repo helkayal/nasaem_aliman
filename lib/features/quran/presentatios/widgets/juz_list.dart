@@ -44,7 +44,11 @@ class _JuzasListState extends State<JuzasList> {
                 ),
                 child: Row(
                   children: [
-                    Icon(Icons.arrow_drop_down, color: Colors.black, size: 30),
+                    Icon(
+                      Icons.arrow_drop_down,
+                      color: Theme.of(context).colorScheme.onSurface,
+                      size: 30,
+                    ),
                     SizedBox(width: 8.w),
                     Expanded(
                       child: ListRow(
@@ -94,12 +98,15 @@ class _JuzasListState extends State<JuzasList> {
                               ),
                             );
                           },
-                          child: ListRow(
-                            text: range.surahName,
-                            rowNumber: range.surahId.toString(),
-                            rowTrailer:
-                                "من آية ${range.startAyah} إلى ${range.endAyah}",
-                            fontScale: "small",
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 4.h),
+                            child: ListRow(
+                              text: range.surahName,
+                              rowNumber: range.surahId.toString(),
+                              rowTrailer:
+                                  "من آية ${range.startAyah} إلى ${range.endAyah}",
+                              fontScale: "small",
+                            ),
                           ),
                         ),
                       );

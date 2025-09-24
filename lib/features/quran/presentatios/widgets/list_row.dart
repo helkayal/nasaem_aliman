@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nasaem_aliman/core/constants/app_constants.dart';
 
+import '../../../../core/constants/app_assets.dart';
+
 class ListRow extends StatelessWidget {
   final String text;
   final String rowNumber;
@@ -22,6 +24,8 @@ class ListRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Row(
       spacing: 20,
       mainAxisAlignment: MainAxisAlignment.end,
@@ -49,29 +53,31 @@ class ListRow extends StatelessWidget {
         withLeading
             ? Container(
                 width: fontScale == "large"
-                    ? 50.w
+                    ? 52.w
                     : fontScale == "medium"
-                    ? 40.w
-                    : 30.w,
+                    ? 46.w
+                    : 40.w,
                 height: fontScale == "large"
-                    ? 50.h
+                    ? 52.h
                     : fontScale == "medium"
-                    ? 40.h
-                    : 30.h,
+                    ? 46.h
+                    : 40.h,
                 decoration: BoxDecoration(
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/number_bg.png'),
-                    fit: BoxFit.cover,
+                  image: DecorationImage(
+                    image: AssetImage(
+                      isDark ? AppAssets.numberBgDark : AppAssets.numberBg,
+                    ),
+                    fit: BoxFit.fill,
                   ),
                   shape: BoxShape.circle,
                 ),
                 child: Padding(
                   padding: EdgeInsets.only(
                     top: fontScale == "large"
-                        ? AppConstants.defaultPadding * 1.h
+                        ? AppConstants.defaultPadding * 1.2.h
                         : fontScale == "medium"
-                        ? AppConstants.defaultPadding * .75.h
-                        : AppConstants.defaultPadding * .6.h,
+                        ? AppConstants.defaultPadding * .9.h
+                        : AppConstants.defaultPadding * .8.h,
                   ),
                   child: Text(
                     rowNumber,

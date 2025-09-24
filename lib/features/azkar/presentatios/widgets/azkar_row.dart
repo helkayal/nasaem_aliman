@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/constants/app_assets.dart';
 import '../../domain/entities/azkar_category_entiti.dart';
 
 class AzkarRow extends StatelessWidget {
@@ -9,6 +10,8 @@ class AzkarRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       child: Row(
@@ -19,8 +22,10 @@ class AzkarRow extends StatelessWidget {
             width: 50.w,
             height: 50.h,
             decoration: BoxDecoration(
-              image: const DecorationImage(
-                image: AssetImage('assets/images/number_bg.png'),
+              image: DecorationImage(
+                image: AssetImage(
+                  isDark ? AppAssets.numberBgDark : AppAssets.numberBg,
+                ),
                 fit: BoxFit.cover,
               ),
               shape: BoxShape.circle,

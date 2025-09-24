@@ -28,19 +28,19 @@ ThemeData lightTheme() {
       headlineSmall: TextStyle(
         fontSize: 22.sp,
         fontWeight: FontWeight.bold,
-        color: AppColors.white,
+        color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       headlineMedium: TextStyle(
         fontSize: 26.sp,
         fontWeight: FontWeight.bold,
-        color: AppColors.white,
+        color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       headlineLarge: TextStyle(
         fontSize: 30.sp,
         fontWeight: FontWeight.bold,
-        color: AppColors.white,
+        color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       displaySmall: TextStyle(
@@ -157,7 +157,7 @@ ThemeData darkTheme() {
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
       ),
       titleTextStyle: TextStyle(
-        color: AppColors.black,
+        color: AppColors.white,
         fontSize: 24.sp,
         fontWeight: FontWeight.bold,
         fontFamily: AppConstants.textFontFamily,
@@ -218,17 +218,17 @@ ThemeData darkTheme() {
       ),
       titleSmall: TextStyle(
         fontSize: 20.sp,
-        color: AppColors.darkBlue,
+        color: AppColors.lightGrey,
         fontFamily: AppConstants.quranFontFamily,
       ),
       titleMedium: TextStyle(
         fontSize: 24.sp,
-        color: AppColors.darkBlue,
+        color: AppColors.lightGrey,
         fontFamily: AppConstants.quranFontFamily,
       ),
       titleLarge: TextStyle(
         fontSize: 28.sp,
-        color: AppColors.darkBlue,
+        color: AppColors.lightGrey,
         fontFamily: AppConstants.quranFontFamily,
       ),
     ),
