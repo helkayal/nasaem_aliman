@@ -1,19 +1,9 @@
-//   final List<String> azkar = [
-//     "سُبْحَانَ اللَّهِ",
-//     "الْحَمْدُ لِلَّهِ",
-//     "اللَّهُ أَكْبَرُ",
-//     "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
-//     "لَا إِلَهَ إِلَّا اللَّهُ",
-//     "أَسْتَغْفِرُ اللَّهُ",
-//     "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
-//     "سُبْحَانَ اللَّهِ الْعَظِيمِ",
-//     "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
-//     "لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
-//   ];
-
+import 'dart:async';
 import 'dart:math';
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nasaem_aliman/core/constants/app_assets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SebhaScreen extends StatefulWidget {
@@ -28,10 +18,37 @@ class _SebhaScreenState extends State<SebhaScreen> {
   String? zekr; // null means no zekr yet
   final int totalBeads = 33;
 
+  Timer? _saveTimer;
+  bool _pendingSave = false;
+
+  // 🔹 Sebha head
+  final sebhaHeadHeight = 60.h;
+  final sebhaHeadTop = 20.h;
+
+  late final Image headImage;
+  ui.Image? beadUiImage;
+
   @override
   void initState() {
     super.initState();
+    headImage = Image.asset(
+      AppAssets.sebhaHeadImage,
+      height: sebhaHeadHeight,
+      fit: BoxFit.fitHeight,
+    );
+    _loadBeadImage();
     _loadData();
+  }
+
+  Future<void> _loadBeadImage() async {
+    final data = await DefaultAssetBundle.of(
+      context,
+    ).load(AppAssets.sebhaBeadImage);
+    final codec = await ui.instantiateImageCodec(data.buffer.asUint8List());
+    final frame = await codec.getNextFrame();
+    setState(() {
+      beadUiImage = frame.image;
+    });
   }
 
   Future<void> _loadData() async {
@@ -51,17 +68,31 @@ class _SebhaScreenState extends State<SebhaScreen> {
   }
 
   void _incrementCounter() {
-    if (zekr == null || zekr!.isEmpty) return; // block increment
-    setState(() {
-      counter++;
+    if (zekr == null || zekr!.isEmpty) return;
+    setState(() => counter++);
+    _pendingSave = true;
+    _debounceSave();
+  }
+
+  void _debounceSave() {
+    _saveTimer?.cancel();
+    _saveTimer = Timer(const Duration(seconds: 2), () {
+      if (_pendingSave) {
+        _saveData();
+        _pendingSave = false;
+      }
     });
-    _saveData();
+  }
+
+  @override
+  void dispose() {
+    _saveTimer?.cancel();
+    if (_pendingSave) _saveData();
+    super.dispose();
   }
 
   void _resetCounter() {
-    setState(() {
-      counter = 0;
-    });
+    setState(() => counter = 0);
     _saveData();
   }
 
@@ -95,7 +126,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
     if (newZekr != null && newZekr.isNotEmpty) {
       setState(() {
         zekr = newZekr;
-        counter = 0; // reset when new zekr entered
+        counter = 0;
       });
       _saveData();
     }
@@ -112,11 +143,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
     final ovalWidth = screenWidth * 0.85;
     final ovalHeight = screenHeight * 0.45;
 
-    // 🔹 Sebha head dimensions
-    final sebhaHeadHeight = screenHeight * 0.09;
-    final sebhaHeadTop = 20.h;
-
-    // 🔹 Oval center (aligned so top bead matches head bottom)
+    // 🔹 Center
     final centerX = screenWidth / 2;
     final centerY = sebhaHeadTop + sebhaHeadHeight + (ovalHeight / 2);
 
@@ -145,7 +172,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
         ],
       ),
       body: AbsorbPointer(
-        absorbing: zekr == null || zekr!.isEmpty, // disable taps if no zekr
+        absorbing: zekr == null || zekr!.isEmpty,
         child: GestureDetector(
           onTap: _incrementCounter,
           child: Container(
@@ -164,28 +191,29 @@ class _SebhaScreenState extends State<SebhaScreen> {
                   left: centerX - (screenWidth * 0.3) / 2,
                   top: sebhaHeadTop,
                   child: Opacity(
-                    opacity: (zekr != null && zekr!.isNotEmpty)
-                        ? 1.0
-                        : 0.4, // 🔹 dim sehba head if disabled
-                    child: Image.asset(
-                      "assets/images/sebha_head.png",
-                      height: sebhaHeadHeight,
-                      fit: BoxFit.fitHeight,
-                    ),
+                    opacity: (zekr != null && zekr!.isNotEmpty) ? 1.0 : 0.4,
+                    child: headImage,
                   ),
                 ),
 
-                // 🔹 Beads loop
-                for (int i = 0; i < totalBeads; i++)
-                  buildBead(
-                    i,
-                    highlightedIndex,
-                    ovalWidth,
-                    ovalHeight,
-                    screenWidth,
-                    centerX,
-                    centerY,
-                    enabled: zekr != null && zekr!.isNotEmpty,
+                // 🔹 CustomPaint beads
+                if (beadUiImage != null)
+                  RepaintBoundary(
+                    child: CustomPaint(
+                      painter: BeadsPainter(
+                        beadUiImage: beadUiImage!,
+                        totalBeads: totalBeads,
+                        highlightedIndex: highlightedIndex,
+                        ovalWidth: ovalWidth,
+                        ovalHeight: ovalHeight,
+                        beadSize: screenWidth * 0.1,
+                        centerX: centerX,
+                        centerY: centerY,
+                        enabled: zekr != null && zekr!.isNotEmpty,
+                        primaryColor: Theme.of(context).colorScheme.primary,
+                      ),
+                      child: const SizedBox.expand(),
+                    ),
                   ),
 
                 // 🔹 Center text + counter
@@ -204,12 +232,11 @@ class _SebhaScreenState extends State<SebhaScreen> {
       children: [
         if (zekr != null && zekr.isNotEmpty) ...[
           GestureDetector(
-            onLongPress: () => _editZekrInline(), // long press to edit
+            onLongPress: () => _editZekrInline(),
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 800),
-              transitionBuilder: (child, animation) {
-                return FadeTransition(opacity: animation, child: child);
-              },
+              transitionBuilder: (child, animation) =>
+                  FadeTransition(opacity: animation, child: child),
               child: ConstrainedBox(
                 key: ValueKey<String>(zekr),
                 constraints: BoxConstraints(maxWidth: screenWidth * 0.65),
@@ -240,52 +267,79 @@ class _SebhaScreenState extends State<SebhaScreen> {
       ],
     );
   }
+}
 
-  Widget buildBead(
-    int index,
-    int highlightedIndex,
-    double ovalWidth,
-    double ovalHeight,
-    double screenWidth,
-    double centerX,
-    double centerY, {
-    required bool enabled,
-  }) {
-    double angle = 2 * pi * index / totalBeads - pi / 2;
+/// 🔹 CustomPainter for beads
+class BeadsPainter extends CustomPainter {
+  final ui.Image beadUiImage;
+  final int totalBeads;
+  final int highlightedIndex;
+  final double ovalWidth;
+  final double ovalHeight;
+  final double beadSize;
+  final double centerX;
+  final double centerY;
+  final bool enabled;
+  final Color primaryColor;
 
-    double radiusX = ovalWidth / 2;
-    double radiusY = ovalHeight / 2;
+  BeadsPainter({
+    required this.beadUiImage,
+    required this.totalBeads,
+    required this.highlightedIndex,
+    required this.ovalWidth,
+    required this.ovalHeight,
+    required this.beadSize,
+    required this.centerX,
+    required this.centerY,
+    required this.enabled,
+    required this.primaryColor,
+  });
 
-    double x = radiusX * cos(angle);
-    double y = radiusY * sin(angle);
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    final radiusX = ovalWidth / 2;
+    final radiusY = ovalHeight / 2;
 
-    double size = screenWidth * 0.1;
+    for (int i = 0; i < totalBeads; i++) {
+      final angle = 2 * pi * i / totalBeads - pi / 2;
+      final x = centerX + radiusX * cos(angle);
+      final y = centerY + radiusY * sin(angle) + 10;
 
-    final isHighlighted = enabled && index == highlightedIndex;
+      final rect = Rect.fromCenter(
+        center: Offset(x, y),
+        width: beadSize,
+        height: beadSize,
+      );
 
-    return Positioned(
-      left: centerX + x - size / 2,
-      top: centerY + y - size / 2 + 10,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        width: size,
-        height: size,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          boxShadow: [
-            if (isHighlighted)
-              BoxShadow(
-                color: Theme.of(context).colorScheme.primary,
-                blurRadius: 14,
-                spreadRadius: 6,
-              ),
-          ],
+      if (enabled && i == highlightedIndex) {
+        final glowPaint = Paint()
+          ..color = primaryColor.withValues(alpha: 0.5)
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 10);
+        canvas.drawCircle(Offset(x, y), beadSize * 0.55, glowPaint);
+      }
+
+      paint.color = enabled
+          ? Colors.white
+          : Colors.white.withValues(alpha: 0.4);
+
+      canvas.drawImageRect(
+        beadUiImage,
+        Rect.fromLTWH(
+          0,
+          0,
+          beadUiImage.width.toDouble(),
+          beadUiImage.height.toDouble(),
         ),
-        child: Opacity(
-          opacity: enabled ? 1.0 : 0.4, // dim beads if disabled
-          child: Image.asset("assets/images/sebha_bead.png"),
-        ),
-      ),
-    );
+        rect,
+        paint,
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant BeadsPainter oldDelegate) {
+    return oldDelegate.highlightedIndex != highlightedIndex ||
+        oldDelegate.enabled != enabled;
   }
 }
