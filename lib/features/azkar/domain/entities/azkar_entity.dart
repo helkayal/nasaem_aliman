@@ -1,5 +1,7 @@
 // domain/entities/azkar_entity.dart
-class AzkarEntity {
+import 'package:equatable/equatable.dart';
+
+class AzkarEntity extends Equatable {
   final int id;
   final String text;
   final int count;
@@ -13,4 +15,7 @@ class AzkarEntity {
     required this.audio,
     required this.filename,
   });
+
+  @override
+  List<Object?> get props => [id, text, count, audio, filename];
 }

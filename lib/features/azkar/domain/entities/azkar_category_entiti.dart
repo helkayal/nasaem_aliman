@@ -1,7 +1,8 @@
 // domain/entities/azkar_category_entity.dart
+import 'package:equatable/equatable.dart';
 import 'azkar_entity.dart';
 
-class AzkarCategoryEntity {
+class AzkarCategoryEntity extends Equatable {
   final int id;
   final String category;
   final bool repeatable;
@@ -13,4 +14,7 @@ class AzkarCategoryEntity {
     required this.repeatable,
     required this.azkar,
   });
+
+  @override
+  List<Object?> get props => [id, category, repeatable, azkar];
 }

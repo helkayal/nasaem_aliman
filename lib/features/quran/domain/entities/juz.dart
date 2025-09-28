@@ -1,9 +1,17 @@
+import 'package:equatable/equatable.dart';
 import 'surah_range.dart';
 
-class JuzEntity {
+class JuzEntity extends Equatable {
   final int id;
   final String name;
   final List<SurahRangeEntity> surahRanges;
 
-  JuzEntity({required this.id, required this.name, required this.surahRanges});
+  const JuzEntity({
+    required this.id,
+    required this.name,
+    required this.surahRanges,
+  });
+
+  @override
+  List<Object?> get props => [id, name, surahRanges];
 }

@@ -1,17 +1,32 @@
+import 'package:equatable/equatable.dart';
 import '../../domain/entities/azkar_category_entiti.dart';
 
-abstract class AzkarCategoriesState {}
+abstract class AzkarCategoriesState extends Equatable {
+  const AzkarCategoriesState();
+  @override
+  List<Object?> get props => [];
+}
 
-class AzkarCategoriesInitial extends AzkarCategoriesState {}
+class AzkarCategoriesInitial extends AzkarCategoriesState {
+  const AzkarCategoriesInitial();
+}
 
-class AzkarCategoriesLoading extends AzkarCategoriesState {}
+class AzkarCategoriesLoading extends AzkarCategoriesState {
+  const AzkarCategoriesLoading();
+}
 
 class AzkarCategoriesLoaded extends AzkarCategoriesState {
   final List<AzkarCategoryEntity> categories;
-  AzkarCategoriesLoaded(this.categories);
+  const AzkarCategoriesLoaded(this.categories);
+
+  @override
+  List<Object?> get props => [categories];
 }
 
 class AzkarCategoriesError extends AzkarCategoriesState {
   final String message;
-  AzkarCategoriesError(this.message);
+  const AzkarCategoriesError(this.message);
+
+  @override
+  List<Object?> get props => [message];
 }

@@ -9,8 +9,7 @@ import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_category_c
 import 'package:nasaem_aliman/features/azkar/presentatios/screens/azkar_screen.dart';
 import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_cubit.dart';
 import 'package:nasaem_aliman/features/quran/presentatios/screens/quran_screen.dart';
-import 'package:nasaem_aliman/features/sebha/cubit/sebha_cubit.dart';
-import 'package:nasaem_aliman/features/sebha/screens/sebha_screen.dart';
+import 'package:nasaem_aliman/features/sebha/sebha_screen.dart';
 
 class NasaemAlimanTabs extends StatefulWidget {
   const NasaemAlimanTabs({super.key});
@@ -23,10 +22,7 @@ class _NasaemAlimanTabsState extends State<NasaemAlimanTabs> {
   int _currentIndex = 1;
 
   final List<Widget> _screens = [
-    BlocProvider(
-      create: (_) => di.sl<SebhaCubit>(),
-      child: const SebhaScreen(),
-    ),
+    const SebhaScreen(),
     BlocProvider(
       create: (_) => di.sl<QuranCubit>()..fetchAllSurahs(),
       child: const QuranScreen(),
