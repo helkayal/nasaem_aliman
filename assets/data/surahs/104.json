@@ -1,0 +1,77 @@
+{
+  "id": 104,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "وَيۡلٞ لِّكُلِّ هُمَزَةٖ لُّمَزَةٍ",
+      "en": "Woe to every scorner and mocker",
+      "path": "/audio/104/001.mp3",
+      "dir": "/audio/104",
+      "size": 20373
+    },
+    {
+      "id": 2,
+      "ar": "ٱلَّذِي جَمَعَ مَالٗا وَعَدَّدَهُۥ",
+      "en": "Who collects wealth and [continuously] counts it",
+      "path": "/audio/104/002.mp3",
+      "dir": "/audio/104",
+      "size": 22462
+    },
+    {
+      "id": 3,
+      "ar": "يَحۡسَبُ أَنَّ مَالَهُۥٓ أَخۡلَدَهُۥ",
+      "en": "He thinks that his wealth will make him immortal",
+      "path": "/audio/104/003.mp3",
+      "dir": "/audio/104",
+      "size": 30169
+    },
+    {
+      "id": 4,
+      "ar": "كَلَّاۖ لَيُنۢبَذَنَّ فِي ٱلۡحُطَمَةِ",
+      "en": "No! He will surely be thrown into the Crusher",
+      "path": "/audio/104/004.mp3",
+      "dir": "/audio/104",
+      "size": 23246
+    },
+    {
+      "id": 5,
+      "ar": "وَمَآ أَدۡرَىٰكَ مَا ٱلۡحُطَمَةُ",
+      "en": "And what can make you know what is the Crusher",
+      "path": "/audio/104/005.mp3",
+      "dir": "/audio/104",
+      "size": 21288
+    },
+    {
+      "id": 6,
+      "ar": "نَارُ ٱللَّهِ ٱلۡمُوقَدَةُ",
+      "en": "It is the fire of Allah, [eternally] fueled",
+      "path": "/audio/104/006.mp3",
+      "dir": "/audio/104",
+      "size": 14756
+    },
+    {
+      "id": 7,
+      "ar": "ٱلَّتِي تَطَّلِعُ عَلَى ٱلۡأَفۡـِٔدَةِ",
+      "en": "Which mounts directed at the hearts",
+      "path": "/audio/104/007.mp3",
+      "dir": "/audio/104",
+      "size": 19720
+    },
+    {
+      "id": 8,
+      "ar": "إِنَّهَا عَلَيۡهِم مُّؤۡصَدَةٞ",
+      "en": "Indeed, Hellfire will be closed down upon them",
+      "path": "/audio/104/008.mp3",
+      "dir": "/audio/104",
+      "size": 24944
+    },
+    {
+      "id": 9,
+      "ar": "فِي عَمَدٖ مُّمَدَّدَةِۭ",
+      "en": "In extended columns",
+      "path": "/audio/104/009.mp3",
+      "dir": "/audio/104",
+      "size": 15802
+    }
+  ]
+}

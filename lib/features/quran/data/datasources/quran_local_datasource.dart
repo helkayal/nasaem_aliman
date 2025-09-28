@@ -21,6 +21,19 @@ abstract class QuranLocalDataSource {
 class QuranLocalDataSourceImpl implements QuranLocalDataSource {
   static const String bookmarksKey = "BOOKMARKS";
   static const String lastReadKey = "LAST_READ";
+  Map<int, String>? _surahNamesCache;
+
+  Future<Map<int, String>> _loadSurahNames() async {
+    if (_surahNamesCache != null) return _surahNamesCache!;
+    final response = await rootBundle.loadString("assets/data/surahs.json");
+    final List data = json.decode(response);
+    _surahNamesCache = {
+      for (final e in data)
+        (e['id'] as int):
+            (e['name'] as String?) ?? (e['name_arabic'] as String? ?? ''),
+    };
+    return _surahNamesCache!;
+  }
 
   @override
   Future<List<SurahModel>> getAllSurahs() async {
@@ -31,11 +44,25 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
 
   @override
   Future<SurahModel> getSurah(int surahId) async {
-    final data = await rootBundle.loadString("assets/data/quran.json");
-    final List<dynamic> jsonList = jsonDecode(data);
+    // Prefer per-surah file: assets/data/surahs/NNN.json
+    final fileName = surahId.toString().padLeft(3, '0');
+    final path = "assets/data/surahs/$fileName.json";
+    final raw = await rootBundle.loadString(path);
+    final Map<String, dynamic> jsonMap = jsonDecode(raw);
 
-    final surahJson = jsonList.firstWhere((s) => s['id'] == surahId);
-    return SurahModel.fromQuranJson(surahJson);
+    final List<dynamic> ayahsJson = (jsonMap['ayahs'] as List<dynamic>);
+    final ayahModels = ayahsJson
+        .map((a) => AyahModel.fromJson(a as Map<String, dynamic>, surahId))
+        .toList();
+
+    final names = await _loadSurahNames();
+    final String name = names[surahId] ?? '';
+    return SurahModel(
+      id: surahId,
+      name: name,
+      versesCount: ayahModels.length,
+      ayahModels: ayahModels,
+    );
   }
 
   @override

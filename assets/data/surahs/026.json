@@ -1,0 +1,1821 @@
+{
+  "id": 26,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "طسٓمٓ",
+      "en": "Ta, Seen, Meem",
+      "path": "/audio/026/001.mp3",
+      "dir": "/audio/026",
+      "size": 39181
+    },
+    {
+      "id": 2,
+      "ar": "تِلۡكَ ءَايَٰتُ ٱلۡكِتَٰبِ ٱلۡمُبِينِ",
+      "en": "These are the verses of the clear Book",
+      "path": "/audio/026/002.mp3",
+      "dir": "/audio/026",
+      "size": 22985
+    },
+    {
+      "id": 3,
+      "ar": "لَعَلَّكَ بَٰخِعٞ نَّفۡسَكَ أَلَّا يَكُونُواْ مُؤۡمِنِينَ",
+      "en": "Perhaps, [O Muhammad], you would kill yourself with grief that they will not be believers",
+      "path": "/audio/026/003.mp3",
+      "dir": "/audio/026",
+      "size": 32389
+    },
+    {
+      "id": 4,
+      "ar": "إِن نَّشَأۡ نُنَزِّلۡ عَلَيۡهِم مِّنَ ٱلسَّمَآءِ ءَايَةٗ فَظَلَّتۡ أَعۡنَٰقُهُمۡ لَهَا خَٰضِعِينَ",
+      "en": "If We willed, We could send down to them from the sky a sign for which their necks would remain humbled",
+      "path": "/audio/026/004.mp3",
+      "dir": "/audio/026",
+      "size": 56422
+    },
+    {
+      "id": 5,
+      "ar": "وَمَا يَأۡتِيهِم مِّن ذِكۡرٖ مِّنَ ٱلرَّحۡمَٰنِ مُحۡدَثٍ إِلَّا كَانُواْ عَنۡهُ مُعۡرِضِينَ",
+      "en": "And no revelation comes to them anew from the Most Merciful except that they turn away from it",
+      "path": "/audio/026/005.mp3",
+      "dir": "/audio/026",
+      "size": 49369
+    },
+    {
+      "id": 6,
+      "ar": "فَقَدۡ كَذَّبُواْ فَسَيَأۡتِيهِمۡ أَنۢبَـٰٓؤُاْ مَا كَانُواْ بِهِۦ يَسۡتَهۡزِءُونَ",
+      "en": "For they have already denied, but there will come to them the news of that which they used to ridicule",
+      "path": "/audio/026/006.mp3",
+      "dir": "/audio/026",
+      "size": 45842
+    },
+    {
+      "id": 7,
+      "ar": "أَوَلَمۡ يَرَوۡاْ إِلَى ٱلۡأَرۡضِ كَمۡ أَنۢبَتۡنَا فِيهَا مِن كُلِّ زَوۡجٖ كَرِيمٍ",
+      "en": "Did they not look at the earth - how much We have produced therein from every noble kind",
+      "path": "/audio/026/007.mp3",
+      "dir": "/audio/026",
+      "size": 45712
+    },
+    {
+      "id": 8,
+      "ar": "إِنَّ فِي ذَٰلِكَ لَأٓيَةٗۖ وَمَا كَانَ أَكۡثَرُهُم مُّؤۡمِنِينَ",
+      "en": "Indeed in that is a sign, but most of them were not to be believers",
+      "path": "/audio/026/008.mp3",
+      "dir": "/audio/026",
+      "size": 43361
+    },
+    {
+      "id": 9,
+      "ar": "وَإِنَّ رَبَّكَ لَهُوَ ٱلۡعَزِيزُ ٱلرَّحِيمُ",
+      "en": "And indeed, your Lord - He is the Exalted in Might, the Merciful",
+      "path": "/audio/026/009.mp3",
+      "dir": "/audio/026",
+      "size": 28601
+    },
+    {
+      "id": 10,
+      "ar": "وَإِذۡ نَادَىٰ رَبُّكَ مُوسَىٰٓ أَنِ ٱئۡتِ ٱلۡقَوۡمَ ٱلظَّـٰلِمِينَ",
+      "en": "And [mention] when your Lord called Moses, [saying], \"Go to the wrongdoing people",
+      "path": "/audio/026/010.mp3",
+      "dir": "/audio/026",
+      "size": 32781
+    },
+    {
+      "id": 11,
+      "ar": "قَوۡمَ فِرۡعَوۡنَۚ أَلَا يَتَّقُونَ",
+      "en": "The people of Pharaoh. Will they not fear Allah",
+      "path": "/audio/026/011.mp3",
+      "dir": "/audio/026",
+      "size": 20373
+    },
+    {
+      "id": 12,
+      "ar": "قَالَ رَبِّ إِنِّيٓ أَخَافُ أَن يُكَذِّبُونِ",
+      "en": "He said, \"My Lord, indeed I fear that they will deny me",
+      "path": "/audio/026/012.mp3",
+      "dir": "/audio/026",
+      "size": 31214
+    },
+    {
+      "id": 13,
+      "ar": "وَيَضِيقُ صَدۡرِي وَلَا يَنطَلِقُ لِسَانِي فَأَرۡسِلۡ إِلَىٰ هَٰرُونَ",
+      "en": "And that my breast will tighten and my tongue will not be fluent, so send for Aaron",
+      "path": "/audio/026/013.mp3",
+      "dir": "/audio/026",
+      "size": 42315
+    },
+    {
+      "id": 14,
+      "ar": "وَلَهُمۡ عَلَيَّ ذَنۢبٞ فَأَخَافُ أَن يَقۡتُلُونِ",
+      "en": "And they have upon me a [claim due to] sin, so I fear that they will kill me",
+      "path": "/audio/026/014.mp3",
+      "dir": "/audio/026",
+      "size": 33826
+    },
+    {
+      "id": 15,
+      "ar": "قَالَ كَلَّاۖ فَٱذۡهَبَا بِـَٔايَٰتِنَآۖ إِنَّا مَعَكُم مُّسۡتَمِعُونَ",
+      "en": "[Allah] said, \"No. Go both of you with Our signs; indeed, We are with you, listening",
+      "path": "/audio/026/015.mp3",
+      "dir": "/audio/026",
+      "size": 45059
+    },
+    {
+      "id": 16,
+      "ar": "فَأۡتِيَا فِرۡعَوۡنَ فَقُولَآ إِنَّا رَسُولُ رَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "Go to Pharaoh and say, 'We are the messengers of the Lord of the worlds",
+      "path": "/audio/026/016.mp3",
+      "dir": "/audio/026",
+      "size": 39181
+    },
+    {
+      "id": 17,
+      "ar": "أَنۡ أَرۡسِلۡ مَعَنَا بَنِيٓ إِسۡرَـٰٓءِيلَ",
+      "en": "[Commanded to say], \"Send with us the Children of Israel",
+      "path": "/audio/026/017.mp3",
+      "dir": "/audio/026",
+      "size": 26904
+    },
+    {
+      "id": 18,
+      "ar": "قَالَ أَلَمۡ نُرَبِّكَ فِينَا وَلِيدٗا وَلَبِثۡتَ فِينَا مِنۡ عُمُرِكَ سِنِينَ",
+      "en": "[Pharaoh] said, \"Did we not raise you among us as a child, and you remained among us for years of your life",
+      "path": "/audio/026/018.mp3",
+      "dir": "/audio/026",
+      "size": 40095
+    },
+    {
+      "id": 19,
+      "ar": "وَفَعَلۡتَ فَعۡلَتَكَ ٱلَّتِي فَعَلۡتَ وَأَنتَ مِنَ ٱلۡكَٰفِرِينَ",
+      "en": "And [then] you did your deed which you did, and you were of the ungrateful",
+      "path": "/audio/026/019.mp3",
+      "dir": "/audio/026",
+      "size": 35393
+    },
+    {
+      "id": 20,
+      "ar": "قَالَ فَعَلۡتُهَآ إِذٗا وَأَنَا۠ مِنَ ٱلضَّآلِّينَ",
+      "en": "[Moses] said, \"I did it, then, while I was of those astray",
+      "path": "/audio/026/020.mp3",
+      "dir": "/audio/026",
+      "size": 42708
+    },
+    {
+      "id": 21,
+      "ar": "فَفَرَرۡتُ مِنكُمۡ لَمَّا خِفۡتُكُمۡ فَوَهَبَ لِي رَبِّي حُكۡمٗا وَجَعَلَنِي مِنَ ٱلۡمُرۡسَلِينَ",
+      "en": "So I fled from you when I feared you. Then my Lord granted me wisdom and prophethood and appointed me [as one] of the messengers",
+      "path": "/audio/026/021.mp3",
+      "dir": "/audio/026",
+      "size": 55769
+    },
+    {
+      "id": 22,
+      "ar": "وَتِلۡكَ نِعۡمَةٞ تَمُنُّهَا عَلَيَّ أَنۡ عَبَّدتَّ بَنِيٓ إِسۡرَـٰٓءِيلَ",
+      "en": "And is this a favor of which you remind me - that you have enslaved the Children of Israel",
+      "path": "/audio/026/022.mp3",
+      "dir": "/audio/026",
+      "size": 48846
+    },
+    {
+      "id": 23,
+      "ar": "قَالَ فِرۡعَوۡنُ وَمَا رَبُّ ٱلۡعَٰلَمِينَ",
+      "en": "Said Pharaoh, \"And what is the Lord of the worlds",
+      "path": "/audio/026/023.mp3",
+      "dir": "/audio/026",
+      "size": 25075
+    },
+    {
+      "id": 24,
+      "ar": "قَالَ رَبُّ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِ وَمَا بَيۡنَهُمَآۖ إِن كُنتُم مُّوقِنِينَ",
+      "en": "[Moses] said, \"The Lord of the heavens and earth and that between them, if you should be convinced",
+      "path": "/audio/026/024.mp3",
+      "dir": "/audio/026",
+      "size": 51328
+    },
+    {
+      "id": 25,
+      "ar": "قَالَ لِمَنۡ حَوۡلَهُۥٓ أَلَا تَسۡتَمِعُونَ",
+      "en": "[Pharaoh] said to those around him, \"Do you not hear",
+      "path": "/audio/026/025.mp3",
+      "dir": "/audio/026",
+      "size": 27818
+    },
+    {
+      "id": 26,
+      "ar": "قَالَ رَبُّكُمۡ وَرَبُّ ءَابَآئِكُمُ ٱلۡأَوَّلِينَ",
+      "en": "[Moses] said, \"Your Lord and the Lord of your first forefathers",
+      "path": "/audio/026/026.mp3",
+      "dir": "/audio/026",
+      "size": 29907
+    },
+    {
+      "id": 27,
+      "ar": "قَالَ إِنَّ رَسُولَكُمُ ٱلَّذِيٓ أُرۡسِلَ إِلَيۡكُمۡ لَمَجۡنُونٞ",
+      "en": "[Pharaoh] said, \"Indeed, your 'messenger' who has been sent to you is mad",
+      "path": "/audio/026/027.mp3",
+      "dir": "/audio/026",
+      "size": 35263
+    },
+    {
+      "id": 28,
+      "ar": "قَالَ رَبُّ ٱلۡمَشۡرِقِ وَٱلۡمَغۡرِبِ وَمَا بَيۡنَهُمَآۖ إِن كُنتُمۡ تَعۡقِلُونَ",
+      "en": "[Moses] said, \"Lord of the east and the west and that between them, if you were to reason",
+      "path": "/audio/026/028.mp3",
+      "dir": "/audio/026",
+      "size": 47018
+    },
+    {
+      "id": 29,
+      "ar": "قَالَ لَئِنِ ٱتَّخَذۡتَ إِلَٰهًا غَيۡرِي لَأَجۡعَلَنَّكَ مِنَ ٱلۡمَسۡجُونِينَ",
+      "en": "[Pharaoh] said, \"If you take a god other than me, I will surely place you among those imprisoned",
+      "path": "/audio/026/029.mp3",
+      "dir": "/audio/026",
+      "size": 41401
+    },
+    {
+      "id": 30,
+      "ar": "قَالَ أَوَلَوۡ جِئۡتُكَ بِشَيۡءٖ مُّبِينٖ",
+      "en": "[Moses] said, \"Even if I brought you proof manifest",
+      "path": "/audio/026/030.mp3",
+      "dir": "/audio/026",
+      "size": 25206
+    },
+    {
+      "id": 31,
+      "ar": "قَالَ فَأۡتِ بِهِۦٓ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ",
+      "en": "[Pharaoh] said, \"Then bring it, if you should be of the truthful",
+      "path": "/audio/026/031.mp3",
+      "dir": "/audio/026",
+      "size": 32258
+    },
+    {
+      "id": 32,
+      "ar": "فَأَلۡقَىٰ عَصَاهُ فَإِذَا هِيَ ثُعۡبَانٞ مُّبِينٞ",
+      "en": "So [Moses] threw his staff, and suddenly it was a serpent manifest",
+      "path": "/audio/026/032.mp3",
+      "dir": "/audio/026",
+      "size": 31606
+    },
+    {
+      "id": 33,
+      "ar": "وَنَزَعَ يَدَهُۥ فَإِذَا هِيَ بَيۡضَآءُ لِلنَّـٰظِرِينَ",
+      "en": "And he drew out his hand; thereupon it was white for the observers",
+      "path": "/audio/026/033.mp3",
+      "dir": "/audio/026",
+      "size": 36046
+    },
+    {
+      "id": 34,
+      "ar": "قَالَ لِلۡمَلَإِ حَوۡلَهُۥٓ إِنَّ هَٰذَا لَسَٰحِرٌ عَلِيمٞ",
+      "en": "[Pharaoh] said to the eminent ones around him, \"Indeed, this is a learned magician",
+      "path": "/audio/026/034.mp3",
+      "dir": "/audio/026",
+      "size": 36439
+    },
+    {
+      "id": 35,
+      "ar": "يُرِيدُ أَن يُخۡرِجَكُم مِّنۡ أَرۡضِكُم بِسِحۡرِهِۦ فَمَاذَا تَأۡمُرُونَ",
+      "en": "He wants to drive you out of your land by his magic, so what do you advise",
+      "path": "/audio/026/035.mp3",
+      "dir": "/audio/026",
+      "size": 41140
+    },
+    {
+      "id": 36,
+      "ar": "قَالُوٓاْ أَرۡجِهۡ وَأَخَاهُ وَٱبۡعَثۡ فِي ٱلۡمَدَآئِنِ حَٰشِرِينَ",
+      "en": "They said, \"Postpone [the matter of] him and his brother and send among the cities gatherers",
+      "path": "/audio/026/036.mp3",
+      "dir": "/audio/026",
+      "size": 39573
+    },
+    {
+      "id": 37,
+      "ar": "يَأۡتُوكَ بِكُلِّ سَحَّارٍ عَلِيمٖ",
+      "en": "Who will bring you every learned, skilled magician",
+      "path": "/audio/026/037.mp3",
+      "dir": "/audio/026",
+      "size": 23377
+    },
+    {
+      "id": 38,
+      "ar": "فَجُمِعَ ٱلسَّحَرَةُ لِمِيقَٰتِ يَوۡمٖ مَّعۡلُومٖ",
+      "en": "So the magicians were assembled for the appointment of a well-known day",
+      "path": "/audio/026/038.mp3",
+      "dir": "/audio/026",
+      "size": 30822
+    },
+    {
+      "id": 39,
+      "ar": "وَقِيلَ لِلنَّاسِ هَلۡ أَنتُم مُّجۡتَمِعُونَ",
+      "en": "And it was said to the people, \"Will you congregate",
+      "path": "/audio/026/039.mp3",
+      "dir": "/audio/026",
+      "size": 28340
+    },
+    {
+      "id": 40,
+      "ar": "لَعَلَّنَا نَتَّبِعُ ٱلسَّحَرَةَ إِن كَانُواْ هُمُ ٱلۡغَٰلِبِينَ",
+      "en": "That we might follow the magicians if they are the predominant",
+      "path": "/audio/026/040.mp3",
+      "dir": "/audio/026",
+      "size": 34609
+    },
+    {
+      "id": 41,
+      "ar": "فَلَمَّا جَآءَ ٱلسَّحَرَةُ قَالُواْ لِفِرۡعَوۡنَ أَئِنَّ لَنَا لَأَجۡرًا إِن كُنَّا نَحۡنُ ٱلۡغَٰلِبِينَ",
+      "en": "And when the magicians arrived, they said to Pharaoh, \"Is there indeed for us a reward if we are the predominant",
+      "path": "/audio/026/041.mp3",
+      "dir": "/audio/026",
+      "size": 60341
+    },
+    {
+      "id": 42,
+      "ar": "قَالَ نَعَمۡ وَإِنَّكُمۡ إِذٗا لَّمِنَ ٱلۡمُقَرَّبِينَ",
+      "en": "He said, \"Yes, and indeed, you will then be of those near [to me]",
+      "path": "/audio/026/042.mp3",
+      "dir": "/audio/026",
+      "size": 31867
+    },
+    {
+      "id": 43,
+      "ar": "قَالَ لَهُم مُّوسَىٰٓ أَلۡقُواْ مَآ أَنتُم مُّلۡقُونَ",
+      "en": "Moses said to them, \"Throw whatever you will throw",
+      "path": "/audio/026/043.mp3",
+      "dir": "/audio/026",
+      "size": 41662
+    },
+    {
+      "id": 44,
+      "ar": "فَأَلۡقَوۡاْ حِبَالَهُمۡ وَعِصِيَّهُمۡ وَقَالُواْ بِعِزَّةِ فِرۡعَوۡنَ إِنَّا لَنَحۡنُ ٱلۡغَٰلِبُونَ",
+      "en": "So they threw their ropes and their staffs and said, \"By the might of Pharaoh, indeed it is we who are predominant",
+      "path": "/audio/026/044.mp3",
+      "dir": "/audio/026",
+      "size": 48977
+    },
+    {
+      "id": 45,
+      "ar": "فَأَلۡقَىٰ مُوسَىٰ عَصَاهُ فَإِذَا هِيَ تَلۡقَفُ مَا يَأۡفِكُونَ",
+      "en": "Then Moses threw his staff, and at once it devoured what they falsified",
+      "path": "/audio/026/045.mp3",
+      "dir": "/audio/026",
+      "size": 37353
+    },
+    {
+      "id": 46,
+      "ar": "فَأُلۡقِيَ ٱلسَّحَرَةُ سَٰجِدِينَ",
+      "en": "So the magicians fell down in prostration [to Allah]",
+      "path": "/audio/026/046.mp3",
+      "dir": "/audio/026",
+      "size": 18675
+    },
+    {
+      "id": 47,
+      "ar": "قَالُوٓاْ ءَامَنَّا بِرَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "They said, \"We have believed in the Lord of the worlds",
+      "path": "/audio/026/047.mp3",
+      "dir": "/audio/026",
+      "size": 23638
+    },
+    {
+      "id": 48,
+      "ar": "رَبِّ مُوسَىٰ وَهَٰرُونَ",
+      "en": "The Lord of Moses and Aaron",
+      "path": "/audio/026/048.mp3",
+      "dir": "/audio/026",
+      "size": 15801
+    },
+    {
+      "id": 49,
+      "ar": "قَالَ ءَامَنتُمۡ لَهُۥ قَبۡلَ أَنۡ ءَاذَنَ لَكُمۡۖ إِنَّهُۥ لَكَبِيرُكُمُ ٱلَّذِي عَلَّمَكُمُ ٱلسِّحۡرَ فَلَسَوۡفَ تَعۡلَمُونَۚ لَأُقَطِّعَنَّ أَيۡدِيَكُمۡ وَأَرۡجُلَكُم مِّنۡ خِلَٰفٖ وَلَأُصَلِّبَنَّكُمۡ أَجۡمَعِينَ",
+      "en": "[Pharaoh] said, \"You believed Moses before I gave you permission. Indeed, he is your leader who has taught you magic, but you are going to know. I will surely cut off your hands and your feet on opposite sides, and I will surely crucify you all",
+      "path": "/audio/026/049.mp3",
+      "dir": "/audio/026",
+      "size": 119247
+    },
+    {
+      "id": 50,
+      "ar": "قَالُواْ لَا ضَيۡرَۖ إِنَّآ إِلَىٰ رَبِّنَا مُنقَلِبُونَ",
+      "en": "They said, \"No harm. Indeed, to our Lord we will return",
+      "path": "/audio/026/050.mp3",
+      "dir": "/audio/026",
+      "size": 45450
+    },
+    {
+      "id": 51,
+      "ar": "إِنَّا نَطۡمَعُ أَن يَغۡفِرَ لَنَا رَبُّنَا خَطَٰيَٰنَآ أَن كُنَّآ أَوَّلَ ٱلۡمُؤۡمِنِينَ",
+      "en": "Indeed, we aspire that our Lord will forgive us our sins because we were the first of the believers",
+      "path": "/audio/026/051.mp3",
+      "dir": "/audio/026",
+      "size": 61385
+    },
+    {
+      "id": 52,
+      "ar": "۞وَأَوۡحَيۡنَآ إِلَىٰ مُوسَىٰٓ أَنۡ أَسۡرِ بِعِبَادِيٓ إِنَّكُم مُّتَّبَعُونَ",
+      "en": "And We inspired to Moses, \"Travel by night with My servants; indeed, you will be pursued",
+      "path": "/audio/026/052.mp3",
+      "dir": "/audio/026",
+      "size": 51198
+    },
+    {
+      "id": 53,
+      "ar": "فَأَرۡسَلَ فِرۡعَوۡنُ فِي ٱلۡمَدَآئِنِ حَٰشِرِينَ",
+      "en": "Then Pharaoh sent among the cities gatherers",
+      "path": "/audio/026/053.mp3",
+      "dir": "/audio/026",
+      "size": 29646
+    },
+    {
+      "id": 54,
+      "ar": "إِنَّ هَـٰٓؤُلَآءِ لَشِرۡذِمَةٞ قَلِيلُونَ",
+      "en": "[And said], \"Indeed, those are but a small band",
+      "path": "/audio/026/054.mp3",
+      "dir": "/audio/026",
+      "size": 32128
+    },
+    {
+      "id": 55,
+      "ar": "وَإِنَّهُمۡ لَنَا لَغَآئِظُونَ",
+      "en": "And indeed, they are enraging us",
+      "path": "/audio/026/055.mp3",
+      "dir": "/audio/026",
+      "size": 26773
+    },
+    {
+      "id": 56,
+      "ar": "وَإِنَّا لَجَمِيعٌ حَٰذِرُونَ",
+      "en": "And indeed, we are a cautious society",
+      "path": "/audio/026/056.mp3",
+      "dir": "/audio/026",
+      "size": 21157
+    },
+    {
+      "id": 57,
+      "ar": "فَأَخۡرَجۡنَٰهُم مِّن جَنَّـٰتٖ وَعُيُونٖ",
+      "en": "So We removed them from gardens and springs",
+      "path": "/audio/026/057.mp3",
+      "dir": "/audio/026",
+      "size": 33303
+    },
+    {
+      "id": 58,
+      "ar": "وَكُنُوزٖ وَمَقَامٖ كَرِيمٖ",
+      "en": "And treasures and honorable station",
+      "path": "/audio/026/058.mp3",
+      "dir": "/audio/026",
+      "size": 24553
+    },
+    {
+      "id": 59,
+      "ar": "كَذَٰلِكَۖ وَأَوۡرَثۡنَٰهَا بَنِيٓ إِسۡرَـٰٓءِيلَ",
+      "en": "Thus. And We caused to inherit it the Children of Israel",
+      "path": "/audio/026/059.mp3",
+      "dir": "/audio/026",
+      "size": 33695
+    },
+    {
+      "id": 60,
+      "ar": "فَأَتۡبَعُوهُم مُّشۡرِقِينَ",
+      "en": "So they pursued them at sunrise",
+      "path": "/audio/026/060.mp3",
+      "dir": "/audio/026",
+      "size": 22332
+    },
+    {
+      "id": 61,
+      "ar": "فَلَمَّا تَرَـٰٓءَا ٱلۡجَمۡعَانِ قَالَ أَصۡحَٰبُ مُوسَىٰٓ إِنَّا لَمُدۡرَكُونَ",
+      "en": "And when the two companies saw one another, the companions of Moses said, \"Indeed, we are to be overtaken",
+      "path": "/audio/026/061.mp3",
+      "dir": "/audio/026",
+      "size": 49630
+    },
+    {
+      "id": 62,
+      "ar": "قَالَ كَلَّآۖ إِنَّ مَعِيَ رَبِّي سَيَهۡدِينِ",
+      "en": "[Moses] said, \"No! Indeed, with me is my Lord; He will guide me",
+      "path": "/audio/026/062.mp3",
+      "dir": "/audio/026",
+      "size": 37353
+    },
+    {
+      "id": 63,
+      "ar": "فَأَوۡحَيۡنَآ إِلَىٰ مُوسَىٰٓ أَنِ ٱضۡرِب بِّعَصَاكَ ٱلۡبَحۡرَۖ فَٱنفَلَقَ فَكَانَ كُلُّ فِرۡقٖ كَٱلطَّوۡدِ ٱلۡعَظِيمِ",
+      "en": "Then We inspired to Moses, \"Strike with your staff the sea,\" and it parted, and each portion was like a great towering mountain",
+      "path": "/audio/026/063.mp3",
+      "dir": "/audio/026",
+      "size": 70266
+    },
+    {
+      "id": 64,
+      "ar": "وَأَزۡلَفۡنَا ثَمَّ ٱلۡأٓخَرِينَ",
+      "en": "And We advanced thereto the pursuers",
+      "path": "/audio/026/064.mp3",
+      "dir": "/audio/026",
+      "size": 21810
+    },
+    {
+      "id": 65,
+      "ar": "وَأَنجَيۡنَا مُوسَىٰ وَمَن مَّعَهُۥٓ أَجۡمَعِينَ",
+      "en": "And We saved Moses and those with him, all together",
+      "path": "/audio/026/065.mp3",
+      "dir": "/audio/026",
+      "size": 34479
+    },
+    {
+      "id": 66,
+      "ar": "ثُمَّ أَغۡرَقۡنَا ٱلۡأٓخَرِينَ",
+      "en": "Then We drowned the others",
+      "path": "/audio/026/066.mp3",
+      "dir": "/audio/026",
+      "size": 20895
+    },
+    {
+      "id": 67,
+      "ar": "إِنَّ فِي ذَٰلِكَ لَأٓيَةٗۖ وَمَا كَانَ أَكۡثَرُهُم مُّؤۡمِنِينَ",
+      "en": "Indeed in that is a sign, but most of them were not to be believers",
+      "path": "/audio/026/067.mp3",
+      "dir": "/audio/026",
+      "size": 38659
+    },
+    {
+      "id": 68,
+      "ar": "وَإِنَّ رَبَّكَ لَهُوَ ٱلۡعَزِيزُ ٱلرَّحِيمُ",
+      "en": "And indeed, your Lord - He is the Exalted in Might, the Merciful",
+      "path": "/audio/026/068.mp3",
+      "dir": "/audio/026",
+      "size": 25336
+    },
+    {
+      "id": 69,
+      "ar": "وَٱتۡلُ عَلَيۡهِمۡ نَبَأَ إِبۡرَٰهِيمَ",
+      "en": "And recite to them the news of Abraham",
+      "path": "/audio/026/069.mp3",
+      "dir": "/audio/026",
+      "size": 19851
+    },
+    {
+      "id": 70,
+      "ar": "إِذۡ قَالَ لِأَبِيهِ وَقَوۡمِهِۦ مَا تَعۡبُدُونَ",
+      "en": "When he said to his father and his people, \"What do you worship",
+      "path": "/audio/026/070.mp3",
+      "dir": "/audio/026",
+      "size": 25336
+    },
+    {
+      "id": 71,
+      "ar": "قَالُواْ نَعۡبُدُ أَصۡنَامٗا فَنَظَلُّ لَهَا عَٰكِفِينَ",
+      "en": "They said, \"We worship idols and remain to them devoted",
+      "path": "/audio/026/071.mp3",
+      "dir": "/audio/026",
+      "size": 31605
+    },
+    {
+      "id": 72,
+      "ar": "قَالَ هَلۡ يَسۡمَعُونَكُمۡ إِذۡ تَدۡعُونَ",
+      "en": "He said, \"Do they hear you when you supplicate",
+      "path": "/audio/026/072.mp3",
+      "dir": "/audio/026",
+      "size": 22594
+    },
+    {
+      "id": 73,
+      "ar": "أَوۡ يَنفَعُونَكُمۡ أَوۡ يَضُرُّونَ",
+      "en": "Or do they benefit you, or do they harm",
+      "path": "/audio/026/073.mp3",
+      "dir": "/audio/026",
+      "size": 21940
+    },
+    {
+      "id": 74,
+      "ar": "قَالُواْ بَلۡ وَجَدۡنَآ ءَابَآءَنَا كَذَٰلِكَ يَفۡعَلُونَ",
+      "en": "They said, \"But we found our fathers doing thus",
+      "path": "/audio/026/074.mp3",
+      "dir": "/audio/026",
+      "size": 39050
+    },
+    {
+      "id": 75,
+      "ar": "قَالَ أَفَرَءَيۡتُم مَّا كُنتُمۡ تَعۡبُدُونَ",
+      "en": "He said, \"Then do you see what you have been worshipping",
+      "path": "/audio/026/075.mp3",
+      "dir": "/audio/026",
+      "size": 29647
+    },
+    {
+      "id": 76,
+      "ar": "أَنتُمۡ وَءَابَآؤُكُمُ ٱلۡأَقۡدَمُونَ",
+      "en": "You and your ancient forefathers",
+      "path": "/audio/026/076.mp3",
+      "dir": "/audio/026",
+      "size": 25205
+    },
+    {
+      "id": 77,
+      "ar": "فَإِنَّهُمۡ عَدُوّٞ لِّيٓ إِلَّا رَبَّ ٱلۡعَٰلَمِينَ",
+      "en": "Indeed, they are enemies to me, except the Lord of the worlds",
+      "path": "/audio/026/077.mp3",
+      "dir": "/audio/026",
+      "size": 38920
+    },
+    {
+      "id": 78,
+      "ar": "ٱلَّذِي خَلَقَنِي فَهُوَ يَهۡدِينِ",
+      "en": "Who created me, and He [it is who] guides me",
+      "path": "/audio/026/078.mp3",
+      "dir": "/audio/026",
+      "size": 23508
+    },
+    {
+      "id": 79,
+      "ar": "وَٱلَّذِي هُوَ يُطۡعِمُنِي وَيَسۡقِينِ",
+      "en": "And it is He who feeds me and gives me drink",
+      "path": "/audio/026/079.mp3",
+      "dir": "/audio/026",
+      "size": 25075
+    },
+    {
+      "id": 80,
+      "ar": "وَإِذَا مَرِضۡتُ فَهُوَ يَشۡفِينِ",
+      "en": "And when I am ill, it is He who cures me",
+      "path": "/audio/026/080.mp3",
+      "dir": "/audio/026",
+      "size": 22593
+    },
+    {
+      "id": 81,
+      "ar": "وَٱلَّذِي يُمِيتُنِي ثُمَّ يُحۡيِينِ",
+      "en": "And who will cause me to die and then bring me to life",
+      "path": "/audio/026/081.mp3",
+      "dir": "/audio/026",
+      "size": 25205
+    },
+    {
+      "id": 82,
+      "ar": "وَٱلَّذِيٓ أَطۡمَعُ أَن يَغۡفِرَ لِي خَطِيٓـَٔتِي يَوۡمَ ٱلدِّينِ",
+      "en": "And who I aspire that He will forgive me my sin on the Day of Recompense",
+      "path": "/audio/026/082.mp3",
+      "dir": "/audio/026",
+      "size": 41533
+    },
+    {
+      "id": 83,
+      "ar": "رَبِّ هَبۡ لِي حُكۡمٗا وَأَلۡحِقۡنِي بِٱلصَّـٰلِحِينَ",
+      "en": "[And he said], \"My Lord, grant me authority and join me with the righteous",
+      "path": "/audio/026/083.mp3",
+      "dir": "/audio/026",
+      "size": 30560
+    },
+    {
+      "id": 84,
+      "ar": "وَٱجۡعَل لِّي لِسَانَ صِدۡقٖ فِي ٱلۡأٓخِرِينَ",
+      "en": "And grant me a reputation of honor among later generations",
+      "path": "/audio/026/084.mp3",
+      "dir": "/audio/026",
+      "size": 27034
+    },
+    {
+      "id": 85,
+      "ar": "وَٱجۡعَلۡنِي مِن وَرَثَةِ جَنَّةِ ٱلنَّعِيمِ",
+      "en": "And place me among the inheritors of the Garden of Pleasure",
+      "path": "/audio/026/085.mp3",
+      "dir": "/audio/026",
+      "size": 31867
+    },
+    {
+      "id": 86,
+      "ar": "وَٱغۡفِرۡ لِأَبِيٓ إِنَّهُۥ كَانَ مِنَ ٱلضَّآلِّينَ",
+      "en": "And forgive my father. Indeed, he has been of those astray",
+      "path": "/audio/026/086.mp3",
+      "dir": "/audio/026",
+      "size": 49238
+    },
+    {
+      "id": 87,
+      "ar": "وَلَا تُخۡزِنِي يَوۡمَ يُبۡعَثُونَ",
+      "en": "And do not disgrace me on the Day they are [all] resurrected",
+      "path": "/audio/026/087.mp3",
+      "dir": "/audio/026",
+      "size": 20504
+    },
+    {
+      "id": 88,
+      "ar": "يَوۡمَ لَا يَنفَعُ مَالٞ وَلَا بَنُونَ",
+      "en": "The Day when there will not benefit [anyone] wealth or children",
+      "path": "/audio/026/088.mp3",
+      "dir": "/audio/026",
+      "size": 25858
+    },
+    {
+      "id": 89,
+      "ar": "إِلَّا مَنۡ أَتَى ٱللَّهَ بِقَلۡبٖ سَلِيمٖ",
+      "en": "But only one who comes to Allah with a sound heart",
+      "path": "/audio/026/089.mp3",
+      "dir": "/audio/026",
+      "size": 24945
+    },
+    {
+      "id": 90,
+      "ar": "وَأُزۡلِفَتِ ٱلۡجَنَّةُ لِلۡمُتَّقِينَ",
+      "en": "And Paradise will be brought near [that Day] to the righteous",
+      "path": "/audio/026/090.mp3",
+      "dir": "/audio/026",
+      "size": 23507
+    },
+    {
+      "id": 91,
+      "ar": "وَبُرِّزَتِ ٱلۡجَحِيمُ لِلۡغَاوِينَ",
+      "en": "And Hellfire will be brought forth for the deviators",
+      "path": "/audio/026/091.mp3",
+      "dir": "/audio/026",
+      "size": 20504
+    },
+    {
+      "id": 92,
+      "ar": "وَقِيلَ لَهُمۡ أَيۡنَ مَا كُنتُمۡ تَعۡبُدُونَ",
+      "en": "And it will be said to them, \"Where are those you used to worship",
+      "path": "/audio/026/092.mp3",
+      "dir": "/audio/026",
+      "size": 26511
+    },
+    {
+      "id": 93,
+      "ar": "مِن دُونِ ٱللَّهِ هَلۡ يَنصُرُونَكُمۡ أَوۡ يَنتَصِرُونَ",
+      "en": "Other than Allah? Can they help you or help themselves",
+      "path": "/audio/026/093.mp3",
+      "dir": "/audio/026",
+      "size": 34741
+    },
+    {
+      "id": 94,
+      "ar": "فَكُبۡكِبُواْ فِيهَا هُمۡ وَٱلۡغَاوُۥنَ",
+      "en": "So they will be overturned into Hellfire, they and the deviators",
+      "path": "/audio/026/094.mp3",
+      "dir": "/audio/026",
+      "size": 23115
+    },
+    {
+      "id": 95,
+      "ar": "وَجُنُودُ إِبۡلِيسَ أَجۡمَعُونَ",
+      "en": "And the soldiers of Iblees, all together",
+      "path": "/audio/026/095.mp3",
+      "dir": "/audio/026",
+      "size": 18675
+    },
+    {
+      "id": 96,
+      "ar": "قَالُواْ وَهُمۡ فِيهَا يَخۡتَصِمُونَ",
+      "en": "They will say while they dispute therein",
+      "path": "/audio/026/096.mp3",
+      "dir": "/audio/026",
+      "size": 22724
+    },
+    {
+      "id": 97,
+      "ar": "تَٱللَّهِ إِن كُنَّا لَفِي ضَلَٰلٖ مُّبِينٍ",
+      "en": "By Allah, we were indeed in manifest error",
+      "path": "/audio/026/097.mp3",
+      "dir": "/audio/026",
+      "size": 34871
+    },
+    {
+      "id": 98,
+      "ar": "إِذۡ نُسَوِّيكُم بِرَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "When we equated you with the Lord of the worlds",
+      "path": "/audio/026/098.mp3",
+      "dir": "/audio/026",
+      "size": 24553
+    },
+    {
+      "id": 99,
+      "ar": "وَمَآ أَضَلَّنَآ إِلَّا ٱلۡمُجۡرِمُونَ",
+      "en": "And no one misguided us except the criminals",
+      "path": "/audio/026/099.mp3",
+      "dir": "/audio/026",
+      "size": 27164
+    },
+    {
+      "id": 100,
+      "ar": "فَمَا لَنَا مِن شَٰفِعِينَ",
+      "en": "So now we have no intercessors",
+      "path": "/audio/026/100.mp3",
+      "dir": "/audio/026",
+      "size": 18675
+    },
+    {
+      "id": 101,
+      "ar": "وَلَا صَدِيقٍ حَمِيمٖ",
+      "en": "And not a devoted friend",
+      "path": "/audio/026/101.mp3",
+      "dir": "/audio/026",
+      "size": 15932
+    },
+    {
+      "id": 102,
+      "ar": "فَلَوۡ أَنَّ لَنَا كَرَّةٗ فَنَكُونَ مِنَ ٱلۡمُؤۡمِنِينَ",
+      "en": "Then if we only had a return [to the world] and could be of the believers",
+      "path": "/audio/026/102.mp3",
+      "dir": "/audio/026",
+      "size": 32128
+    },
+    {
+      "id": 103,
+      "ar": "إِنَّ فِي ذَٰلِكَ لَأٓيَةٗۖ وَمَا كَانَ أَكۡثَرُهُم مُّؤۡمِنِينَ",
+      "en": "Indeed in that is a sign, but most of them were not to be believers",
+      "path": "/audio/026/103.mp3",
+      "dir": "/audio/026",
+      "size": 43230
+    },
+    {
+      "id": 104,
+      "ar": "وَإِنَّ رَبَّكَ لَهُوَ ٱلۡعَزِيزُ ٱلرَّحِيمُ",
+      "en": "And indeed, your Lord - He is the Exalted in Might, the Merciful",
+      "path": "/audio/026/104.mp3",
+      "dir": "/audio/026",
+      "size": 30953
+    },
+    {
+      "id": 105,
+      "ar": "كَذَّبَتۡ قَوۡمُ نُوحٍ ٱلۡمُرۡسَلِينَ",
+      "en": "The people of Noah denied the messengers",
+      "path": "/audio/026/105.mp3",
+      "dir": "/audio/026",
+      "size": 24291
+    },
+    {
+      "id": 106,
+      "ar": "إِذۡ قَالَ لَهُمۡ أَخُوهُمۡ نُوحٌ أَلَا تَتَّقُونَ",
+      "en": "When their brother Noah said to them, \"Will you not fear Allah",
+      "path": "/audio/026/106.mp3",
+      "dir": "/audio/026",
+      "size": 30169
+    },
+    {
+      "id": 107,
+      "ar": "إِنِّي لَكُمۡ رَسُولٌ أَمِينٞ",
+      "en": "Indeed, I am to you a trustworthy messenger",
+      "path": "/audio/026/107.mp3",
+      "dir": "/audio/026",
+      "size": 21548
+    },
+    {
+      "id": 108,
+      "ar": "فَٱتَّقُواْ ٱللَّهَ وَأَطِيعُونِ",
+      "en": "So fear Allah and obey me",
+      "path": "/audio/026/108.mp3",
+      "dir": "/audio/026",
+      "size": 18153
+    },
+    {
+      "id": 109,
+      "ar": "وَمَآ أَسۡـَٔلُكُمۡ عَلَيۡهِ مِنۡ أَجۡرٍۖ إِنۡ أَجۡرِيَ إِلَّا عَلَىٰ رَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "And I do not ask you for it any payment. My payment is only from the Lord of the worlds",
+      "path": "/audio/026/109.mp3",
+      "dir": "/audio/026",
+      "size": 44536
+    },
+    {
+      "id": 110,
+      "ar": "فَٱتَّقُواْ ٱللَّهَ وَأَطِيعُونِ",
+      "en": "So fear Allah and obey me",
+      "path": "/audio/026/110.mp3",
+      "dir": "/audio/026",
+      "size": 17630
+    },
+    {
+      "id": 111,
+      "ar": "۞قَالُوٓاْ أَنُؤۡمِنُ لَكَ وَٱتَّبَعَكَ ٱلۡأَرۡذَلُونَ",
+      "en": "They said, \"Should we believe you while you are followed by the lowest [class of people]",
+      "path": "/audio/026/111.mp3",
+      "dir": "/audio/026",
+      "size": 25075
+    },
+    {
+      "id": 112,
+      "ar": "قَالَ وَمَا عِلۡمِي بِمَا كَانُواْ يَعۡمَلُونَ",
+      "en": "He said, \"And what is my knowledge of what they used to do",
+      "path": "/audio/026/112.mp3",
+      "dir": "/audio/026",
+      "size": 23638
+    },
+    {
+      "id": 113,
+      "ar": "إِنۡ حِسَابُهُمۡ إِلَّا عَلَىٰ رَبِّيۖ لَوۡ تَشۡعُرُونَ",
+      "en": "Their account is only upon my Lord, if you [could] perceive",
+      "path": "/audio/026/113.mp3",
+      "dir": "/audio/026",
+      "size": 29254
+    },
+    {
+      "id": 114,
+      "ar": "وَمَآ أَنَا۠ بِطَارِدِ ٱلۡمُؤۡمِنِينَ",
+      "en": "And I am not one to drive away the believers",
+      "path": "/audio/026/114.mp3",
+      "dir": "/audio/026",
+      "size": 24553
+    },
+    {
+      "id": 115,
+      "ar": "إِنۡ أَنَا۠ إِلَّا نَذِيرٞ مُّبِينٞ",
+      "en": "I am only a clear warner",
+      "path": "/audio/026/115.mp3",
+      "dir": "/audio/026",
+      "size": 19067
+    },
+    {
+      "id": 116,
+      "ar": "قَالُواْ لَئِن لَّمۡ تَنتَهِ يَٰنُوحُ لَتَكُونَنَّ مِنَ ٱلۡمَرۡجُومِينَ",
+      "en": "They said, \"If you do not desist, O Noah, you will surely be of those who are stoned",
+      "path": "/audio/026/116.mp3",
+      "dir": "/audio/026",
+      "size": 38005
+    },
+    {
+      "id": 117,
+      "ar": "قَالَ رَبِّ إِنَّ قَوۡمِي كَذَّبُونِ",
+      "en": "He said, \"My Lord, indeed my people have denied me",
+      "path": "/audio/026/117.mp3",
+      "dir": "/audio/026",
+      "size": 23638
+    },
+    {
+      "id": 118,
+      "ar": "فَٱفۡتَحۡ بَيۡنِي وَبَيۡنَهُمۡ فَتۡحٗا وَنَجِّنِي وَمَن مَّعِيَ مِنَ ٱلۡمُؤۡمِنِينَ",
+      "en": "Then judge between me and them with decisive judgement and save me and those with me of the believers",
+      "path": "/audio/026/118.mp3",
+      "dir": "/audio/026",
+      "size": 42447
+    },
+    {
+      "id": 119,
+      "ar": "فَأَنجَيۡنَٰهُ وَمَن مَّعَهُۥ فِي ٱلۡفُلۡكِ ٱلۡمَشۡحُونِ",
+      "en": "So We saved him and those with him in the laden ship",
+      "path": "/audio/026/119.mp3",
+      "dir": "/audio/026",
+      "size": 37613
+    },
+    {
+      "id": 120,
+      "ar": "ثُمَّ أَغۡرَقۡنَا بَعۡدُ ٱلۡبَاقِينَ",
+      "en": "Then We drowned thereafter the remaining ones",
+      "path": "/audio/026/120.mp3",
+      "dir": "/audio/026",
+      "size": 21549
+    },
+    {
+      "id": 121,
+      "ar": "إِنَّ فِي ذَٰلِكَ لَأٓيَةٗۖ وَمَا كَانَ أَكۡثَرُهُم مُّؤۡمِنِينَ",
+      "en": "Indeed in that is a sign, but most of them were not to be believers",
+      "path": "/audio/026/121.mp3",
+      "dir": "/audio/026",
+      "size": 37483
+    },
+    {
+      "id": 122,
+      "ar": "وَإِنَّ رَبَّكَ لَهُوَ ٱلۡعَزِيزُ ٱلرَّحِيمُ",
+      "en": "And indeed, your Lord - He is the Exalted in Might, the Merciful",
+      "path": "/audio/026/122.mp3",
+      "dir": "/audio/026",
+      "size": 27165
+    },
+    {
+      "id": 123,
+      "ar": "كَذَّبَتۡ عَادٌ ٱلۡمُرۡسَلِينَ",
+      "en": "Aad denied the messengers",
+      "path": "/audio/026/123.mp3",
+      "dir": "/audio/026",
+      "size": 17369
+    },
+    {
+      "id": 124,
+      "ar": "إِذۡ قَالَ لَهُمۡ أَخُوهُمۡ هُودٌ أَلَا تَتَّقُونَ",
+      "en": "When their brother Hud said to them, \"Will you not fear Allah",
+      "path": "/audio/026/124.mp3",
+      "dir": "/audio/026",
+      "size": 28470
+    },
+    {
+      "id": 125,
+      "ar": "إِنِّي لَكُمۡ رَسُولٌ أَمِينٞ",
+      "en": "Indeed, I am to you a trustworthy messenger",
+      "path": "/audio/026/125.mp3",
+      "dir": "/audio/026",
+      "size": 19459
+    },
+    {
+      "id": 126,
+      "ar": "فَٱتَّقُواْ ٱللَّهَ وَأَطِيعُونِ",
+      "en": "So fear Allah and obey me",
+      "path": "/audio/026/126.mp3",
+      "dir": "/audio/026",
+      "size": 17630
+    },
+    {
+      "id": 127,
+      "ar": "وَمَآ أَسۡـَٔلُكُمۡ عَلَيۡهِ مِنۡ أَجۡرٍۖ إِنۡ أَجۡرِيَ إِلَّا عَلَىٰ رَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "And I do not ask you for it any payment. My payment is only from the Lord of the worlds",
+      "path": "/audio/026/127.mp3",
+      "dir": "/audio/026",
+      "size": 43230
+    },
+    {
+      "id": 128,
+      "ar": "أَتَبۡنُونَ بِكُلِّ رِيعٍ ءَايَةٗ تَعۡبَثُونَ",
+      "en": "Do you construct on every elevation a sign, amusing yourselves",
+      "path": "/audio/026/128.mp3",
+      "dir": "/audio/026",
+      "size": 32128
+    },
+    {
+      "id": 129,
+      "ar": "وَتَتَّخِذُونَ مَصَانِعَ لَعَلَّكُمۡ تَخۡلُدُونَ",
+      "en": "And take for yourselves palaces and fortresses that you might abide eternally",
+      "path": "/audio/026/129.mp3",
+      "dir": "/audio/026",
+      "size": 25075
+    },
+    {
+      "id": 130,
+      "ar": "وَإِذَا بَطَشۡتُم بَطَشۡتُمۡ جَبَّارِينَ",
+      "en": "And when you strike, you strike as tyrants",
+      "path": "/audio/026/130.mp3",
+      "dir": "/audio/026",
+      "size": 22593
+    },
+    {
+      "id": 131,
+      "ar": "فَٱتَّقُواْ ٱللَّهَ وَأَطِيعُونِ",
+      "en": "So fear Allah and obey me",
+      "path": "/audio/026/131.mp3",
+      "dir": "/audio/026",
+      "size": 16063
+    },
+    {
+      "id": 132,
+      "ar": "وَٱتَّقُواْ ٱلَّذِيٓ أَمَدَّكُم بِمَا تَعۡلَمُونَ",
+      "en": "And fear He who provided you with that which you know",
+      "path": "/audio/026/132.mp3",
+      "dir": "/audio/026",
+      "size": 32128
+    },
+    {
+      "id": 133,
+      "ar": "أَمَدَّكُم بِأَنۡعَٰمٖ وَبَنِينَ",
+      "en": "Provided you with grazing livestock and children",
+      "path": "/audio/026/133.mp3",
+      "dir": "/audio/026",
+      "size": 19720
+    },
+    {
+      "id": 134,
+      "ar": "وَجَنَّـٰتٖ وَعُيُونٍ",
+      "en": "And gardens and springs",
+      "path": "/audio/026/134.mp3",
+      "dir": "/audio/026",
+      "size": 23769
+    },
+    {
+      "id": 135,
+      "ar": "إِنِّيٓ أَخَافُ عَلَيۡكُمۡ عَذَابَ يَوۡمٍ عَظِيمٖ",
+      "en": "Indeed, I fear for you the punishment of a terrible day",
+      "path": "/audio/026/135.mp3",
+      "dir": "/audio/026",
+      "size": 32781
+    },
+    {
+      "id": 136,
+      "ar": "قَالُواْ سَوَآءٌ عَلَيۡنَآ أَوَعَظۡتَ أَمۡ لَمۡ تَكُن مِّنَ ٱلۡوَٰعِظِينَ",
+      "en": "They said, \"It is all the same to us whether you advise or are not of the advisors",
+      "path": "/audio/026/136.mp3",
+      "dir": "/audio/026",
+      "size": 46103
+    },
+    {
+      "id": 137,
+      "ar": "إِنۡ هَٰذَآ إِلَّا خُلُقُ ٱلۡأَوَّلِينَ",
+      "en": "This is not but the custom of the former peoples",
+      "path": "/audio/026/137.mp3",
+      "dir": "/audio/026",
+      "size": 25989
+    },
+    {
+      "id": 138,
+      "ar": "وَمَا نَحۡنُ بِمُعَذَّبِينَ",
+      "en": "And we are not to be punished",
+      "path": "/audio/026/138.mp3",
+      "dir": "/audio/026",
+      "size": 15149
+    },
+    {
+      "id": 139,
+      "ar": "فَكَذَّبُوهُ فَأَهۡلَكۡنَٰهُمۡۚ إِنَّ فِي ذَٰلِكَ لَأٓيَةٗۖ وَمَا كَانَ أَكۡثَرُهُم مُّؤۡمِنِينَ",
+      "en": "And they denied him, so We destroyed them. Indeed in that is a sign, but most of them were not to be believers",
+      "path": "/audio/026/139.mp3",
+      "dir": "/audio/026",
+      "size": 52112
+    },
+    {
+      "id": 140,
+      "ar": "وَإِنَّ رَبَّكَ لَهُوَ ٱلۡعَزِيزُ ٱلرَّحِيمُ",
+      "en": "And indeed, your Lord - He is the Exalted in Might, the Merciful",
+      "path": "/audio/026/140.mp3",
+      "dir": "/audio/026",
+      "size": 25728
+    },
+    {
+      "id": 141,
+      "ar": "كَذَّبَتۡ ثَمُودُ ٱلۡمُرۡسَلِينَ",
+      "en": "Thamud denied the messengers",
+      "path": "/audio/026/141.mp3",
+      "dir": "/audio/026",
+      "size": 17499
+    },
+    {
+      "id": 142,
+      "ar": "إِذۡ قَالَ لَهُمۡ أَخُوهُمۡ صَٰلِحٌ أَلَا تَتَّقُونَ",
+      "en": "When their brother Salih said to them, \"Will you not fear Allah",
+      "path": "/audio/026/142.mp3",
+      "dir": "/audio/026",
+      "size": 27557
+    },
+    {
+      "id": 143,
+      "ar": "إِنِّي لَكُمۡ رَسُولٌ أَمِينٞ",
+      "en": "Indeed, I am to you a trustworthy messenger",
+      "path": "/audio/026/143.mp3",
+      "dir": "/audio/026",
+      "size": 19850
+    },
+    {
+      "id": 144,
+      "ar": "فَٱتَّقُواْ ٱللَّهَ وَأَطِيعُونِ",
+      "en": "So fear Allah and obey me",
+      "path": "/audio/026/144.mp3",
+      "dir": "/audio/026",
+      "size": 15671
+    },
+    {
+      "id": 145,
+      "ar": "وَمَآ أَسۡـَٔلُكُمۡ عَلَيۡهِ مِنۡ أَجۡرٍۖ إِنۡ أَجۡرِيَ إِلَّا عَلَىٰ رَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "And I do not ask you for it any payment. My payment is only from the Lord of the worlds",
+      "path": "/audio/026/145.mp3",
+      "dir": "/audio/026",
+      "size": 43099
+    },
+    {
+      "id": 146,
+      "ar": "أَتُتۡرَكُونَ فِي مَا هَٰهُنَآ ءَامِنِينَ",
+      "en": "Will you be left in what is here, secure [from death]",
+      "path": "/audio/026/146.mp3",
+      "dir": "/audio/026",
+      "size": 27949
+    },
+    {
+      "id": 147,
+      "ar": "فِي جَنَّـٰتٖ وَعُيُونٖ",
+      "en": "Within gardens and springs",
+      "path": "/audio/026/147.mp3",
+      "dir": "/audio/026",
+      "size": 17238
+    },
+    {
+      "id": 148,
+      "ar": "وَزُرُوعٖ وَنَخۡلٖ طَلۡعُهَا هَضِيمٞ",
+      "en": "And fields of crops and palm trees with softened fruit",
+      "path": "/audio/026/148.mp3",
+      "dir": "/audio/026",
+      "size": 25075
+    },
+    {
+      "id": 149,
+      "ar": "وَتَنۡحِتُونَ مِنَ ٱلۡجِبَالِ بُيُوتٗا فَٰرِهِينَ",
+      "en": "And you carve out of the mountains, homes, with skill",
+      "path": "/audio/026/149.mp3",
+      "dir": "/audio/026",
+      "size": 28863
+    },
+    {
+      "id": 150,
+      "ar": "فَٱتَّقُواْ ٱللَّهَ وَأَطِيعُونِ",
+      "en": "So fear Allah and obey me",
+      "path": "/audio/026/150.mp3",
+      "dir": "/audio/026",
+      "size": 15932
+    },
+    {
+      "id": 151,
+      "ar": "وَلَا تُطِيعُوٓاْ أَمۡرَ ٱلۡمُسۡرِفِينَ",
+      "en": "And do not obey the order of the transgressors",
+      "path": "/audio/026/151.mp3",
+      "dir": "/audio/026",
+      "size": 18283
+    },
+    {
+      "id": 152,
+      "ar": "ٱلَّذِينَ يُفۡسِدُونَ فِي ٱلۡأَرۡضِ وَلَا يُصۡلِحُونَ",
+      "en": "Who cause corruption in the land and do not amend",
+      "path": "/audio/026/152.mp3",
+      "dir": "/audio/026",
+      "size": 27164
+    },
+    {
+      "id": 153,
+      "ar": "قَالُوٓاْ إِنَّمَآ أَنتَ مِنَ ٱلۡمُسَحَّرِينَ",
+      "en": "They said, \"You are only of those affected by magic",
+      "path": "/audio/026/153.mp3",
+      "dir": "/audio/026",
+      "size": 29908
+    },
+    {
+      "id": 154,
+      "ar": "مَآ أَنتَ إِلَّا بَشَرٞ مِّثۡلُنَا فَأۡتِ بِـَٔايَةٍ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ",
+      "en": "You are but a man like ourselves, so bring a sign, if you should be of the truthful",
+      "path": "/audio/026/154.mp3",
+      "dir": "/audio/026",
+      "size": 48063
+    },
+    {
+      "id": 155,
+      "ar": "قَالَ هَٰذِهِۦ نَاقَةٞ لَّهَا شِرۡبٞ وَلَكُمۡ شِرۡبُ يَوۡمٖ مَّعۡلُومٖ",
+      "en": "He said, \"This is a she-camel. For her is a [time of] drink, and for you is a [time of] drink, [each] on a known day",
+      "path": "/audio/026/155.mp3",
+      "dir": "/audio/026",
+      "size": 44144
+    },
+    {
+      "id": 156,
+      "ar": "وَلَا تَمَسُّوهَا بِسُوٓءٖ فَيَأۡخُذَكُمۡ عَذَابُ يَوۡمٍ عَظِيمٖ",
+      "en": "And do not touch her with harm, lest you be seized by the punishment of a terrible day",
+      "path": "/audio/026/156.mp3",
+      "dir": "/audio/026",
+      "size": 37614
+    },
+    {
+      "id": 157,
+      "ar": "فَعَقَرُوهَا فَأَصۡبَحُواْ نَٰدِمِينَ",
+      "en": "But they hamstrung her and so became regretful",
+      "path": "/audio/026/157.mp3",
+      "dir": "/audio/026",
+      "size": 24422
+    },
+    {
+      "id": 158,
+      "ar": "فَأَخَذَهُمُ ٱلۡعَذَابُۚ إِنَّ فِي ذَٰلِكَ لَأٓيَةٗۖ وَمَا كَانَ أَكۡثَرُهُم مُّؤۡمِنِينَ",
+      "en": "And the punishment seized them. Indeed in that is a sign, but most of them were not to be believers",
+      "path": "/audio/026/158.mp3",
+      "dir": "/audio/026",
+      "size": 46626
+    },
+    {
+      "id": 159,
+      "ar": "وَإِنَّ رَبَّكَ لَهُوَ ٱلۡعَزِيزُ ٱلرَّحِيمُ",
+      "en": "And indeed, your Lord - He is the Exalted in Might, the Merciful",
+      "path": "/audio/026/159.mp3",
+      "dir": "/audio/026",
+      "size": 24291
+    },
+    {
+      "id": 160,
+      "ar": "كَذَّبَتۡ قَوۡمُ لُوطٍ ٱلۡمُرۡسَلِينَ",
+      "en": "The people of Lot denied the messengers",
+      "path": "/audio/026/160.mp3",
+      "dir": "/audio/026",
+      "size": 19458
+    },
+    {
+      "id": 161,
+      "ar": "إِذۡ قَالَ لَهُمۡ أَخُوهُمۡ لُوطٌ أَلَا تَتَّقُونَ",
+      "en": "When their brother Lot said to them, \"Will you not fear Allah",
+      "path": "/audio/026/161.mp3",
+      "dir": "/audio/026",
+      "size": 26904
+    },
+    {
+      "id": 162,
+      "ar": "إِنِّي لَكُمۡ رَسُولٌ أَمِينٞ",
+      "en": "Indeed, I am to you a trustworthy messenger",
+      "path": "/audio/026/162.mp3",
+      "dir": "/audio/026",
+      "size": 17761
+    },
+    {
+      "id": 163,
+      "ar": "فَٱتَّقُواْ ٱللَّهَ وَأَطِيعُونِ",
+      "en": "So fear Allah and obey me",
+      "path": "/audio/026/163.mp3",
+      "dir": "/audio/026",
+      "size": 16062
+    },
+    {
+      "id": 164,
+      "ar": "وَمَآ أَسۡـَٔلُكُمۡ عَلَيۡهِ مِنۡ أَجۡرٍۖ إِنۡ أَجۡرِيَ إِلَّا عَلَىٰ رَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "And I do not ask you for it any payment. My payment is only from the Lord of the worlds",
+      "path": "/audio/026/164.mp3",
+      "dir": "/audio/026",
+      "size": 42708
+    },
+    {
+      "id": 165,
+      "ar": "أَتَأۡتُونَ ٱلذُّكۡرَانَ مِنَ ٱلۡعَٰلَمِينَ",
+      "en": "Do you approach males among the worlds",
+      "path": "/audio/026/165.mp3",
+      "dir": "/audio/026",
+      "size": 21418
+    },
+    {
+      "id": 166,
+      "ar": "وَتَذَرُونَ مَا خَلَقَ لَكُمۡ رَبُّكُم مِّنۡ أَزۡوَٰجِكُمۚ بَلۡ أَنتُمۡ قَوۡمٌ عَادُونَ",
+      "en": "And leave what your Lord has created for you as mates? But you are a people transgressing",
+      "path": "/audio/026/166.mp3",
+      "dir": "/audio/026",
+      "size": 48193
+    },
+    {
+      "id": 167,
+      "ar": "قَالُواْ لَئِن لَّمۡ تَنتَهِ يَٰلُوطُ لَتَكُونَنَّ مِنَ ٱلۡمُخۡرَجِينَ",
+      "en": "They said, \"If you do not desist, O Lot, you will surely be of those evicted",
+      "path": "/audio/026/167.mp3",
+      "dir": "/audio/026",
+      "size": 36438
+    },
+    {
+      "id": 168,
+      "ar": "قَالَ إِنِّي لِعَمَلِكُم مِّنَ ٱلۡقَالِينَ",
+      "en": "He said, \"Indeed, I am, toward your deed, of those who detest [it]",
+      "path": "/audio/026/168.mp3",
+      "dir": "/audio/026",
+      "size": 24553
+    },
+    {
+      "id": 169,
+      "ar": "رَبِّ نَجِّنِي وَأَهۡلِي مِمَّا يَعۡمَلُونَ",
+      "en": "My Lord, save me and my family from [the consequence of] what they do",
+      "path": "/audio/026/169.mp3",
+      "dir": "/audio/026",
+      "size": 24422
+    },
+    {
+      "id": 170,
+      "ar": "فَنَجَّيۡنَٰهُ وَأَهۡلَهُۥٓ أَجۡمَعِينَ",
+      "en": "So We saved him and his family, all",
+      "path": "/audio/026/170.mp3",
+      "dir": "/audio/026",
+      "size": 23115
+    },
+    {
+      "id": 171,
+      "ar": "إِلَّا عَجُوزٗا فِي ٱلۡغَٰبِرِينَ",
+      "en": "Except an old woman among those who remained behind",
+      "path": "/audio/026/171.mp3",
+      "dir": "/audio/026",
+      "size": 20243
+    },
+    {
+      "id": 172,
+      "ar": "ثُمَّ دَمَّرۡنَا ٱلۡأٓخَرِينَ",
+      "en": "Then We destroyed the others",
+      "path": "/audio/026/172.mp3",
+      "dir": "/audio/026",
+      "size": 17891
+    },
+    {
+      "id": 173,
+      "ar": "وَأَمۡطَرۡنَا عَلَيۡهِم مَّطَرٗاۖ فَسَآءَ مَطَرُ ٱلۡمُنذَرِينَ",
+      "en": "And We rained upon them a rain [of stones], and evil was the rain of those who were warned",
+      "path": "/audio/026/173.mp3",
+      "dir": "/audio/026",
+      "size": 45189
+    },
+    {
+      "id": 174,
+      "ar": "إِنَّ فِي ذَٰلِكَ لَأٓيَةٗۖ وَمَا كَانَ أَكۡثَرُهُم مُّؤۡمِنِينَ",
+      "en": "Indeed in that is a sign, but most of them were not to be believers",
+      "path": "/audio/026/174.mp3",
+      "dir": "/audio/026",
+      "size": 38789
+    },
+    {
+      "id": 175,
+      "ar": "وَإِنَّ رَبَّكَ لَهُوَ ٱلۡعَزِيزُ ٱلرَّحِيمُ",
+      "en": "And indeed, your Lord - He is the Exalted in Might, the Merciful",
+      "path": "/audio/026/175.mp3",
+      "dir": "/audio/026",
+      "size": 30039
+    },
+    {
+      "id": 176,
+      "ar": "كَذَّبَ أَصۡحَٰبُ لۡـَٔيۡكَةِ ٱلۡمُرۡسَلِينَ",
+      "en": "The companions of the thicket denied the messengers",
+      "path": "/audio/026/176.mp3",
+      "dir": "/audio/026",
+      "size": 24552
+    },
+    {
+      "id": 177,
+      "ar": "إِذۡ قَالَ لَهُمۡ شُعَيۡبٌ أَلَا تَتَّقُونَ",
+      "en": "When Shu'ayb said to them, \"Will you not fear Allah",
+      "path": "/audio/026/177.mp3",
+      "dir": "/audio/026",
+      "size": 25597
+    },
+    {
+      "id": 178,
+      "ar": "إِنِّي لَكُمۡ رَسُولٌ أَمِينٞ",
+      "en": "Indeed, I am to you a trustworthy messenger",
+      "path": "/audio/026/178.mp3",
+      "dir": "/audio/026",
+      "size": 19328
+    },
+    {
+      "id": 179,
+      "ar": "فَٱتَّقُواْ ٱللَّهَ وَأَطِيعُونِ",
+      "en": "So fear Allah and obey me",
+      "path": "/audio/026/179.mp3",
+      "dir": "/audio/026",
+      "size": 16194
+    },
+    {
+      "id": 180,
+      "ar": "وَمَآ أَسۡـَٔلُكُمۡ عَلَيۡهِ مِنۡ أَجۡرٍۖ إِنۡ أَجۡرِيَ إِلَّا عَلَىٰ رَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "And I do not ask you for it any payment. My payment is only from the Lord of the worlds",
+      "path": "/audio/026/180.mp3",
+      "dir": "/audio/026",
+      "size": 46626
+    },
+    {
+      "id": 181,
+      "ar": "۞أَوۡفُواْ ٱلۡكَيۡلَ وَلَا تَكُونُواْ مِنَ ٱلۡمُخۡسِرِينَ",
+      "en": "Give full measure and do not be of those who cause loss",
+      "path": "/audio/026/181.mp3",
+      "dir": "/audio/026",
+      "size": 24814
+    },
+    {
+      "id": 182,
+      "ar": "وَزِنُواْ بِٱلۡقِسۡطَاسِ ٱلۡمُسۡتَقِيمِ",
+      "en": "And weigh with an even balance",
+      "path": "/audio/026/182.mp3",
+      "dir": "/audio/026",
+      "size": 20895
+    },
+    {
+      "id": 183,
+      "ar": "وَلَا تَبۡخَسُواْ ٱلنَّاسَ أَشۡيَآءَهُمۡ وَلَا تَعۡثَوۡاْ فِي ٱلۡأَرۡضِ مُفۡسِدِينَ",
+      "en": "And do not deprive people of their due and do not commit abuse on earth, spreading corruption",
+      "path": "/audio/026/183.mp3",
+      "dir": "/audio/026",
+      "size": 41140
+    },
+    {
+      "id": 184,
+      "ar": "وَٱتَّقُواْ ٱلَّذِي خَلَقَكُمۡ وَٱلۡجِبِلَّةَ ٱلۡأَوَّلِينَ",
+      "en": "And fear He who created you and the former creation",
+      "path": "/audio/026/184.mp3",
+      "dir": "/audio/026",
+      "size": 29647
+    },
+    {
+      "id": 185,
+      "ar": "قَالُوٓاْ إِنَّمَآ أَنتَ مِنَ ٱلۡمُسَحَّرِينَ",
+      "en": "They said, \"You are only of those affected by magic",
+      "path": "/audio/026/185.mp3",
+      "dir": "/audio/026",
+      "size": 34479
+    },
+    {
+      "id": 186,
+      "ar": "وَمَآ أَنتَ إِلَّا بَشَرٞ مِّثۡلُنَا وَإِن نَّظُنُّكَ لَمِنَ ٱلۡكَٰذِبِينَ",
+      "en": "You are but a man like ourselves, and indeed, we think you are among the liars",
+      "path": "/audio/026/186.mp3",
+      "dir": "/audio/026",
+      "size": 51458
+    },
+    {
+      "id": 187,
+      "ar": "فَأَسۡقِطۡ عَلَيۡنَا كِسَفٗا مِّنَ ٱلسَّمَآءِ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ",
+      "en": "So cause to fall upon us fragments of the sky, if you should be of the truthful",
+      "path": "/audio/026/187.mp3",
+      "dir": "/audio/026",
+      "size": 43622
+    },
+    {
+      "id": 188,
+      "ar": "قَالَ رَبِّيٓ أَعۡلَمُ بِمَا تَعۡمَلُونَ",
+      "en": "He said, \"My Lord is most knowing of what you do",
+      "path": "/audio/026/188.mp3",
+      "dir": "/audio/026",
+      "size": 25989
+    },
+    {
+      "id": 189,
+      "ar": "فَكَذَّبُوهُ فَأَخَذَهُمۡ عَذَابُ يَوۡمِ ٱلظُّلَّةِۚ إِنَّهُۥ كَانَ عَذَابَ يَوۡمٍ عَظِيمٍ",
+      "en": "And they denied him, so the punishment of the day of the black cloud seized them. Indeed, it was the punishment of a terrible day",
+      "path": "/audio/026/189.mp3",
+      "dir": "/audio/026",
+      "size": 48194
+    },
+    {
+      "id": 190,
+      "ar": "إِنَّ فِي ذَٰلِكَ لَأٓيَةٗۖ وَمَا كَانَ أَكۡثَرُهُم مُّؤۡمِنِينَ",
+      "en": "Indeed in that is a sign, but most of them were not to be believers",
+      "path": "/audio/026/190.mp3",
+      "dir": "/audio/026",
+      "size": 41532
+    },
+    {
+      "id": 191,
+      "ar": "وَإِنَّ رَبَّكَ لَهُوَ ٱلۡعَزِيزُ ٱلرَّحِيمُ",
+      "en": "And indeed, your Lord - He is the Exalted in Might, the Merciful",
+      "path": "/audio/026/191.mp3",
+      "dir": "/audio/026",
+      "size": 24422
+    },
+    {
+      "id": 192,
+      "ar": "وَإِنَّهُۥ لَتَنزِيلُ رَبِّ ٱلۡعَٰلَمِينَ",
+      "en": "And indeed, the Qur'an is the revelation of the Lord of the worlds",
+      "path": "/audio/026/192.mp3",
+      "dir": "/audio/026",
+      "size": 28079
+    },
+    {
+      "id": 193,
+      "ar": "نَزَلَ بِهِ ٱلرُّوحُ ٱلۡأَمِينُ",
+      "en": "The Trustworthy Spirit has brought it down",
+      "path": "/audio/026/193.mp3",
+      "dir": "/audio/026",
+      "size": 13711
+    },
+    {
+      "id": 194,
+      "ar": "عَلَىٰ قَلۡبِكَ لِتَكُونَ مِنَ ٱلۡمُنذِرِينَ",
+      "en": "Upon your heart, [O Muhammad] - that you may be of the warners",
+      "path": "/audio/026/194.mp3",
+      "dir": "/audio/026",
+      "size": 23377
+    },
+    {
+      "id": 195,
+      "ar": "بِلِسَانٍ عَرَبِيّٖ مُّبِينٖ",
+      "en": "In a clear Arabic language",
+      "path": "/audio/026/195.mp3",
+      "dir": "/audio/026",
+      "size": 22332
+    },
+    {
+      "id": 196,
+      "ar": "وَإِنَّهُۥ لَفِي زُبُرِ ٱلۡأَوَّلِينَ",
+      "en": "And indeed, it is [mentioned] in the scriptures of former peoples",
+      "path": "/audio/026/196.mp3",
+      "dir": "/audio/026",
+      "size": 21941
+    },
+    {
+      "id": 197,
+      "ar": "أَوَلَمۡ يَكُن لَّهُمۡ ءَايَةً أَن يَعۡلَمَهُۥ عُلَمَـٰٓؤُاْ بَنِيٓ إِسۡرَـٰٓءِيلَ",
+      "en": "And has it not been a sign to them that it is recognized by the scholars of the Children of Israel",
+      "path": "/audio/026/197.mp3",
+      "dir": "/audio/026",
+      "size": 52242
+    },
+    {
+      "id": 198,
+      "ar": "وَلَوۡ نَزَّلۡنَٰهُ عَلَىٰ بَعۡضِ ٱلۡأَعۡجَمِينَ",
+      "en": "And even if We had revealed it to one among the foreigners",
+      "path": "/audio/026/198.mp3",
+      "dir": "/audio/026",
+      "size": 24553
+    },
+    {
+      "id": 199,
+      "ar": "فَقَرَأَهُۥ عَلَيۡهِم مَّا كَانُواْ بِهِۦ مُؤۡمِنِينَ",
+      "en": "And he had recited it to them [perfectly], they would [still] not have been believers in it",
+      "path": "/audio/026/199.mp3",
+      "dir": "/audio/026",
+      "size": 29515
+    },
+    {
+      "id": 200,
+      "ar": "كَذَٰلِكَ سَلَكۡنَٰهُ فِي قُلُوبِ ٱلۡمُجۡرِمِينَ",
+      "en": "Thus have We inserted disbelief into the hearts of the criminals",
+      "path": "/audio/026/200.mp3",
+      "dir": "/audio/026",
+      "size": 25598
+    },
+    {
+      "id": 201,
+      "ar": "لَا يُؤۡمِنُونَ بِهِۦ حَتَّىٰ يَرَوُاْ ٱلۡعَذَابَ ٱلۡأَلِيمَ",
+      "en": "They will not believe in it until they see the painful punishment",
+      "path": "/audio/026/201.mp3",
+      "dir": "/audio/026",
+      "size": 30430
+    },
+    {
+      "id": 202,
+      "ar": "فَيَأۡتِيَهُم بَغۡتَةٗ وَهُمۡ لَا يَشۡعُرُونَ",
+      "en": "And it will come to them suddenly while they perceive [it] not",
+      "path": "/audio/026/202.mp3",
+      "dir": "/audio/026",
+      "size": 27034
+    },
+    {
+      "id": 203,
+      "ar": "فَيَقُولُواْ هَلۡ نَحۡنُ مُنظَرُونَ",
+      "en": "And they will say, \"May we be reprieved",
+      "path": "/audio/026/203.mp3",
+      "dir": "/audio/026",
+      "size": 19458
+    },
+    {
+      "id": 204,
+      "ar": "أَفَبِعَذَابِنَا يَسۡتَعۡجِلُونَ",
+      "en": "So for Our punishment are they impatient",
+      "path": "/audio/026/204.mp3",
+      "dir": "/audio/026",
+      "size": 22594
+    },
+    {
+      "id": 205,
+      "ar": "أَفَرَءَيۡتَ إِن مَّتَّعۡنَٰهُمۡ سِنِينَ",
+      "en": "Then have you considered if We gave them enjoyment for years",
+      "path": "/audio/026/205.mp3",
+      "dir": "/audio/026",
+      "size": 23507
+    },
+    {
+      "id": 206,
+      "ar": "ثُمَّ جَآءَهُم مَّا كَانُواْ يُوعَدُونَ",
+      "en": "And then there came to them that which they were promised",
+      "path": "/audio/026/206.mp3",
+      "dir": "/audio/026",
+      "size": 30692
+    },
+    {
+      "id": 207,
+      "ar": "مَآ أَغۡنَىٰ عَنۡهُم مَّا كَانُواْ يُمَتَّعُونَ",
+      "en": "They would not be availed by the enjoyment with which they were provided",
+      "path": "/audio/026/207.mp3",
+      "dir": "/audio/026",
+      "size": 32389
+    },
+    {
+      "id": 208,
+      "ar": "وَمَآ أَهۡلَكۡنَا مِن قَرۡيَةٍ إِلَّا لَهَا مُنذِرُونَ",
+      "en": "And We did not destroy any city except that it had warners",
+      "path": "/audio/026/208.mp3",
+      "dir": "/audio/026",
+      "size": 39050
+    },
+    {
+      "id": 209,
+      "ar": "ذِكۡرَىٰ وَمَا كُنَّا ظَٰلِمِينَ",
+      "en": "As a reminder; and never have We been unjust",
+      "path": "/audio/026/209.mp3",
+      "dir": "/audio/026",
+      "size": 20634
+    },
+    {
+      "id": 210,
+      "ar": "وَمَا تَنَزَّلَتۡ بِهِ ٱلشَّيَٰطِينُ",
+      "en": "And the devils have not brought the revelation down",
+      "path": "/audio/026/210.mp3",
+      "dir": "/audio/026",
+      "size": 17761
+    },
+    {
+      "id": 211,
+      "ar": "وَمَا يَنۢبَغِي لَهُمۡ وَمَا يَسۡتَطِيعُونَ",
+      "en": "It is not allowable for them, nor would they be able",
+      "path": "/audio/026/211.mp3",
+      "dir": "/audio/026",
+      "size": 23899
+    },
+    {
+      "id": 212,
+      "ar": "إِنَّهُمۡ عَنِ ٱلسَّمۡعِ لَمَعۡزُولُونَ",
+      "en": "Indeed they, from [its] hearing, are removed",
+      "path": "/audio/026/212.mp3",
+      "dir": "/audio/026",
+      "size": 22855
+    },
+    {
+      "id": 213,
+      "ar": "فَلَا تَدۡعُ مَعَ ٱللَّهِ إِلَٰهًا ءَاخَرَ فَتَكُونَ مِنَ ٱلۡمُعَذَّبِينَ",
+      "en": "So do not invoke with Allah another deity and [thus] be among the punished",
+      "path": "/audio/026/213.mp3",
+      "dir": "/audio/026",
+      "size": 35785
+    },
+    {
+      "id": 214,
+      "ar": "وَأَنذِرۡ عَشِيرَتَكَ ٱلۡأَقۡرَبِينَ",
+      "en": "And warn, [O Muhammad], your closest kindred",
+      "path": "/audio/026/214.mp3",
+      "dir": "/audio/026",
+      "size": 21418
+    },
+    {
+      "id": 215,
+      "ar": "وَٱخۡفِضۡ جَنَاحَكَ لِمَنِ ٱتَّبَعَكَ مِنَ ٱلۡمُؤۡمِنِينَ",
+      "en": "And lower your wing to those who follow you of the believers",
+      "path": "/audio/026/215.mp3",
+      "dir": "/audio/026",
+      "size": 26642
+    },
+    {
+      "id": 216,
+      "ar": "فَإِنۡ عَصَوۡكَ فَقُلۡ إِنِّي بَرِيٓءٞ مِّمَّا تَعۡمَلُونَ",
+      "en": "And if they disobey you, then say, \"Indeed, I am disassociated from what you are doing",
+      "path": "/audio/026/216.mp3",
+      "dir": "/audio/026",
+      "size": 38659
+    },
+    {
+      "id": 217,
+      "ar": "وَتَوَكَّلۡ عَلَى ٱلۡعَزِيزِ ٱلرَّحِيمِ",
+      "en": "And rely upon the Exalted in Might, the Merciful",
+      "path": "/audio/026/217.mp3",
+      "dir": "/audio/026",
+      "size": 19720
+    },
+    {
+      "id": 218,
+      "ar": "ٱلَّذِي يَرَىٰكَ حِينَ تَقُومُ",
+      "en": "Who sees you when you arise",
+      "path": "/audio/026/218.mp3",
+      "dir": "/audio/026",
+      "size": 16846
+    },
+    {
+      "id": 219,
+      "ar": "وَتَقَلُّبَكَ فِي ٱلسَّـٰجِدِينَ",
+      "en": "And your movement among those who prostrate",
+      "path": "/audio/026/219.mp3",
+      "dir": "/audio/026",
+      "size": 15932
+    },
+    {
+      "id": 220,
+      "ar": "إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلۡعَلِيمُ",
+      "en": "Indeed, He is the Hearing, the Knowing",
+      "path": "/audio/026/220.mp3",
+      "dir": "/audio/026",
+      "size": 18283
+    },
+    {
+      "id": 221,
+      "ar": "هَلۡ أُنَبِّئُكُمۡ عَلَىٰ مَن تَنَزَّلُ ٱلشَّيَٰطِينُ",
+      "en": "Shall I inform you upon whom the devils descend",
+      "path": "/audio/026/221.mp3",
+      "dir": "/audio/026",
+      "size": 30300
+    },
+    {
+      "id": 222,
+      "ar": "تَنَزَّلُ عَلَىٰ كُلِّ أَفَّاكٍ أَثِيمٖ",
+      "en": "They descend upon every sinful liar",
+      "path": "/audio/026/222.mp3",
+      "dir": "/audio/026",
+      "size": 22593
+    },
+    {
+      "id": 223,
+      "ar": "يُلۡقُونَ ٱلسَّمۡعَ وَأَكۡثَرُهُمۡ كَٰذِبُونَ",
+      "en": "They pass on what is heard, and most of them are liars",
+      "path": "/audio/026/223.mp3",
+      "dir": "/audio/026",
+      "size": 22201
+    },
+    {
+      "id": 224,
+      "ar": "وَٱلشُّعَرَآءُ يَتَّبِعُهُمُ ٱلۡغَاوُۥنَ",
+      "en": "And the poets - [only] the deviators follow them",
+      "path": "/audio/026/224.mp3",
+      "dir": "/audio/026",
+      "size": 27818
+    },
+    {
+      "id": 225,
+      "ar": "أَلَمۡ تَرَ أَنَّهُمۡ فِي كُلِّ وَادٖ يَهِيمُونَ",
+      "en": "Do you not see that in every valley they roam",
+      "path": "/audio/026/225.mp3",
+      "dir": "/audio/026",
+      "size": 27818
+    },
+    {
+      "id": 226,
+      "ar": "وَأَنَّهُمۡ يَقُولُونَ مَا لَا يَفۡعَلُونَ",
+      "en": "And that they say what they do not do",
+      "path": "/audio/026/226.mp3",
+      "dir": "/audio/026",
+      "size": 25336
+    },
+    {
+      "id": 227,
+      "ar": "إِلَّا ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّـٰلِحَٰتِ وَذَكَرُواْ ٱللَّهَ كَثِيرٗا وَٱنتَصَرُواْ مِنۢ بَعۡدِ مَا ظُلِمُواْۗ وَسَيَعۡلَمُ ٱلَّذِينَ ظَلَمُوٓاْ أَيَّ مُنقَلَبٖ يَنقَلِبُونَ",
+      "en": "Except those [poets] who believe and do righteous deeds and remember Allah often and defend [the Muslims] after they were wronged. And those who have wronged are going to know to what [kind of] return they will be returned",
+      "path": "/audio/026/227.mp3",
+      "dir": "/audio/026",
+      "size": 121075
+    }
+  ]
+}

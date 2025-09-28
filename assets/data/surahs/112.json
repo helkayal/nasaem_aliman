@@ -1,0 +1,37 @@
+{
+  "id": 112,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "قُلۡ هُوَ ٱللَّهُ أَحَدٌ",
+      "en": "Say, \"He is Allah, [who is] One",
+      "path": "/audio/112/001.mp3",
+      "dir": "/audio/112",
+      "size": 14887
+    },
+    {
+      "id": 2,
+      "ar": "ٱللَّهُ ٱلصَّمَدُ",
+      "en": "Allah, the Eternal Refuge",
+      "path": "/audio/112/002.mp3",
+      "dir": "/audio/112",
+      "size": 10577
+    },
+    {
+      "id": 3,
+      "ar": "لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ",
+      "en": "He neither begets nor is born",
+      "path": "/audio/112/003.mp3",
+      "dir": "/audio/112",
+      "size": 12536
+    },
+    {
+      "id": 4,
+      "ar": "وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ",
+      "en": "Nor is there to Him any equivalent",
+      "path": "/audio/112/004.mp3",
+      "dir": "/audio/112",
+      "size": 17108
+    }
+  ]
+}

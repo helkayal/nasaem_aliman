@@ -1,0 +1,237 @@
+{
+  "id": 81,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "إِذَا ٱلشَّمۡسُ كُوِّرَتۡ",
+      "en": "When the sun is wrapped up [in darkness]",
+      "path": "/audio/081/001.mp3",
+      "dir": "/audio/081",
+      "size": 10576
+    },
+    {
+      "id": 2,
+      "ar": "وَإِذَا ٱلنُّجُومُ ٱنكَدَرَتۡ",
+      "en": "And when the stars fall, dispersing",
+      "path": "/audio/081/002.mp3",
+      "dir": "/audio/081",
+      "size": 16847
+    },
+    {
+      "id": 3,
+      "ar": "وَإِذَا ٱلۡجِبَالُ سُيِّرَتۡ",
+      "en": "And when the mountains are removed",
+      "path": "/audio/081/003.mp3",
+      "dir": "/audio/081",
+      "size": 15671
+    },
+    {
+      "id": 4,
+      "ar": "وَإِذَا ٱلۡعِشَارُ عُطِّلَتۡ",
+      "en": "And when full-term she-camels are neglected",
+      "path": "/audio/081/004.mp3",
+      "dir": "/audio/081",
+      "size": 13973
+    },
+    {
+      "id": 5,
+      "ar": "وَإِذَا ٱلۡوُحُوشُ حُشِرَتۡ",
+      "en": "And when the wild beasts are gathered",
+      "path": "/audio/081/005.mp3",
+      "dir": "/audio/081",
+      "size": 12797
+    },
+    {
+      "id": 6,
+      "ar": "وَإِذَا ٱلۡبِحَارُ سُجِّرَتۡ",
+      "en": "And when the seas are filled with flame",
+      "path": "/audio/081/006.mp3",
+      "dir": "/audio/081",
+      "size": 13973
+    },
+    {
+      "id": 7,
+      "ar": "وَإِذَا ٱلنُّفُوسُ زُوِّجَتۡ",
+      "en": "And when the souls are paired",
+      "path": "/audio/081/007.mp3",
+      "dir": "/audio/081",
+      "size": 16846
+    },
+    {
+      "id": 8,
+      "ar": "وَإِذَا ٱلۡمَوۡءُۥدَةُ سُئِلَتۡ",
+      "en": "And when the girl [who was] buried alive is asked",
+      "path": "/audio/081/008.mp3",
+      "dir": "/audio/081",
+      "size": 15149
+    },
+    {
+      "id": 9,
+      "ar": "بِأَيِّ ذَنۢبٖ قُتِلَتۡ",
+      "en": "For what sin she was killed",
+      "path": "/audio/081/009.mp3",
+      "dir": "/audio/081",
+      "size": 18544
+    },
+    {
+      "id": 10,
+      "ar": "وَإِذَا ٱلصُّحُفُ نُشِرَتۡ",
+      "en": "And when the pages are made public",
+      "path": "/audio/081/010.mp3",
+      "dir": "/audio/081",
+      "size": 11491
+    },
+    {
+      "id": 11,
+      "ar": "وَإِذَا ٱلسَّمَآءُ كُشِطَتۡ",
+      "en": "And when the sky is stripped away",
+      "path": "/audio/081/011.mp3",
+      "dir": "/audio/081",
+      "size": 20243
+    },
+    {
+      "id": 12,
+      "ar": "وَإِذَا ٱلۡجَحِيمُ سُعِّرَتۡ",
+      "en": "And when Hellfire is set ablaze",
+      "path": "/audio/081/012.mp3",
+      "dir": "/audio/081",
+      "size": 14364
+    },
+    {
+      "id": 13,
+      "ar": "وَإِذَا ٱلۡجَنَّةُ أُزۡلِفَتۡ",
+      "en": "And when Paradise is brought near",
+      "path": "/audio/081/013.mp3",
+      "dir": "/audio/081",
+      "size": 17369
+    },
+    {
+      "id": 14,
+      "ar": "عَلِمَتۡ نَفۡسٞ مَّآ أَحۡضَرَتۡ",
+      "en": "A soul will [then] know what it has brought [with it]",
+      "path": "/audio/081/014.mp3",
+      "dir": "/audio/081",
+      "size": 29124
+    },
+    {
+      "id": 15,
+      "ar": "فَلَآ أُقۡسِمُ بِٱلۡخُنَّسِ",
+      "en": "So I swear by the retreating stars",
+      "path": "/audio/081/015.mp3",
+      "dir": "/audio/081",
+      "size": 24030
+    },
+    {
+      "id": 16,
+      "ar": "ٱلۡجَوَارِ ٱلۡكُنَّسِ",
+      "en": "Those that run [their courses] and disappear",
+      "path": "/audio/081/016.mp3",
+      "dir": "/audio/081",
+      "size": 13059
+    },
+    {
+      "id": 17,
+      "ar": "وَٱلَّيۡلِ إِذَا عَسۡعَسَ",
+      "en": "And by the night as it closes in",
+      "path": "/audio/081/017.mp3",
+      "dir": "/audio/081",
+      "size": 12666
+    },
+    {
+      "id": 18,
+      "ar": "وَٱلصُّبۡحِ إِذَا تَنَفَّسَ",
+      "en": "And by the dawn when it breathes",
+      "path": "/audio/081/018.mp3",
+      "dir": "/audio/081",
+      "size": 14626
+    },
+    {
+      "id": 19,
+      "ar": "إِنَّهُۥ لَقَوۡلُ رَسُولٖ كَرِيمٖ",
+      "en": "[That] indeed, the Qur'an is a word [conveyed by] a noble messenger",
+      "path": "/audio/081/019.mp3",
+      "dir": "/audio/081",
+      "size": 32259
+    },
+    {
+      "id": 20,
+      "ar": "ذِي قُوَّةٍ عِندَ ذِي ٱلۡعَرۡشِ مَكِينٖ",
+      "en": "[Who is] possessed of power and with the Owner of the Throne, secure [in position]",
+      "path": "/audio/081/020.mp3",
+      "dir": "/audio/081",
+      "size": 25728
+    },
+    {
+      "id": 21,
+      "ar": "مُّطَاعٖ ثَمَّ أَمِينٖ",
+      "en": "Obeyed there [in the heavens] and trustworthy",
+      "path": "/audio/081/021.mp3",
+      "dir": "/audio/081",
+      "size": 24030
+    },
+    {
+      "id": 22,
+      "ar": "وَمَا صَاحِبُكُم بِمَجۡنُونٖ",
+      "en": "And your companion is not [at all] mad",
+      "path": "/audio/081/022.mp3",
+      "dir": "/audio/081",
+      "size": 20895
+    },
+    {
+      "id": 23,
+      "ar": "وَلَقَدۡ رَءَاهُ بِٱلۡأُفُقِ ٱلۡمُبِينِ",
+      "en": "And he has already seen Gabriel in the clear horizon",
+      "path": "/audio/081/023.mp3",
+      "dir": "/audio/081",
+      "size": 17630
+    },
+    {
+      "id": 24,
+      "ar": "وَمَا هُوَ عَلَى ٱلۡغَيۡبِ بِضَنِينٖ",
+      "en": "And Muhammad is not a withholder of [knowledge of] the unseen",
+      "path": "/audio/081/024.mp3",
+      "dir": "/audio/081",
+      "size": 22071
+    },
+    {
+      "id": 25,
+      "ar": "وَمَا هُوَ بِقَوۡلِ شَيۡطَٰنٖ رَّجِيمٖ",
+      "en": "And the Qur'an is not the word of a devil, expelled [from the heavens]",
+      "path": "/audio/081/025.mp3",
+      "dir": "/audio/081",
+      "size": 24814
+    },
+    {
+      "id": 26,
+      "ar": "فَأَيۡنَ تَذۡهَبُونَ",
+      "en": "So where are you going",
+      "path": "/audio/081/026.mp3",
+      "dir": "/audio/081",
+      "size": 15410
+    },
+    {
+      "id": 27,
+      "ar": "إِنۡ هُوَ إِلَّا ذِكۡرٞ لِّلۡعَٰلَمِينَ",
+      "en": "It is not except a reminder to the worlds",
+      "path": "/audio/081/027.mp3",
+      "dir": "/audio/081",
+      "size": 19719
+    },
+    {
+      "id": 28,
+      "ar": "لِمَن شَآءَ مِنكُمۡ أَن يَسۡتَقِيمَ",
+      "en": "For whoever wills among you to take a right course",
+      "path": "/audio/081/028.mp3",
+      "dir": "/audio/081",
+      "size": 42969
+    },
+    {
+      "id": 29,
+      "ar": "وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ رَبُّ ٱلۡعَٰلَمِينَ",
+      "en": "And you do not will except that Allah wills - Lord of the worlds",
+      "path": "/audio/081/029.mp3",
+      "dir": "/audio/081",
+      "size": 56161
+    }
+  ]
+}

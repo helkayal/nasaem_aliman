@@ -1,0 +1,53 @@
+{
+  "id": 114,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+      "en": "Say, \"I seek refuge in the Lord of mankind",
+      "path": "/audio/114/001.mp3",
+      "dir": "/audio/114",
+      "size": 19067
+    },
+    {
+      "id": 2,
+      "ar": "مَلِكِ ٱلنَّاسِ",
+      "en": "The Sovereign of mankind",
+      "path": "/audio/114/002.mp3",
+      "dir": "/audio/114",
+      "size": 10577
+    },
+    {
+      "id": 3,
+      "ar": "إِلَٰهِ ٱلنَّاسِ",
+      "en": "The God of mankind",
+      "path": "/audio/114/003.mp3",
+      "dir": "/audio/114",
+      "size": 17630
+    },
+    {
+      "id": 4,
+      "ar": "مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ",
+      "en": "From the evil of the retreating whisperer",
+      "path": "/audio/114/004.mp3",
+      "dir": "/audio/114",
+      "size": 35393
+    },
+    {
+      "id": 5,
+      "ar": "ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ",
+      "en": "Who whispers [evil] into the breasts of mankind",
+      "path": "/audio/114/005.mp3",
+      "dir": "/audio/114",
+      "size": 31083
+    },
+    {
+      "id": 6,
+      "ar": "مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ",
+      "en": "From among the jinn and mankind",
+      "path": "/audio/114/006.mp3",
+      "dir": "/audio/114",
+      "size": 31475
+    }
+  ]
+}

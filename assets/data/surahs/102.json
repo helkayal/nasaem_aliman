@@ -1,0 +1,69 @@
+{
+  "id": 102,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "أَلۡهَىٰكُمُ ٱلتَّكَاثُرُ",
+      "en": "Competition in [worldly] increase diverts you",
+      "path": "/audio/102/001.mp3",
+      "dir": "/audio/102",
+      "size": 13842
+    },
+    {
+      "id": 2,
+      "ar": "حَتَّىٰ زُرۡتُمُ ٱلۡمَقَابِرَ",
+      "en": "Until you visit the graveyards",
+      "path": "/audio/102/002.mp3",
+      "dir": "/audio/102",
+      "size": 14496
+    },
+    {
+      "id": 3,
+      "ar": "كَلَّا سَوۡفَ تَعۡلَمُونَ",
+      "en": "No! You are going to know",
+      "path": "/audio/102/003.mp3",
+      "dir": "/audio/102",
+      "size": 14103
+    },
+    {
+      "id": 4,
+      "ar": "ثُمَّ كَلَّا سَوۡفَ تَعۡلَمُونَ",
+      "en": "Then no! You are going to know",
+      "path": "/audio/102/004.mp3",
+      "dir": "/audio/102",
+      "size": 25859
+    },
+    {
+      "id": 5,
+      "ar": "كَلَّا لَوۡ تَعۡلَمُونَ عِلۡمَ ٱلۡيَقِينِ",
+      "en": "No! If you only knew with knowledge of certainty",
+      "path": "/audio/102/005.mp3",
+      "dir": "/audio/102",
+      "size": 21156
+    },
+    {
+      "id": 6,
+      "ar": "لَتَرَوُنَّ ٱلۡجَحِيمَ",
+      "en": "You will surely see the Hellfire",
+      "path": "/audio/102/006.mp3",
+      "dir": "/audio/102",
+      "size": 22071
+    },
+    {
+      "id": 7,
+      "ar": "ثُمَّ لَتَرَوُنَّهَا عَيۡنَ ٱلۡيَقِينِ",
+      "en": "Then you will surely see it with the eye of certainty",
+      "path": "/audio/102/007.mp3",
+      "dir": "/audio/102",
+      "size": 33957
+    },
+    {
+      "id": 8,
+      "ar": "ثُمَّ لَتُسۡـَٔلُنَّ يَوۡمَئِذٍ عَنِ ٱلنَّعِيمِ",
+      "en": "Then you will surely be asked that Day about pleasure",
+      "path": "/audio/102/008.mp3",
+      "dir": "/audio/102",
+      "size": 42185
+    }
+  ]
+}

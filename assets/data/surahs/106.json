@@ -1,0 +1,37 @@
+{
+  "id": 106,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "لِإِيلَٰفِ قُرَيۡشٍ",
+      "en": "For the accustomed security of the Quraysh",
+      "path": "/audio/106/001.mp3",
+      "dir": "/audio/106",
+      "size": 17499
+    },
+    {
+      "id": 2,
+      "ar": "إِۦلَٰفِهِمۡ رِحۡلَةَ ٱلشِّتَآءِ وَٱلصَّيۡفِ",
+      "en": "Their accustomed security [in] the caravan of winter and summer",
+      "path": "/audio/106/002.mp3",
+      "dir": "/audio/106",
+      "size": 31998
+    },
+    {
+      "id": 3,
+      "ar": "فَلۡيَعۡبُدُواْ رَبَّ هَٰذَا ٱلۡبَيۡتِ",
+      "en": "Let them worship the Lord of this House",
+      "path": "/audio/106/003.mp3",
+      "dir": "/audio/106",
+      "size": 23377
+    },
+    {
+      "id": 4,
+      "ar": "ٱلَّذِيٓ أَطۡعَمَهُم مِّن جُوعٖ وَءَامَنَهُم مِّنۡ خَوۡفِۭ",
+      "en": "Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear",
+      "path": "/audio/106/004.mp3",
+      "dir": "/audio/106",
+      "size": 49891
+    }
+  ]
+}

@@ -1,23 +1,27 @@
 // data/models/azkar_model.dart
 
-import '../../domain/entities/azkar_entity.dart';
+class AzkarModel {
+  final int id;
+  final String text;
+  final int count;
+  final String audio;
+  final String filename;
 
-class AzkarModel extends AzkarEntity {
   const AzkarModel({
-    required super.id,
-    required super.text,
-    required super.count,
-    required super.audio,
-    required super.filename,
+    required this.id,
+    required this.text,
+    required this.count,
+    required this.audio,
+    required this.filename,
   });
 
   factory AzkarModel.fromJson(Map<String, dynamic> json) {
     return AzkarModel(
-      id: json['id'],
-      text: json['text'],
-      count: json['count'],
-      audio: json['audio'] ?? "",
-      filename: json['filename'] ?? "",
+      id: json['id'] as int,
+      text: json['text'] as String,
+      count: (json['count'] as int?) ?? 1,
+      audio: (json['audio'] as String?) ?? '',
+      filename: (json['filename'] as String?) ?? '',
     );
   }
 }

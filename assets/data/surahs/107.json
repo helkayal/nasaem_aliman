@@ -1,0 +1,61 @@
+{
+  "id": 107,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "أَرَءَيۡتَ ٱلَّذِي يُكَذِّبُ بِٱلدِّينِ",
+      "en": "Have you seen the one who denies the Recompense",
+      "path": "/audio/107/001.mp3",
+      "dir": "/audio/107",
+      "size": 19720
+    },
+    {
+      "id": 2,
+      "ar": "فَذَٰلِكَ ٱلَّذِي يَدُعُّ ٱلۡيَتِيمَ",
+      "en": "For that is the one who drives away the orphan",
+      "path": "/audio/107/002.mp3",
+      "dir": "/audio/107",
+      "size": 27556
+    },
+    {
+      "id": 3,
+      "ar": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلۡمِسۡكِينِ",
+      "en": "And does not encourage the feeding of the poor",
+      "path": "/audio/107/003.mp3",
+      "dir": "/audio/107",
+      "size": 29777
+    },
+    {
+      "id": 4,
+      "ar": "فَوَيۡلٞ لِّلۡمُصَلِّينَ",
+      "en": "So woe to those who pray",
+      "path": "/audio/107/004.mp3",
+      "dir": "/audio/107",
+      "size": 21418
+    },
+    {
+      "id": 5,
+      "ar": "ٱلَّذِينَ هُمۡ عَن صَلَاتِهِمۡ سَاهُونَ",
+      "en": "[But] who are heedless of their prayer",
+      "path": "/audio/107/005.mp3",
+      "dir": "/audio/107",
+      "size": 34610
+    },
+    {
+      "id": 6,
+      "ar": "ٱلَّذِينَ هُمۡ يُرَآءُونَ",
+      "en": "Those who make show [of their deeds]",
+      "path": "/audio/107/006.mp3",
+      "dir": "/audio/107",
+      "size": 17630
+    },
+    {
+      "id": 7,
+      "ar": "وَيَمۡنَعُونَ ٱلۡمَاعُونَ",
+      "en": "And withhold [simple] assistance",
+      "path": "/audio/107/007.mp3",
+      "dir": "/audio/107",
+      "size": 18675
+    }
+  ]
+}

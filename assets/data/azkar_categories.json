@@ -1,0 +1,32 @@
+[
+  {
+    "category": "أذكار الصباح",
+    "id": 1,
+    "repeatable": true
+  },
+  {
+    "category": "أذكار المساء",
+    "id": 2,
+    "repeatable": true
+  },
+  {
+    "category": "أذكار النوم ",
+    "id": 3,
+    "repeatable": false
+  },
+  {
+    "category": "أذكار الإستيقاظ من النوم",
+    "id": 4,
+    "repeatable": false
+  },
+  {
+    "category": "أذكار الأذان",
+    "id": 5,
+    "repeatable": false
+  },
+  {
+    "category": "أذكار متفرقة",
+    "id": 7,
+    "repeatable": false
+  }
+]

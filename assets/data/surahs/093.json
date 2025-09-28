@@ -1,0 +1,93 @@
+{
+  "id": 93,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "وَٱلضُّحَىٰ",
+      "en": "By the morning brightness",
+      "path": "/audio/093/001.mp3",
+      "dir": "/audio/093",
+      "size": 6528
+    },
+    {
+      "id": 2,
+      "ar": "وَٱلَّيۡلِ إِذَا سَجَىٰ",
+      "en": "And [by] the night when it covers with darkness",
+      "path": "/audio/093/002.mp3",
+      "dir": "/audio/093",
+      "size": 15149
+    },
+    {
+      "id": 3,
+      "ar": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+      "en": "Your Lord has not taken leave of you, [O Muhammad], nor has He detested [you]",
+      "path": "/audio/093/003.mp3",
+      "dir": "/audio/093",
+      "size": 19589
+    },
+    {
+      "id": 4,
+      "ar": "وَلَلۡأٓخِرَةُ خَيۡرٞ لَّكَ مِنَ ٱلۡأُولَىٰ",
+      "en": "And the Hereafter is better for you than the first [life]",
+      "path": "/audio/093/004.mp3",
+      "dir": "/audio/093",
+      "size": 23116
+    },
+    {
+      "id": 5,
+      "ar": "وَلَسَوۡفَ يُعۡطِيكَ رَبُّكَ فَتَرۡضَىٰٓ",
+      "en": "And your Lord is going to give you, and you will be satisfied",
+      "path": "/audio/093/005.mp3",
+      "dir": "/audio/093",
+      "size": 23116
+    },
+    {
+      "id": 6,
+      "ar": "أَلَمۡ يَجِدۡكَ يَتِيمٗا فَـَٔاوَىٰ",
+      "en": "Did He not find you an orphan and give [you] refuge",
+      "path": "/audio/093/006.mp3",
+      "dir": "/audio/093",
+      "size": 23115
+    },
+    {
+      "id": 7,
+      "ar": "وَوَجَدَكَ ضَآلّٗا فَهَدَىٰ",
+      "en": "And He found you lost and guided [you]",
+      "path": "/audio/093/007.mp3",
+      "dir": "/audio/093",
+      "size": 30300
+    },
+    {
+      "id": 8,
+      "ar": "وَوَجَدَكَ عَآئِلٗا فَأَغۡنَىٰ",
+      "en": "And He found you poor and made [you] self-sufficient",
+      "path": "/audio/093/008.mp3",
+      "dir": "/audio/093",
+      "size": 26903
+    },
+    {
+      "id": 9,
+      "ar": "فَأَمَّا ٱلۡيَتِيمَ فَلَا تَقۡهَرۡ",
+      "en": "So as for the orphan, do not oppress [him]",
+      "path": "/audio/093/009.mp3",
+      "dir": "/audio/093",
+      "size": 21026
+    },
+    {
+      "id": 10,
+      "ar": "وَأَمَّا ٱلسَّآئِلَ فَلَا تَنۡهَرۡ",
+      "en": "And as for the petitioner, do not repel [him]",
+      "path": "/audio/093/010.mp3",
+      "dir": "/audio/093",
+      "size": 24553
+    },
+    {
+      "id": 11,
+      "ar": "وَأَمَّا بِنِعۡمَةِ رَبِّكَ فَحَدِّثۡ",
+      "en": "But as for the favor of your Lord, report [it]",
+      "path": "/audio/093/011.mp3",
+      "dir": "/audio/093",
+      "size": 24683
+    }
+  ]
+}

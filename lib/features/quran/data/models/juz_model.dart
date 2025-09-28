@@ -1,13 +1,12 @@
 // data/models/juz_model.dart
-import '../../domain/entities/juz.dart';
 import '../../domain/entities/surah_range.dart';
 
-class JuzModel extends JuzEntity {
-  JuzModel({
-    required super.id,
-    required super.name,
-    required super.surahRanges,
-  });
+class JuzModel {
+  final int id;
+  final String name;
+  final List<SurahRangeEntity> surahRanges;
+
+  JuzModel({required this.id, required this.name, required this.surahRanges});
 
   factory JuzModel.fromJson(Map<String, dynamic> json) {
     return JuzModel(
@@ -18,8 +17,8 @@ class JuzModel extends JuzEntity {
             (s) => SurahRangeEntity(
               surahId: s['sura'] as int,
               surahName: s['sura_name'] as String,
-              startAyah: s['aya'][0] as int,
-              endAyah: s['aya'][1] as int,
+              startAyah: (s['aya'] as List)[0] as int,
+              endAyah: (s['aya'] as List)[1] as int,
             ),
           )
           .toList(),

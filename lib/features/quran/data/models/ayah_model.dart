@@ -1,19 +1,23 @@
-import '../../domain/entities/ayah.dart';
+class AyahModel {
+  final int id; // ayah id within surah (1..N)
+  final int surahId; // parent surah id
+  final int number; // same as id
+  final String text; // Arabic text (from 'ar')
 
-class AyahModel extends AyahEntity {
   AyahModel({
-    required super.id,
-    required super.surahId,
-    required super.number,
-    required super.text,
+    required this.id,
+    required this.surahId,
+    required this.number,
+    required this.text,
   });
 
   factory AyahModel.fromJson(Map<String, dynamic> json, int surahId) {
+    final id = json['id'] as int;
     return AyahModel(
-      id: json['id'] as int,
+      id: id,
       surahId: surahId,
-      number: json['id'] as int,
-      text: json['ar'] as String,
+      number: id,
+      text: (json['ar'] as String?) ?? (json['text'] as String? ?? ''),
     );
   }
 }

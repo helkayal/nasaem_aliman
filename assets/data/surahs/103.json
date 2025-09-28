@@ -1,0 +1,29 @@
+{
+  "id": 103,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "وَٱلۡعَصۡرِ",
+      "en": "By time",
+      "path": "/audio/103/001.mp3",
+      "dir": "/audio/103",
+      "size": 5745
+    },
+    {
+      "id": 2,
+      "ar": "إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ",
+      "en": "Indeed, mankind is in loss",
+      "path": "/audio/103/002.mp3",
+      "dir": "/audio/103",
+      "size": 23115
+    },
+    {
+      "id": 3,
+      "ar": "إِلَّا ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّـٰلِحَٰتِ وَتَوَاصَوۡاْ بِٱلۡحَقِّ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ",
+      "en": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience",
+      "path": "/audio/103/003.mp3",
+      "dir": "/audio/103",
+      "size": 47932
+    }
+  ]
+}

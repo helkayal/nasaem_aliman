@@ -1,24 +1,40 @@
 // data/models/azkar_category_model.dart
+// Decoupled pure data model (no inheritance from entity)
 
-import '../../domain/entities/azkar_category_entiti.dart';
 import 'azkar_models.dart';
 
-class AzkarCategoryModel extends AzkarCategoryEntity {
+class AzkarCategoryModel {
+  final int id;
+  final String category;
+  final bool repeatable;
+  final List<AzkarModel>
+  azkar; // may be empty when first created from categories list
+
   const AzkarCategoryModel({
-    required super.id,
-    required super.category,
-    required super.repeatable,
-    required super.azkar,
+    required this.id,
+    required this.category,
+    required this.repeatable,
+    required this.azkar,
   });
 
+  // Factory for the categories master list (no embedded azkar list there)
   factory AzkarCategoryModel.fromJson(Map<String, dynamic> json) {
     return AzkarCategoryModel(
-      id: json['id'],
-      category: json['category'],
-      repeatable: json['repeatable'],
-      azkar: (json['azkar'] as List)
-          .map((a) => AzkarModel.fromJson(a))
-          .toList(),
+      id: json['id'] as int,
+      category: json['category'] as String,
+      repeatable: json['repeatable'] as bool,
+      azkar: (json['azkar'] is List)
+          ? (json['azkar'] as List)
+                .map((e) => AzkarModel.fromJson(e as Map<String, dynamic>))
+                .toList()
+          : const [],
     );
   }
+
+  AzkarCategoryModel copyWith({List<AzkarModel>? azkar}) => AzkarCategoryModel(
+    id: id,
+    category: category,
+    repeatable: repeatable,
+    azkar: azkar ?? this.azkar,
+  );
 }

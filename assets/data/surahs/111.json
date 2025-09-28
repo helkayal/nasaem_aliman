@@ -1,0 +1,45 @@
+{
+  "id": 111,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "تَبَّتۡ يَدَآ أَبِي لَهَبٖ وَتَبَّ",
+      "en": "May the hands of Abu Lahab be ruined, and ruined is he",
+      "path": "/audio/111/001.mp3",
+      "dir": "/audio/111",
+      "size": 30169
+    },
+    {
+      "id": 2,
+      "ar": "مَآ أَغۡنَىٰ عَنۡهُ مَالُهُۥ وَمَا كَسَبَ",
+      "en": "His wealth will not avail him or that which he gained",
+      "path": "/audio/111/002.mp3",
+      "dir": "/audio/111",
+      "size": 27687
+    },
+    {
+      "id": 3,
+      "ar": "سَيَصۡلَىٰ نَارٗا ذَاتَ لَهَبٖ",
+      "en": "He will [enter to] burn in a Fire of [blazing] flame",
+      "path": "/audio/111/003.mp3",
+      "dir": "/audio/111",
+      "size": 20504
+    },
+    {
+      "id": 4,
+      "ar": "وَٱمۡرَأَتُهُۥ حَمَّالَةَ ٱلۡحَطَبِ",
+      "en": "And his wife [as well] - the carrier of firewood",
+      "path": "/audio/111/004.mp3",
+      "dir": "/audio/111",
+      "size": 24030
+    },
+    {
+      "id": 5,
+      "ar": "فِي جِيدِهَا حَبۡلٞ مِّن مَّسَدِۭ",
+      "en": "Around her neck is a rope of [twisted] fiber",
+      "path": "/audio/111/005.mp3",
+      "dir": "/audio/111",
+      "size": 24160
+    }
+  ]
+}

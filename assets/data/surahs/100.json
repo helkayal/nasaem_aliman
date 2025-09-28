@@ -1,0 +1,93 @@
+{
+  "id": 100,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "وَٱلۡعَٰدِيَٰتِ ضَبۡحٗا",
+      "en": "By the racers, panting",
+      "path": "/audio/100/001.mp3",
+      "dir": "/audio/100",
+      "size": 17630
+    },
+    {
+      "id": 2,
+      "ar": "فَٱلۡمُورِيَٰتِ قَدۡحٗا",
+      "en": "And the producers of sparks [when] striking",
+      "path": "/audio/100/002.mp3",
+      "dir": "/audio/100",
+      "size": 14887
+    },
+    {
+      "id": 3,
+      "ar": "فَٱلۡمُغِيرَٰتِ صُبۡحٗا",
+      "en": "And the chargers at dawn",
+      "path": "/audio/100/003.mp3",
+      "dir": "/audio/100",
+      "size": 14365
+    },
+    {
+      "id": 4,
+      "ar": "فَأَثَرۡنَ بِهِۦ نَقۡعٗا",
+      "en": "Stirring up thereby [clouds of] dust",
+      "path": "/audio/100/004.mp3",
+      "dir": "/audio/100",
+      "size": 17630
+    },
+    {
+      "id": 5,
+      "ar": "فَوَسَطۡنَ بِهِۦ جَمۡعًا",
+      "en": "Arriving thereby in the center collectively",
+      "path": "/audio/100/005.mp3",
+      "dir": "/audio/100",
+      "size": 13973
+    },
+    {
+      "id": 6,
+      "ar": "إِنَّ ٱلۡإِنسَٰنَ لِرَبِّهِۦ لَكَنُودٞ",
+      "en": "Indeed mankind, to his Lord, is ungrateful",
+      "path": "/audio/100/006.mp3",
+      "dir": "/audio/100",
+      "size": 37744
+    },
+    {
+      "id": 7,
+      "ar": "وَإِنَّهُۥ عَلَىٰ ذَٰلِكَ لَشَهِيدٞ",
+      "en": "And indeed, he is to that a witness",
+      "path": "/audio/100/007.mp3",
+      "dir": "/audio/100",
+      "size": 21679
+    },
+    {
+      "id": 8,
+      "ar": "وَإِنَّهُۥ لِحُبِّ ٱلۡخَيۡرِ لَشَدِيدٌ",
+      "en": "And indeed he is, in love of wealth, intense",
+      "path": "/audio/100/008.mp3",
+      "dir": "/audio/100",
+      "size": 30300
+    },
+    {
+      "id": 9,
+      "ar": "۞أَفَلَا يَعۡلَمُ إِذَا بُعۡثِرَ مَا فِي ٱلۡقُبُورِ",
+      "en": "But does he not know that when the contents of the graves are scattered",
+      "path": "/audio/100/009.mp3",
+      "dir": "/audio/100",
+      "size": 24291
+    },
+    {
+      "id": 10,
+      "ar": "وَحُصِّلَ مَا فِي ٱلصُّدُورِ",
+      "en": "And that within the breasts is obtained",
+      "path": "/audio/100/010.mp3",
+      "dir": "/audio/100",
+      "size": 19067
+    },
+    {
+      "id": 11,
+      "ar": "إِنَّ رَبَّهُم بِهِمۡ يَوۡمَئِذٖ لَّخَبِيرُۢ",
+      "en": "Indeed, their Lord with them, that Day, is [fully] Acquainted",
+      "path": "/audio/100/011.mp3",
+      "dir": "/audio/100",
+      "size": 42185
+    }
+  ]
+}

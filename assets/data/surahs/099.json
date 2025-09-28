@@ -1,0 +1,69 @@
+{
+  "id": 99,
+  "ayahs": [
+    {
+      "id": 1,
+      "ar": "إِذَا زُلۡزِلَتِ ٱلۡأَرۡضُ زِلۡزَالَهَا",
+      "en": "When the earth is shaken with its [final] earthquake",
+      "path": "/audio/099/001.mp3",
+      "dir": "/audio/099",
+      "size": 23769
+    },
+    {
+      "id": 2,
+      "ar": "وَأَخۡرَجَتِ ٱلۡأَرۡضُ أَثۡقَالَهَا",
+      "en": "And the earth discharges its burdens",
+      "path": "/audio/099/002.mp3",
+      "dir": "/audio/099",
+      "size": 15541
+    },
+    {
+      "id": 3,
+      "ar": "وَقَالَ ٱلۡإِنسَٰنُ مَا لَهَا",
+      "en": "And man says, \"What is [wrong] with it",
+      "path": "/audio/099/003.mp3",
+      "dir": "/audio/099",
+      "size": 22201
+    },
+    {
+      "id": 4,
+      "ar": "يَوۡمَئِذٖ تُحَدِّثُ أَخۡبَارَهَا",
+      "en": "That Day, it will report its news",
+      "path": "/audio/099/004.mp3",
+      "dir": "/audio/099",
+      "size": 21287
+    },
+    {
+      "id": 5,
+      "ar": "بِأَنَّ رَبَّكَ أَوۡحَىٰ لَهَا",
+      "en": "Because your Lord has commanded it",
+      "path": "/audio/099/005.mp3",
+      "dir": "/audio/099",
+      "size": 19981
+    },
+    {
+      "id": 6,
+      "ar": "يَوۡمَئِذٖ يَصۡدُرُ ٱلنَّاسُ أَشۡتَاتٗا لِّيُرَوۡاْ أَعۡمَٰلَهُمۡ",
+      "en": "That Day, the people will depart separated [into categories] to be shown [the result of] their deeds",
+      "path": "/audio/099/006.mp3",
+      "dir": "/audio/099",
+      "size": 37483
+    },
+    {
+      "id": 7,
+      "ar": "فَمَن يَعۡمَلۡ مِثۡقَالَ ذَرَّةٍ خَيۡرٗا يَرَهُۥ",
+      "en": "So whoever does an atom's weight of good will see it",
+      "path": "/audio/099/007.mp3",
+      "dir": "/audio/099",
+      "size": 34218
+    },
+    {
+      "id": 8,
+      "ar": "وَمَن يَعۡمَلۡ مِثۡقَالَ ذَرَّةٖ شَرّٗا يَرَهُۥ",
+      "en": "And whoever does an atom's weight of evil will see it",
+      "path": "/audio/099/008.mp3",
+      "dir": "/audio/099",
+      "size": 35132
+    }
+  ]
+}

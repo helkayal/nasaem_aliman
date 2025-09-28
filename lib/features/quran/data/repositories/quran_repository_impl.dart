@@ -3,8 +3,8 @@ import '../../domain/entities/surah.dart';
 import '../../domain/entities/ayah.dart';
 import '../../domain/repositories/quran_repository.dart';
 import '../datasources/quran_local_datasource.dart';
-import '../models/ayah_model.dart';
 import '../models/surah_model.dart';
+import '../mappers/quran_mappers.dart';
 
 class QuranRepositoryImpl implements QuranRepository {
   final QuranLocalDataSource localDataSource;
@@ -13,47 +13,32 @@ class QuranRepositoryImpl implements QuranRepository {
 
   @override
   Future<List<JuzEntity>> getJuzList() async {
-    return await localDataSource.getAllJuz();
+    final models = await localDataSource.getAllJuz();
+    return models.map((m) => m.toEntity()).toList();
   }
 
   @override
   Future<List<SurahEntity>> getSurahList() async {
-    return await localDataSource.getAllSurahs();
+    final models = await localDataSource.getAllSurahs();
+    return models.map((m) => m.toEntity()).toList();
   }
 
   @override
-  Future<SurahModel> getSurah(int id) async {
-    return await localDataSource.getSurah(id);
+  Future<SurahEntity> getSurah(int id) async {
+    final SurahModel model = await localDataSource.getSurah(id);
+    return model.toEntity();
   }
 
   @override
   Future<List<AyahEntity>> getSurahAyahs(int surahId) async {
     final models = await localDataSource.getSurahAyahs(surahId);
-    return models
-        .map(
-          (m) => AyahEntity(
-            id: m.id,
-            surahId: m.surahId,
-            number: m.number,
-            text: m.text,
-          ),
-        )
-        .toList();
+    return models.map((m) => m.toEntity()).toList();
   }
 
   @override
   Future<List<AyahEntity>> getJuzAyahs(int juzId) async {
     final models = await localDataSource.getJuzAyahs(juzId);
-    return models
-        .map(
-          (m) => AyahEntity(
-            id: m.id,
-            surahId: m.surahId,
-            number: m.number,
-            text: m.text,
-          ),
-        )
-        .toList();
+    return models.map((m) => m.toEntity()).toList();
   }
 
   @override
@@ -61,38 +46,13 @@ class QuranRepositoryImpl implements QuranRepository {
     List<AyahEntity> ayahs,
     int surahNumber,
   ) async {
-    // Convert entities to models before passing
-    final models = ayahs
-        .map(
-          (a) => AyahModel(
-            id: a.id,
-            surahId: a.surahId,
-            number: a.number,
-            text: a.text,
-          ),
-        )
-        .toList();
-
+    final models = ayahs.map((a) => a.toModel()).toList();
     final groupedModels = await localDataSource.groupAyahsByPage(
       models,
       surahNumber,
     );
-
-    // Convert back models → entities
-    return groupedModels.map((page, ayahModels) {
-      return MapEntry(
-        page,
-        ayahModels
-            .map(
-              (m) => AyahEntity(
-                id: m.id,
-                surahId: m.surahId,
-                number: m.number,
-                text: m.text,
-              ),
-            )
-            .toList(),
-      );
-    });
+    return groupedModels.map(
+      (page, list) => MapEntry(page, list.map((m) => m.toEntity()).toList()),
+    );
   }
 }

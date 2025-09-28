@@ -32,6 +32,8 @@ flutter:
   assets:
     - assets/images/
     - assets/data/
+    - assets/data/surahs/
+    - assets/data/azkar/
 
 flutter_launcher_icons:
   ios: true
