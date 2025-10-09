@@ -23,7 +23,7 @@ class AzkarList extends StatelessWidget {
             textAlign: TextAlign.right,
             style: Theme.of(
               context,
-            ).textTheme.bodyMedium!.copyWith(height: 1.6.h),
+            ).textTheme.bodySmall!.copyWith(height: 1.6.h),
           ),
         );
       },

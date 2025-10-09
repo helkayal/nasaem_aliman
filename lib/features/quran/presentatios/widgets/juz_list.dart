@@ -57,7 +57,7 @@ class _JuzasListState extends State<JuzasList> {
                         rowTrailer: "",
                         withTrailer: false,
                         withLeading: false,
-                        fontScale: "medium",
+                        fontScale: "small",
                       ),
                     ),
                   ],
@@ -104,7 +104,8 @@ class _JuzasListState extends State<JuzasList> {
                               text: range.surahName,
                               rowNumber: range.surahId.toString(),
                               rowTrailer:
-                                  "من آية ${range.startAyah} إلى ${range.endAyah}",
+                                  "(${range.endAyah} - ${range.startAyah})",
+                              // "من آية ${range.startAyah} إلى ${range.endAyah}",
                               fontScale: "small",
                             ),
                           ),

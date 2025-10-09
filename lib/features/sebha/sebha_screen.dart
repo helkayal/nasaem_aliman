@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nasaem_aliman/core/constants/app_assets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/services.dart' show rootBundle;
+
+import '../../core/widgets/custom_app_bar.dart';
 
 class SebhaScreen extends StatefulWidget {
   const SebhaScreen({super.key});
@@ -13,7 +16,8 @@ class SebhaScreen extends StatefulWidget {
   State<SebhaScreen> createState() => _SebhaScreenState();
 }
 
-class _SebhaScreenState extends State<SebhaScreen> {
+class _SebhaScreenState extends State<SebhaScreen>
+    with AutomaticKeepAliveClientMixin<SebhaScreen>, WidgetsBindingObserver {
   int counter = 0;
   String? zekr; // null means no zekr yet
   final int totalBeads = 33;
@@ -31,6 +35,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     headImage = Image.asset(
       AppAssets.sebhaHeadImage,
       height: sebhaHeadHeight,
@@ -40,22 +45,34 @@ class _SebhaScreenState extends State<SebhaScreen> {
     _loadData();
   }
 
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused ||
+        state == AppLifecycleState.inactive) {
+      if (_pendingSave) _saveData();
+    }
+  }
+
   Future<void> _loadBeadImage() async {
-    final data = await DefaultAssetBundle.of(
-      context,
-    ).load(AppAssets.sebhaBeadImage);
-    final codec = await ui.instantiateImageCodec(data.buffer.asUint8List());
-    final frame = await codec.getNextFrame();
-    setState(() {
-      beadUiImage = frame.image;
-    });
+    try {
+      final data = await rootBundle.load(AppAssets.sebhaBeadImage);
+      final codec = await ui.instantiateImageCodec(data.buffer.asUint8List());
+      final frame = await codec.getNextFrame();
+      if (!mounted) return;
+      setState(() {
+        beadUiImage = frame.image;
+      });
+    } catch (_) {
+      // swallow – UI just won't show beads if loading fails
+    }
   }
 
   Future<void> _loadData() async {
     final prefs = await SharedPreferences.getInstance();
+    if (!mounted) return;
     setState(() {
-      zekr = prefs.getString("zekr");
-      counter = prefs.getInt("counter") ?? 0;
+      zekr = prefs.getString('zekr');
+      counter = prefs.getInt('counter') ?? 0;
     });
   }
 
@@ -88,8 +105,12 @@ class _SebhaScreenState extends State<SebhaScreen> {
   void dispose() {
     _saveTimer?.cancel();
     if (_pendingSave) _saveData();
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
+
+  @override
+  bool get wantKeepAlive => true;
 
   void _resetCounter() {
     setState(() => counter = 0);
@@ -134,6 +155,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context); // for AutomaticKeepAliveClientMixin
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
@@ -148,8 +170,8 @@ class _SebhaScreenState extends State<SebhaScreen> {
     final centerY = sebhaHeadTop + sebhaHeadHeight + (ovalHeight / 2);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("السبحه"),
+      appBar: CustomAppBar(
+        title: "السبحه",
         actions: [
           if (zekr == null || zekr!.isEmpty) ...[
             IconButton(
@@ -281,6 +303,7 @@ class BeadsPainter extends CustomPainter {
   final double centerY;
   final bool enabled;
   final Color primaryColor;
+  late final List<Offset> _centers = _computeCenters();
 
   BeadsPainter({
     required this.beadUiImage,
@@ -295,19 +318,25 @@ class BeadsPainter extends CustomPainter {
     required this.primaryColor,
   });
 
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint();
+  List<Offset> _computeCenters() {
     final radiusX = ovalWidth / 2;
     final radiusY = ovalHeight / 2;
-
-    for (int i = 0; i < totalBeads; i++) {
+    return List.generate(totalBeads, (i) {
       final angle = 2 * pi * i / totalBeads - pi / 2;
       final x = centerX + radiusX * cos(angle);
       final y = centerY + radiusY * sin(angle) + 10;
+      return Offset(x, y);
+    });
+  }
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    for (int i = 0; i < totalBeads; i++) {
+      final center = _centers[i];
 
       final rect = Rect.fromCenter(
-        center: Offset(x, y),
+        center: center,
         width: beadSize,
         height: beadSize,
       );
@@ -316,7 +345,7 @@ class BeadsPainter extends CustomPainter {
         final glowPaint = Paint()
           ..color = primaryColor.withValues(alpha: 0.5)
           ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 10);
-        canvas.drawCircle(Offset(x, y), beadSize * 0.55, glowPaint);
+        canvas.drawCircle(center, beadSize * 0.55, glowPaint);
       }
 
       paint.color = enabled
@@ -340,6 +369,14 @@ class BeadsPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant BeadsPainter oldDelegate) {
     return oldDelegate.highlightedIndex != highlightedIndex ||
-        oldDelegate.enabled != enabled;
+        oldDelegate.enabled != enabled ||
+        oldDelegate.ovalWidth != ovalWidth ||
+        oldDelegate.ovalHeight != ovalHeight ||
+        oldDelegate.centerX != centerX ||
+        oldDelegate.centerY != centerY ||
+        oldDelegate.beadSize != beadSize ||
+        oldDelegate.totalBeads != totalBeads ||
+        oldDelegate.primaryColor != primaryColor ||
+        oldDelegate.beadUiImage != beadUiImage; // image swap
   }
 }

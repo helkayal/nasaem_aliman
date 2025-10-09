@@ -77,9 +77,13 @@ class _SurahTextState extends State<SurahText> {
                           WidgetSpan(
                             child: Center(
                               child: Padding(
-                                padding: const EdgeInsets.only(bottom: 16),
+                                padding: const EdgeInsets.only(
+                                  bottom: 16,
+                                  top: 16,
+                                ),
                                 child: Text(
-                                  '﷽',
+                                  // '﷽',
+                                  'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
                                   style: Theme.of(context).textTheme.titleLarge,
                                 ),
                               ),

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/widgets/app_error.dart';
 import '../../../../core/widgets/app_loading.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../cubit/surah_details_cubit.dart';
 import '../cubit/surah_details_state.dart';
 import '../widgets/surah_text.dart';
@@ -55,12 +56,10 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
               : surah.ayahs;
 
           return Scaffold(
-            appBar: AppBar(
-              title: Text(
-                widget.juzName != null
-                    ? "${widget.juzName} - ${surah.name}"
-                    : surah.name,
-              ),
+            appBar: CustomAppBar(
+              title: widget.juzName != null
+                  ? "${widget.juzName} - ${surah.name}"
+                  : surah.name,
             ),
             body: SurahText(
               filteredAyahs: filteredAyahs,

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/widgets/app_divider.dart';
 import '../../../../core/widgets/app_error.dart';
 import '../../../../core/widgets/app_loading.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../cubit/azkar_category_state.dart';
 import '../cubit/azkar_category_cubit.dart';
 import '../widgets/azkar_row.dart';
@@ -15,7 +16,7 @@ class AzkarScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("الأذكار")),
+      appBar: CustomAppBar(title: "الأذكار"),
       body: BlocBuilder<AzkarCategoriesCubit, AzkarCategoriesState>(
         builder: (context, state) {
           if (state is AzkarCategoriesLoading) {
