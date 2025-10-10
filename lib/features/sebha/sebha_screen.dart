@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:math';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nasaem_aliman/core/constants/app_assets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../../core/widgets/custom_app_bar.dart';
+import '../../core/utils/responsive_utils.dart';
 
 class SebhaScreen extends StatefulWidget {
   const SebhaScreen({super.key});
@@ -25,22 +25,13 @@ class _SebhaScreenState extends State<SebhaScreen>
   Timer? _saveTimer;
   bool _pendingSave = false;
 
-  // 🔹 Sebha head
-  final sebhaHeadHeight = 60.h;
-  final sebhaHeadTop = 20.h;
-
-  late final Image headImage;
+  // 🔹 Sebha head - will be calculated in build method
   ui.Image? beadUiImage;
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    headImage = Image.asset(
-      AppAssets.sebhaHeadImage,
-      height: sebhaHeadHeight,
-      fit: BoxFit.fitHeight,
-    );
     _loadBeadImage();
     _loadData();
   }
@@ -157,17 +148,37 @@ class _SebhaScreenState extends State<SebhaScreen>
   Widget build(BuildContext context) {
     super.build(context); // for AutomaticKeepAliveClientMixin
     final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
 
     final highlightedIndex = counter % totalBeads;
 
-    // 🔹 Oval size
-    final ovalWidth = screenWidth * 0.85;
-    final ovalHeight = screenHeight * 0.45;
+    // 🔹 Responsive sizing - calculate in build method
+    final isTablet = ResponsiveUtils.isTablet(context);
+    final sebhaHeadHeight = isTablet
+        ? ResponsiveUtils.responsiveHeight(90) // Larger on tablets
+        : ResponsiveUtils.responsiveHeight(60); // Keep original on phones
+    final sebhaHeadTop = ResponsiveUtils.responsiveHeight(20);
 
-    // 🔹 Center
+    // 🔹 Oval size - responsive sizing
+    final ovalWidth = isTablet
+        ? screenWidth *
+              0.75 // Reasonable size on tablets
+        : screenWidth * 0.8; // Good size on phones
+    final ovalHeight = isTablet
+        ? screenWidth *
+              0.8 // Circular on tablets
+        : screenWidth * 0.9; // Circular on phones
+
+    // 🔹 Center - closer to sebha head with better positioning
     final centerX = screenWidth / 2;
-    final centerY = sebhaHeadTop + sebhaHeadHeight + (ovalHeight / 2);
+    final gapBetweenHeadAndOval = isTablet
+        ? -40.0
+        : -30.0; // Negative gap to bring closer
+    final ovalCenterY =
+        sebhaHeadTop +
+        sebhaHeadHeight +
+        gapBetweenHeadAndOval +
+        (ovalHeight / 2);
+    final centerY = ovalCenterY;
 
     return Scaffold(
       appBar: CustomAppBar(
@@ -210,11 +221,29 @@ class _SebhaScreenState extends State<SebhaScreen>
               children: [
                 // 🔹 Sebha head
                 Positioned(
-                  left: centerX - (screenWidth * 0.3) / 2,
+                  left:
+                      centerX -
+                      (isTablet
+                              ? screenWidth *
+                                    0.2 // Smaller head on tablets
+                              : screenWidth * 0.3) /
+                          2,
                   top: sebhaHeadTop,
                   child: Opacity(
                     opacity: (zekr != null && zekr!.isNotEmpty) ? 1.0 : 0.4,
-                    child: headImage,
+                    child: Container(
+                      width: isTablet
+                          ? screenWidth *
+                                0.2 // Larger on tablets
+                          : screenWidth * 0.3,
+                      height: sebhaHeadHeight,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/sebha_head.png'),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
 
@@ -228,7 +257,10 @@ class _SebhaScreenState extends State<SebhaScreen>
                         highlightedIndex: highlightedIndex,
                         ovalWidth: ovalWidth,
                         ovalHeight: ovalHeight,
-                        beadSize: screenWidth * 0.1,
+                        beadSize: isTablet
+                            ? screenWidth *
+                                  0.063 // Proportional beads on tablets
+                            : screenWidth * 0.08, // Better proportion on phones
                         centerX: centerX,
                         centerY: centerY,
                         enabled: zekr != null && zekr!.isNotEmpty,
@@ -238,8 +270,13 @@ class _SebhaScreenState extends State<SebhaScreen>
                     ),
                   ),
 
-                // 🔹 Center text + counter
-                buildZekrTextWithCount(zekr, counter, screenWidth),
+                // 🔹 Center text + counter - positioned in oval center
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  top: centerY - 25, // Perfectly centered in the oval
+                  child: buildZekrTextWithCount(zekr, counter, screenWidth),
+                ),
               ],
             ),
           ),
@@ -249,8 +286,10 @@ class _SebhaScreenState extends State<SebhaScreen>
   }
 
   Column buildZekrTextWithCount(String? zekr, int counter, double screenWidth) {
+    final isTablet = ResponsiveUtils.isTablet(context);
+
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
         if (zekr != null && zekr.isNotEmpty) ...[
           GestureDetector(
@@ -261,12 +300,18 @@ class _SebhaScreenState extends State<SebhaScreen>
                   FadeTransition(opacity: animation, child: child),
               child: ConstrainedBox(
                 key: ValueKey<String>(zekr),
-                constraints: BoxConstraints(maxWidth: screenWidth * 0.65),
+                constraints: BoxConstraints(
+                  maxWidth: isTablet
+                      ? screenWidth *
+                            0.5 // Narrower on tablets
+                      : screenWidth * 0.65,
+                ),
                 child: Text(
                   zekr,
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    fontSize: ResponsiveUtils.responsiveFontSize(18),
+                  ),
                   textAlign: TextAlign.center,
                   softWrap: true,
                   maxLines: 3,
@@ -274,12 +319,13 @@ class _SebhaScreenState extends State<SebhaScreen>
               ),
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: ResponsiveUtils.responsiveHeight(10)),
           Text(
             '$counter',
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+              fontWeight: FontWeight.bold,
+              fontSize: ResponsiveUtils.responsiveFontSize(20),
+            ),
           ),
         ] else
           Text(
@@ -319,12 +365,12 @@ class BeadsPainter extends CustomPainter {
   });
 
   List<Offset> _computeCenters() {
-    final radiusX = ovalWidth / 2;
-    final radiusY = ovalHeight / 2;
+    final radiusX = (ovalWidth / 2) - beadSize; // Better spacing
+    final radiusY = (ovalHeight / 2) - beadSize; // Better spacing
     return List.generate(totalBeads, (i) {
       final angle = 2 * pi * i / totalBeads - pi / 2;
       final x = centerX + radiusX * cos(angle);
-      final y = centerY + radiusY * sin(angle) + 10;
+      final y = centerY + radiusY * sin(angle);
       return Offset(x, y);
     });
   }

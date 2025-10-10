@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nasaem_aliman/core/utils/responsive_utils.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key, required this.title, this.actions = const []});
@@ -13,13 +13,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(title),
       centerTitle: true,
       bottom: PreferredSize(
-        preferredSize: const Size.fromHeight(10),
-        child: SizedBox(height: 5.h),
+        preferredSize: Size.fromHeight(
+          ResponsiveUtils.tabletAwareHeight(context, 10),
+        ),
+        child: SizedBox(height: ResponsiveUtils.tabletAwareHeight(context, 5)),
       ),
       actions: actions,
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 10);
+  Size get preferredSize => Size.fromHeight(
+    kToolbarHeight +
+        ResponsiveUtils.responsiveHeight(
+          10,
+        ), // Static fallback for preferredSize
+  );
 }
