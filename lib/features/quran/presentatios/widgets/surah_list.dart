@@ -44,7 +44,7 @@ class SurahsList extends StatelessWidget {
               text: surah.name,
               rowNumber: surah.id.toString(),
               rowTrailer: '( ${surah.versesCount} )',
-              fontScale: "small",
+              fontScale: "medium",
             ),
           ),
         );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/constants/app_assets.dart';
+import '../../../../core/widgets/app_number_bg.dart';
 import '../../domain/entities/azkar_category_entiti.dart';
 
 class AzkarRow extends StatelessWidget {
@@ -10,39 +9,21 @@ class AzkarRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       child: Row(
         spacing: 20,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Container(
-            width: 50.w,
-            height: 50.h,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  isDark ? AppAssets.numberBgDark : AppAssets.numberBg,
-                ),
-                fit: BoxFit.cover,
-              ),
-              shape: BoxShape.circle,
-            ),
-            child: Padding(
-              padding: EdgeInsets.only(top: 14.h),
-              child: Text(
-                category.azkar.length.toString(),
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
-            ),
+          AppNumberBg(
+            fontScale: "medium",
+            isDark: Theme.of(context).brightness == Brightness.dark,
+            rowNumber: category.azkar.length.toString(),
           ),
           Expanded(
             child: Text(
               category.category,
-              style: Theme.of(context).textTheme.bodySmall,
+              style: Theme.of(context).textTheme.bodyMedium,
               textAlign: TextAlign.right,
             ),
           ),

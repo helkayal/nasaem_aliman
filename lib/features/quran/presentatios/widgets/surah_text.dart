@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/constants/app_assets.dart';
 import '../../../../core/widgets/app_error.dart';
 import '../../../../core/widgets/app_loading.dart';
+import '../../../../core/widgets/app_number_bg.dart';
 import '../../domain/entities/ayah.dart';
 import '../cubit/ayahs_cubit.dart';
 import '../cubit/ayahs_state.dart';
@@ -93,33 +92,15 @@ class _SurahTextState extends State<SurahText> {
                           return [
                             TextSpan(
                               text: ayah.text,
-                              style: const TextStyle(height: 2),
+                              style: Theme.of(context).textTheme.titleSmall,
+                              // style: const TextStyle(height: 2),
                             ),
                             WidgetSpan(
                               alignment: PlaceholderAlignment.middle,
-                              child: Container(
-                                margin: EdgeInsets.symmetric(horizontal: 6.w),
-                                width: 42.w,
-                                height: 50.h,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      isDark
-                                          ? AppAssets.numberBgDark
-                                          : AppAssets.numberBg,
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    '${ayah.number}',
-                                    style: Theme.of(
-                                      context,
-                                    ).textTheme.titleSmall,
-                                  ),
-                                ),
+                              child: AppNumberBg(
+                                fontScale: "x-small",
+                                isDark: isDark,
+                                rowNumber: '${ayah.number}',
                               ),
                             ),
                           ];

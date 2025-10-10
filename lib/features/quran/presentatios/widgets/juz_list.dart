@@ -57,7 +57,7 @@ class _JuzasListState extends State<JuzasList> {
                         rowTrailer: "",
                         withTrailer: false,
                         withLeading: false,
-                        fontScale: "small",
+                        fontScale: "medium",
                       ),
                     ),
                   ],
@@ -106,7 +106,7 @@ class _JuzasListState extends State<JuzasList> {
                               rowTrailer:
                                   "(${range.endAyah} - ${range.startAyah})",
                               // "من آية ${range.startAyah} إلى ${range.endAyah}",
-                              fontScale: "small",
+                              fontScale: "medium",
                             ),
                           ),
                         ),

@@ -116,6 +116,11 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
                 ),
               ),
 
+              // Page counter (always show if more than 1 page)
+              if (widget.category.azkar.length > 1)
+                _buildPageCounter(context, index),
+
+              SizedBox(height: 10.h),
               // Fixed bottom bar (only if zekr.count > 1)
               if (zekr.count > 1) _buildBottomButtons(context, counter, index),
             ],
@@ -185,6 +190,57 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
       ),
       alignment: Alignment.center,
       child: Text('$counter', style: Theme.of(context).textTheme.headlineSmall),
+    );
+  }
+
+  Widget _buildPageCounter(BuildContext context, int currentIndex) {
+    final currentPage = currentIndex + 1;
+    final totalPages = widget.category.azkar.length;
+
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 8.h),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 4.h),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20.r),
+              color: Theme.of(context).colorScheme.secondary,
+              border: Border.all(
+                color: Theme.of(
+                  context,
+                ).colorScheme.outline.withValues(alpha: 0.3),
+                width: 1,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Theme.of(
+                    context,
+                  ).colorScheme.shadow.withValues(alpha: .1),
+                  offset: Offset(0, 2),
+                  blurRadius: 8,
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              textDirection: TextDirection.rtl,
+              children: [
+                Text(
+                  '$currentPage',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                Text(' / ', style: Theme.of(context).textTheme.bodyMedium),
+                Text(
+                  '$totalPages',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 

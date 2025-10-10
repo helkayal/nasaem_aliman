@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../../domain/entities/azkar_category_entiti.dart';
-import '../widgets/azkar_list.dart';
 import '../widgets/repeatable_azkar_list.dart';
 
 class AzkarDetailsScreen extends StatelessWidget {
@@ -14,13 +13,7 @@ class AzkarDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: category.category),
       body: Column(
-        children: [
-          Expanded(
-            child: category.repeatable
-                ? RepeatableAzkarList(category: category)
-                : AzkarList(category: category),
-          ),
-        ],
+        children: [Expanded(child: RepeatableAzkarList(category: category))],
       ),
     );
   }
