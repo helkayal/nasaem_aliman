@@ -13,10 +13,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(title),
       centerTitle: true,
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(
-          ResponsiveUtils.tabletAwareHeight(context, 10),
-        ),
-        child: SizedBox(height: ResponsiveUtils.tabletAwareHeight(context, 5)),
+        preferredSize: Size.fromHeight(ResponsiveUtils.responsiveHeight(10)),
+        child: SizedBox(height: ResponsiveUtils.responsiveHeight(5)),
       ),
       actions: actions,
     );

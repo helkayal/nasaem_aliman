@@ -4,7 +4,7 @@ import 'package:nasaem_aliman/core/utils/responsive_utils.dart';
 
 import 'app_colors.dart';
 
-ThemeData lightTheme(BuildContext context) {
+ThemeData lightTheme() {
   return ThemeData(
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColors.lightGrey,
@@ -18,79 +18,79 @@ ThemeData lightTheme(BuildContext context) {
       ),
       titleTextStyle: TextStyle(
         color: AppColors.lightGrey,
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 18),
+        fontSize: ResponsiveUtils.responsiveFontSize(18),
         fontWeight: FontWeight.bold,
         fontFamily: AppConstants.textFontFamily,
       ),
       iconTheme: IconThemeData(
         color: AppColors.white,
-        size: ResponsiveUtils.tabletAwareIconSize(context, 30),
+        size: ResponsiveUtils.responsiveWidth(30),
       ),
     ),
     textTheme: TextTheme(
       headlineSmall: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 22),
+        fontSize: ResponsiveUtils.responsiveFontSize(22),
         fontWeight: FontWeight.bold,
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       headlineMedium: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         fontWeight: FontWeight.bold,
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       headlineLarge: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 26),
+        fontSize: ResponsiveUtils.responsiveFontSize(26),
         fontWeight: FontWeight.bold,
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       displaySmall: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 20),
+        fontSize: ResponsiveUtils.responsiveFontSize(20),
         fontWeight: FontWeight.bold,
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       displayMedium: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 22),
+        fontSize: ResponsiveUtils.responsiveFontSize(22),
         fontWeight: FontWeight.bold,
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       displayLarge: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         fontWeight: FontWeight.bold,
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       bodySmall: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 16),
+        fontSize: ResponsiveUtils.responsiveFontSize(16),
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       bodyMedium: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 20),
+        fontSize: ResponsiveUtils.responsiveFontSize(20),
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       bodyLarge: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       titleSmall: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 20),
+        fontSize: ResponsiveUtils.responsiveFontSize(20),
         color: AppColors.darkBlue,
         fontFamily: AppConstants.quranFontFamily,
       ),
       titleMedium: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         color: AppColors.darkBlue,
         fontFamily: AppConstants.quranFontFamily,
       ),
       titleLarge: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 28),
+        fontSize: ResponsiveUtils.responsiveFontSize(28),
         color: AppColors.darkBlue,
         fontFamily: AppConstants.quranFontFamily,
       ),
@@ -105,6 +105,8 @@ ThemeData lightTheme(BuildContext context) {
       onError: AppColors.pink,
       surface: AppColors.white,
       onSurface: AppColors.black,
+      tertiary: AppColors.gold,
+      onTertiary: AppColors.teal,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.darkBlue,
@@ -113,10 +115,10 @@ ThemeData lightTheme(BuildContext context) {
       unselectedItemColor: AppColors.lightBlue,
       unselectedIconTheme: IconThemeData(
         color: AppColors.lightBlue,
-        size: ResponsiveUtils.tabletAwareIconSize(context, 30),
+        size: ResponsiveUtils.responsiveWidth(30),
       ),
       unselectedLabelStyle: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 14),
+        fontSize: ResponsiveUtils.responsiveFontSize(14),
         fontWeight: FontWeight.bold,
         color: AppColors.lightBlue,
         fontFamily: AppConstants.textFontFamily,
@@ -124,10 +126,10 @@ ThemeData lightTheme(BuildContext context) {
       selectedItemColor: AppColors.lightGrey,
       selectedIconTheme: IconThemeData(
         color: AppColors.lightGrey,
-        size: ResponsiveUtils.tabletAwareIconSize(context, 30),
+        size: ResponsiveUtils.responsiveWidth(30),
       ),
       selectedLabelStyle: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 14),
+        fontSize: ResponsiveUtils.responsiveFontSize(14),
         fontWeight: FontWeight.bold,
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
@@ -137,27 +139,27 @@ ThemeData lightTheme(BuildContext context) {
       indicatorSize: TabBarIndicatorSize.tab,
       labelColor: AppColors.lightGrey,
       labelStyle: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         fontWeight: FontWeight.bold,
       ),
       unselectedLabelColor: AppColors.lightBlue,
       unselectedLabelStyle: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 20),
+        fontSize: ResponsiveUtils.responsiveFontSize(20),
       ),
       labelPadding: EdgeInsets.symmetric(
-        vertical: ResponsiveUtils.tabletAwareHeight(context, 8),
+        vertical: ResponsiveUtils.responsiveHeight(8),
       ),
     ),
     dividerTheme: DividerThemeData(
       color: AppColors.darkBlue,
       thickness: 1.5,
-      indent: ResponsiveUtils.tabletAwareWidth(context, 20),
-      endIndent: ResponsiveUtils.tabletAwareWidth(context, 20),
+      indent: ResponsiveUtils.responsiveWidth(20),
+      endIndent: ResponsiveUtils.responsiveWidth(20),
     ),
   );
 }
 
-ThemeData darkTheme(BuildContext context) {
+ThemeData darkTheme() {
   return ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppColors.black,
@@ -171,79 +173,79 @@ ThemeData darkTheme(BuildContext context) {
       ),
       titleTextStyle: TextStyle(
         color: AppColors.white,
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 18),
+        fontSize: ResponsiveUtils.responsiveFontSize(18),
         fontWeight: FontWeight.bold,
         fontFamily: AppConstants.textFontFamily,
       ),
       iconTheme: IconThemeData(
         color: AppColors.white,
-        size: ResponsiveUtils.tabletAwareIconSize(context, 30),
+        size: ResponsiveUtils.responsiveWidth(30),
       ),
     ),
     textTheme: TextTheme(
       headlineSmall: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 22),
+        fontSize: ResponsiveUtils.responsiveFontSize(22),
         fontWeight: FontWeight.bold,
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       headlineMedium: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         fontWeight: FontWeight.bold,
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       headlineLarge: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 26),
+        fontSize: ResponsiveUtils.responsiveFontSize(26),
         fontWeight: FontWeight.bold,
         color: AppColors.darkGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       displaySmall: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 20),
+        fontSize: ResponsiveUtils.responsiveFontSize(20),
         fontWeight: FontWeight.bold,
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       displayMedium: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         fontWeight: FontWeight.bold,
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       displayLarge: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 26),
+        fontSize: ResponsiveUtils.responsiveFontSize(26),
         fontWeight: FontWeight.bold,
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       bodySmall: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 16),
+        fontSize: ResponsiveUtils.responsiveFontSize(16),
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       bodyMedium: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 20),
+        fontSize: ResponsiveUtils.responsiveFontSize(20),
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       bodyLarge: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
       ),
       titleSmall: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 20),
+        fontSize: ResponsiveUtils.responsiveFontSize(20),
         color: AppColors.lightGrey,
         fontFamily: AppConstants.quranFontFamily,
       ),
       titleMedium: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         color: AppColors.lightGrey,
         fontFamily: AppConstants.quranFontFamily,
       ),
       titleLarge: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 28),
+        fontSize: ResponsiveUtils.responsiveFontSize(28),
         color: AppColors.lightGrey,
         fontFamily: AppConstants.quranFontFamily,
       ),
@@ -258,6 +260,8 @@ ThemeData darkTheme(BuildContext context) {
       onError: AppColors.pink,
       surface: AppColors.black,
       onSurface: AppColors.white,
+      tertiary: AppColors.gold,
+      onTertiary: AppColors.teal,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.darkBlue,
@@ -266,10 +270,10 @@ ThemeData darkTheme(BuildContext context) {
       unselectedItemColor: AppColors.lightGrey,
       unselectedIconTheme: IconThemeData(
         color: AppColors.lightGrey,
-        size: ResponsiveUtils.tabletAwareIconSize(context, 30),
+        size: ResponsiveUtils.responsiveWidth(30),
       ),
       unselectedLabelStyle: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 14),
+        fontSize: ResponsiveUtils.responsiveFontSize(14),
         fontWeight: FontWeight.bold,
         color: AppColors.lightGrey,
         fontFamily: AppConstants.textFontFamily,
@@ -277,10 +281,10 @@ ThemeData darkTheme(BuildContext context) {
       selectedItemColor: AppColors.lightBlue,
       selectedIconTheme: IconThemeData(
         color: AppColors.lightBlue,
-        size: ResponsiveUtils.tabletAwareIconSize(context, 30),
+        size: ResponsiveUtils.responsiveWidth(30),
       ),
       selectedLabelStyle: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 14),
+        fontSize: ResponsiveUtils.responsiveFontSize(14),
         fontWeight: FontWeight.bold,
         color: AppColors.lightBlue,
         fontFamily: AppConstants.textFontFamily,
@@ -290,22 +294,22 @@ ThemeData darkTheme(BuildContext context) {
       indicatorSize: TabBarIndicatorSize.tab,
       labelColor: AppColors.lightGrey,
       labelStyle: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 24),
+        fontSize: ResponsiveUtils.responsiveFontSize(24),
         fontWeight: FontWeight.bold,
       ),
       unselectedLabelColor: AppColors.lightBlue,
       unselectedLabelStyle: TextStyle(
-        fontSize: ResponsiveUtils.tabletAwareFontSize(context, 20),
+        fontSize: ResponsiveUtils.responsiveFontSize(20),
       ),
       labelPadding: EdgeInsets.symmetric(
-        vertical: ResponsiveUtils.tabletAwareHeight(context, 8),
+        vertical: ResponsiveUtils.responsiveHeight(8),
       ),
     ),
     dividerTheme: DividerThemeData(
       color: AppColors.lightBlue,
       thickness: 1.5,
-      indent: ResponsiveUtils.tabletAwareWidth(context, 20),
-      endIndent: ResponsiveUtils.tabletAwareWidth(context, 20),
+      indent: ResponsiveUtils.responsiveWidth(20),
+      endIndent: ResponsiveUtils.responsiveWidth(20),
     ),
   );
 }

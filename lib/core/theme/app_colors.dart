@@ -11,4 +11,5 @@ abstract final class AppColors {
   static const Color pink = Color(0xFFFF78C1);
   static const Color lightGreen = Color(0xFF20A66E);
   static const Color teal = Color(0xFF82c0ba);
+  static const Color gold = Color(0xFFFFD700);
 }
