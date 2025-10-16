@@ -18,6 +18,10 @@ import 'package:nasaem_aliman/features/quran/domain/usecases/get_all_juz.dart';
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_juz_ayahs.dart';
 import 'package:nasaem_aliman/features/quran/domain/usecases/get_surah.dart';
 import 'package:nasaem_aliman/features/quran/domain/usecases/group_ayas_per_page.dart';
+import 'package:nasaem_aliman/features/quran/domain/usecases/get_quran_pages.dart';
+import 'package:nasaem_aliman/features/quran/domain/usecases/get_page_for_surah.dart';
+import 'package:nasaem_aliman/features/quran/domain/usecases/get_page_for_juz_surah.dart';
+import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_pages_view_cubit.dart';
 
 // Azkar
 import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_category_cubit.dart';
@@ -31,6 +35,7 @@ Future<void> init() async {
   sl.registerFactory(() => QuranCubit(sl(), sl(), sl(), sl()));
   sl.registerFactory(() => SurahDetailsCubit(sl()));
   sl.registerFactory(() => AyahsCubit(sl()));
+  sl.registerFactory(() => QuranPagesViewCubit(sl(), sl(), sl()));
 
   // UseCases
   sl.registerLazySingleton(() => GetAllSurahs(sl()));
@@ -38,6 +43,9 @@ Future<void> init() async {
   sl.registerLazySingleton(() => GetAllJuz(sl()));
   sl.registerLazySingleton(() => GetJuzAyahs(sl()));
   sl.registerLazySingleton(() => GroupAyahsByPage(sl()));
+  sl.registerLazySingleton(() => GetQuranPages(sl()));
+  sl.registerLazySingleton(() => GetPageForSurah(sl()));
+  sl.registerLazySingleton(() => GetPageForJuzSurah(sl()));
 
   // Repository
   sl.registerLazySingleton<QuranRepository>(

@@ -5,6 +5,7 @@ import '../models/ayah_model.dart';
 import '../models/page_entry_model.dart';
 import '../models/surah_model.dart';
 import '../models/juz_model.dart';
+import '../models/quran_page_model.dart';
 
 abstract class QuranLocalDataSource {
   Future<List<SurahModel>> getAllSurahs();
@@ -16,6 +17,10 @@ abstract class QuranLocalDataSource {
     List<AyahModel> ayahs,
     int surahNumber,
   );
+  // New page-based methods
+  Future<List<QuranPageModel>> getAllQuranPages();
+  Future<int> getPageForSurah(int surahId);
+  Future<int> getPageForJuzSurah(int juzId, int surahId, int startAyah);
 }
 
 class QuranLocalDataSourceImpl implements QuranLocalDataSource {
@@ -145,5 +150,107 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
     );
 
     return surahData as Map<String, dynamic>;
+  }
+
+  /// 🔹 Get all Quran pages (1-604) with their ayahs
+  @override
+  Future<List<QuranPageModel>> getAllQuranPages() async {
+    // Load pages.json to get page mappings
+    final String jsonStr = await rootBundle.loadString(
+      'assets/data/pages.json',
+    );
+    final List<dynamic> jsonList = json.decode(jsonStr);
+
+    final pageMappings = jsonList
+        .map((e) => PageEntryModel.fromJson(e))
+        .toList();
+
+    // Group by page number
+    final Map<int, List<PageEntryModel>> pageGroups = {};
+    for (final mapping in pageMappings) {
+      pageGroups.putIfAbsent(mapping.pageNumber, () => []).add(mapping);
+    }
+
+    // Load all ayahs for efficiency
+    final allAyahsMap = <String, AyahModel>{};
+    for (int surahId = 1; surahId <= 114; surahId++) {
+      try {
+        final surah = await getSurah(surahId);
+        for (final ayah in surah.ayahModels) {
+          allAyahsMap['${ayah.surahId}_${ayah.number}'] = ayah;
+        }
+      } catch (e) {
+        // Skip if surah file doesn't exist
+        continue;
+      }
+    }
+
+    // Build pages
+    final pages = <QuranPageModel>[];
+    for (int pageNum = 1; pageNum <= 604; pageNum++) {
+      final mappings = pageGroups[pageNum] ?? [];
+      final ayahs = <AyahModel>[];
+
+      for (final mapping in mappings) {
+        final key = '${mapping.suraNumber}_${mapping.ayahNumber}';
+        final ayah = allAyahsMap[key];
+        if (ayah != null) {
+          ayahs.add(ayah);
+        }
+      }
+
+      pages.add(
+        QuranPageModel.fromAyahsGroup(pageNumber: pageNum, ayahs: ayahs),
+      );
+    }
+
+    return pages;
+  }
+
+  /// 🔹 Get starting page number for a surah
+  @override
+  Future<int> getPageForSurah(int surahId) async {
+    final String jsonStr = await rootBundle.loadString(
+      'assets/data/pages.json',
+    );
+    final List<dynamic> jsonList = json.decode(jsonStr);
+
+    final pageMappings = jsonList
+        .map((e) => PageEntryModel.fromJson(e))
+        .where((e) => e.suraNumber == surahId)
+        .toList();
+
+    if (pageMappings.isEmpty) return 1;
+
+    // Return the page of the first ayah (should be ayah number 1)
+    final firstAyahMappings = pageMappings
+        .where((mapping) => mapping.ayahNumber == 1)
+        .toList();
+
+    if (firstAyahMappings.isNotEmpty) {
+      return firstAyahMappings.first.pageNumber;
+    }
+
+    return pageMappings.first.pageNumber;
+  }
+
+  /// 🔹 Get page number for a specific ayah in a juz
+  @override
+  Future<int> getPageForJuzSurah(int juzId, int surahId, int startAyah) async {
+    final String jsonStr = await rootBundle.loadString(
+      'assets/data/pages.json',
+    );
+    final List<dynamic> jsonList = json.decode(jsonStr);
+
+    final pageMappings = jsonList
+        .map((e) => PageEntryModel.fromJson(e))
+        .where((e) => e.suraNumber == surahId && e.ayahNumber == startAyah)
+        .toList();
+
+    if (pageMappings.isNotEmpty) {
+      return pageMappings.first.pageNumber;
+    }
+
+    return 1;
   }
 }

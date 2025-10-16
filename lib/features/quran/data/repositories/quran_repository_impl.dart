@@ -1,6 +1,7 @@
 import '../../domain/entities/juz.dart';
 import '../../domain/entities/surah.dart';
 import '../../domain/entities/ayah.dart';
+import '../../domain/entities/quran_page.dart';
 import '../../domain/repositories/quran_repository.dart';
 import '../datasources/quran_local_datasource.dart';
 import '../models/surah_model.dart';
@@ -54,5 +55,22 @@ class QuranRepositoryImpl implements QuranRepository {
     return groupedModels.map(
       (page, list) => MapEntry(page, list.map((m) => m.toEntity()).toList()),
     );
+  }
+
+  // New page-based methods
+  @override
+  Future<List<QuranPageEntity>> getAllQuranPages() async {
+    final models = await localDataSource.getAllQuranPages();
+    return models.map((m) => m.toEntity()).toList();
+  }
+
+  @override
+  Future<int> getPageForSurah(int surahId) async {
+    return await localDataSource.getPageForSurah(surahId);
+  }
+
+  @override
+  Future<int> getPageForJuzSurah(int juzId, int surahId, int startAyah) async {
+    return await localDataSource.getPageForJuzSurah(juzId, surahId, startAyah);
   }
 }

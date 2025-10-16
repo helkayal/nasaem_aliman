@@ -1,9 +1,11 @@
 import '../../domain/entities/ayah.dart';
 import '../../domain/entities/juz.dart';
 import '../../domain/entities/surah.dart';
+import '../../domain/entities/quran_page.dart';
 import '../models/ayah_model.dart';
 import '../models/juz_model.dart';
 import '../models/surah_model.dart';
+import '../models/quran_page_model.dart';
 
 // Ayah mappers
 extension AyahModelMapper on AyahModel {
@@ -37,5 +39,22 @@ extension JuzModelMapper on JuzModel {
     id: id,
     name: name,
     surahRanges: surahRanges, // already domain type
+  );
+}
+
+// QuranPage mappers
+extension QuranPageModelMapper on QuranPageModel {
+  QuranPageEntity toEntity() => QuranPageEntity(
+    pageNumber: pageNumber,
+    ayahs: ayahModels.map((a) => a.toEntity()).toList(),
+    surahIds: surahIds,
+  );
+}
+
+extension QuranPageEntityMapper on QuranPageEntity {
+  QuranPageModel toModel() => QuranPageModel(
+    pageNumber: pageNumber,
+    ayahModels: ayahs.map((a) => a.toModel()).toList(),
+    surahIds: surahIds,
   );
 }

@@ -1,6 +1,7 @@
 import '../entities/juz.dart';
 import '../entities/surah.dart';
 import '../entities/ayah.dart';
+import '../entities/quran_page.dart';
 
 abstract class QuranRepository {
   Future<List<JuzEntity>> getJuzList();
@@ -12,4 +13,9 @@ abstract class QuranRepository {
     List<AyahEntity> ayahs,
     int surahNumber,
   );
+
+  // New page-based methods
+  Future<List<QuranPageEntity>> getAllQuranPages();
+  Future<int> getPageForSurah(int surahId);
+  Future<int> getPageForJuzSurah(int juzId, int surahId, int startAyah);
 }
