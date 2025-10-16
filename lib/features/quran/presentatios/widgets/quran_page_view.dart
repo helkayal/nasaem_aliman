@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/widgets/app_error.dart';
 import '../../../../core/widgets/app_loading.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../cubit/quran_pages_view_cubit.dart';
 import '../cubit/quran_pages_view_state.dart';
 import 'quran_page_widget.dart';
@@ -62,12 +63,7 @@ class _QuranPageViewScreenState extends State<QuranPageViewScreen> {
         }
 
         return Scaffold(
-          appBar: AppBar(
-            title: Text(
-              "$juzTitle - $surahTitle",
-              style: Theme.of(context).textTheme.displaySmall,
-            ),
-          ),
+          appBar: CustomAppBar(title: '$juzTitle - $surahTitle'),
           body: BlocConsumer<QuranPagesViewCubit, QuranPagesViewState>(
             listener: (context, state) {
               if (state is QuranPagesViewNavigating) {

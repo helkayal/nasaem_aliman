@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 
 class TitleWithBorder extends StatelessWidget {
   final String title;
-  const TitleWithBorder({
-    super.key,
-    required this.title,
-  });
+  const TitleWithBorder({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +15,8 @@ class TitleWithBorder extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.arrow_back_ios),
-            Text(title),
-          ],
-        ),
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: Text(title, style: Theme.of(context).textTheme.titleMedium),
       ),
     );
   }

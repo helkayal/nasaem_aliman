@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nasaem_aliman/features/quran/presentatios/widgets/title_with_border.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/utils/number_converter.dart';
 import '../../../../core/widgets/app_number_bg.dart';
@@ -122,76 +123,71 @@ class QuranPageWidget extends StatelessWidget {
       // Add ayah number marker using AppNumberBg
       spans.add(
         WidgetSpan(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 4.w),
-            child: AppNumberBg(
-              fontScale: "x-small",
-              isDark: Theme.of(context).brightness == Brightness.dark,
-              rowNumber: NumberConverter.toArabicNumbers(
-                ayah.number.toString(),
-              ),
-            ),
+          child: AppNumberBg(
+            fontScale: "x-small",
+            isDark: Theme.of(context).brightness == Brightness.dark,
+            rowNumber: NumberConverter.toArabicNumbers(ayah.number.toString()),
           ),
           alignment: PlaceholderAlignment.middle,
         ),
       );
-
-      // Add space between ayahs (continuous flow)
-      if (i < ayahs.length - 1) {
-        spans.add(
-          TextSpan(text: " ", style: Theme.of(context).textTheme.titleSmall),
-        );
-      }
     }
 
     return spans;
   }
 
   Widget _buildSurahHeader(int surahId, BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 8.h),
-      padding: EdgeInsets.symmetric(vertical: 8.h),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Theme.of(context).colorScheme.primary.withValues(alpha: 0.6),
-            Theme.of(context).colorScheme.primary.withValues(alpha: 0.4),
-          ],
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
-        ),
-        borderRadius: BorderRadius.circular(20.r),
-        border: Border.all(
-          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3),
-          width: 1,
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
-            offset: Offset(0, 2.h),
-            blurRadius: 4.r,
-          ),
-        ],
-      ),
-      child: Center(
-        child: Text(
-          _getSurahName(surahId),
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-            shadows: [
-              Shadow(
-                color: Theme.of(
-                  context,
-                ).colorScheme.primary.withValues(alpha: 0.7),
-                offset: Offset(1, 1),
-                blurRadius: 2,
-              ),
-            ],
-          ),
-          textAlign: TextAlign.center,
-        ),
-      ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: TitleWithBorder(title: _getSurahName(surahId)),
     );
   }
+
+  // Widget _buildSurahHeader(int surahId, BuildContext context) {
+  //   return Container(
+  //     margin: EdgeInsets.only(top: 8.h),
+  //     padding: EdgeInsets.symmetric(vertical: 8.h),
+  //     decoration: BoxDecoration(
+  //       gradient: LinearGradient(
+  //         colors: [
+  //           Theme.of(context).colorScheme.primary.withValues(alpha: 0.6),
+  //           Theme.of(context).colorScheme.primary.withValues(alpha: 0.4),
+  //         ],
+  //         begin: Alignment.centerLeft,
+  //         end: Alignment.centerRight,
+  //       ),
+  //       borderRadius: BorderRadius.circular(20.r),
+  //       border: Border.all(
+  //         color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3),
+  //         width: 1,
+  //       ),
+  //       boxShadow: [
+  //         BoxShadow(
+  //           color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
+  //           offset: Offset(0, 2.h),
+  //           blurRadius: 4.r,
+  //         ),
+  //       ],
+  //     ),
+  //     child: Center(
+  //       child: Text(
+  //         _getSurahName(surahId),
+  //         style: Theme.of(context).textTheme.titleMedium!.copyWith(
+  //           shadows: [
+  //             Shadow(
+  //               color: Theme.of(
+  //                 context,
+  //               ).colorScheme.primary.withValues(alpha: 0.7),
+  //               offset: Offset(1, 1),
+  //               blurRadius: 2,
+  //             ),
+  //           ],
+  //         ),
+  //         textAlign: TextAlign.center,
+  //       ),
+  //     ),
+  //   );
+  // }
 
   Widget _buildBasmallah(BuildContext context) {
     return Container(
