@@ -36,6 +36,8 @@ class QuranPagesViewCubit extends Cubit<QuranPagesViewState> {
           pages: _allPages,
           currentPage: _currentPage,
           loadedPages: Map.from(_loadedPages),
+          currentSurahName: _getCurrentSurahName(),
+          currentJuzName: _getCurrentJuzName(),
         ),
       );
     } catch (e) {
@@ -58,6 +60,8 @@ class QuranPagesViewCubit extends Cubit<QuranPagesViewState> {
           pages: _allPages,
           currentPage: _currentPage,
           loadedPages: Map.from(_loadedPages),
+          currentSurahName: _getCurrentSurahName(),
+          currentJuzName: _getCurrentJuzName(),
         ),
       );
     } catch (e) {
@@ -95,6 +99,17 @@ class QuranPagesViewCubit extends Cubit<QuranPagesViewState> {
 
     _currentPage = pageNumber;
 
+    // Emit state immediately for instant AppBar update
+    if (state is QuranPagesViewLoaded) {
+      emit(
+        (state as QuranPagesViewLoaded).copyWith(
+          currentPage: _currentPage,
+          currentSurahName: _getCurrentSurahName(),
+          currentJuzName: _getCurrentJuzName(),
+        ),
+      );
+    }
+
     // Load adjacent pages lazily
     _loadPagesRange(pageNumber - 2, pageNumber + 2).then((_) {
       if (state is QuranPagesViewLoaded) {
@@ -102,6 +117,8 @@ class QuranPagesViewCubit extends Cubit<QuranPagesViewState> {
           (state as QuranPagesViewLoaded).copyWith(
             currentPage: _currentPage,
             loadedPages: Map.from(_loadedPages),
+            currentSurahName: _getCurrentSurahName(),
+            currentJuzName: _getCurrentJuzName(),
           ),
         );
       }
@@ -144,4 +161,16 @@ class QuranPagesViewCubit extends Cubit<QuranPagesViewState> {
 
   // Check if page is loaded
   bool isPageLoaded(int pageNumber) => _loadedPages.containsKey(pageNumber);
+
+  // Get current surah name for AppBar
+  String _getCurrentSurahName() {
+    final currentPageEntity = getPage(_currentPage);
+    return currentPageEntity?.displaySurahName ?? "المصحف الشريف";
+  }
+
+  // Get current juz name for AppBar
+  String _getCurrentJuzName() {
+    final currentPageEntity = getPage(_currentPage);
+    return currentPageEntity?.displayJuzName ?? "الجزء الأول";
+  }
 }

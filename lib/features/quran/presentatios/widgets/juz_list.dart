@@ -6,12 +6,8 @@ import '../../../../core/di/di.dart';
 import '../../../../core/utils/number_converter.dart';
 import '../../../../core/widgets/app_divider.dart';
 import '../../domain/entities/juz.dart';
-import '../../domain/entities/surah_range.dart';
-import '../cubit/ayahs_cubit.dart';
-import '../cubit/surah_details_cubit.dart';
 import '../cubit/quran_pages_view_cubit.dart';
-import '../screens/surah_details_screen.dart';
-import '../screens/quran_page_view_screen.dart';
+import 'quran_page_view.dart';
 import 'list_row.dart';
 
 class JuzasList extends StatefulWidget {
@@ -79,8 +75,28 @@ class _JuzasListState extends State<JuzasList> {
                           horizontal: AppConstants.defaultPadding * 3.w,
                         ),
                         child: InkWell(
-                          onTap: () {
-                            _showJuzViewOptionsDialog(context, juz, range);
+                          onTap: () async {
+                            final cubit = sl<QuranPagesViewCubit>();
+                            final pageNumber = await cubit.getPageForJuzSurah(
+                              juz.id,
+                              range.surahId,
+                              range.startAyah,
+                            );
+
+                            if (context.mounted) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => BlocProvider.value(
+                                    value: cubit,
+                                    child: QuranPageViewScreen(
+                                      initialPage: pageNumber,
+                                      title: juz.name,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }
                           },
                           child: Padding(
                             padding: EdgeInsets.only(top: 4.h),
@@ -104,78 +120,6 @@ class _JuzasListState extends State<JuzasList> {
 
             if (index != widget.juzList.length - 1)
               const AppDivider(height: 16),
-          ],
-        );
-      },
-    );
-  }
-
-  void _showJuzViewOptionsDialog(
-    BuildContext context,
-    JuzEntity juz,
-    SurahRangeEntity range,
-  ) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text("عرض ${range.surahName} من ${juz.name}"),
-          content: Text(
-            "من آية ${NumberConverter.intToArabic(range.startAyah)} إلى ${NumberConverter.intToArabic(range.endAyah)}",
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                // Navigate to traditional surah view
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => MultiBlocProvider(
-                      providers: [
-                        BlocProvider(create: (_) => sl<SurahDetailsCubit>()),
-                        BlocProvider(create: (_) => sl<AyahsCubit>()),
-                      ],
-                      child: SurahDetailsScreen(
-                        surahId: range.surahId,
-                        startAyah: range.startAyah,
-                        endAyah: range.endAyah,
-                        juzName: juz.name,
-                      ),
-                    ),
-                  ),
-                );
-              },
-              child: const Text("عرض نصي"),
-            ),
-            TextButton(
-              onPressed: () async {
-                Navigator.of(context).pop();
-                // Navigate to page view
-                final cubit = sl<QuranPagesViewCubit>();
-                final pageNumber = await cubit.getPageForJuzSurah(
-                  juz.id,
-                  range.surahId,
-                  range.startAyah,
-                );
-
-                if (context.mounted) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => BlocProvider.value(
-                        value: cubit,
-                        child: QuranPageViewScreen(
-                          initialPage: pageNumber,
-                          title: "المصحف - ${juz.name}",
-                        ),
-                      ),
-                    ),
-                  );
-                }
-              },
-              child: const Text("عرض المصحف"),
-            ),
           ],
         );
       },
