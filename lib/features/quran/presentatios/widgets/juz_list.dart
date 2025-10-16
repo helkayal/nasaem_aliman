@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/di/di.dart';
+import '../../../../core/utils/number_converter.dart';
 import '../../../../core/widgets/app_divider.dart';
 import '../../domain/entities/juz.dart';
 import '../cubit/ayahs_cubit.dart';
@@ -53,7 +54,7 @@ class _JuzasListState extends State<JuzasList> {
                     Expanded(
                       child: ListRow(
                         text: juz.name,
-                        rowNumber: juz.id.toString(),
+                        rowNumber: NumberConverter.intToArabic(juz.id),
                         rowTrailer: "",
                         withTrailer: false,
                         withLeading: false,
@@ -102,9 +103,11 @@ class _JuzasListState extends State<JuzasList> {
                             padding: EdgeInsets.only(top: 4.h),
                             child: ListRow(
                               text: range.surahName,
-                              rowNumber: range.surahId.toString(),
+                              rowNumber: NumberConverter.intToArabic(
+                                range.surahId,
+                              ),
                               rowTrailer:
-                                  "(${range.endAyah} - ${range.startAyah})",
+                                  "( ${NumberConverter.intToArabic(range.startAyah)} - ${NumberConverter.intToArabic(range.endAyah)})",
                               // "من آية ${range.startAyah} إلى ${range.endAyah}",
                               fontScale: "medium",
                             ),

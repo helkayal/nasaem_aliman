@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/utils/number_converter.dart';
 import '../../../../core/widgets/app_number_bg.dart';
 import '../../domain/entities/azkar_category_entiti.dart';
 
@@ -18,7 +19,7 @@ class AzkarRow extends StatelessWidget {
           AppNumberBg(
             fontScale: "medium",
             isDark: Theme.of(context).brightness == Brightness.dark,
-            rowNumber: category.azkar.length.toString(),
+            rowNumber: NumberConverter.intToArabic(category.azkar.length),
           ),
           Expanded(
             child: Text(

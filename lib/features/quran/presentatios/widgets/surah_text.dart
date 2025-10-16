@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/utils/number_converter.dart';
 import '../../../../core/widgets/app_error.dart';
 import '../../../../core/widgets/app_loading.dart';
 import '../../../../core/widgets/app_number_bg.dart';
@@ -100,7 +101,9 @@ class _SurahTextState extends State<SurahText> {
                               child: AppNumberBg(
                                 fontScale: "x-small",
                                 isDark: isDark,
-                                rowNumber: '${ayah.number}',
+                                rowNumber: NumberConverter.intToArabic(
+                                  ayah.number,
+                                ),
                               ),
                             ),
                           ];

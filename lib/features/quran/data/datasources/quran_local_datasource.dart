@@ -56,11 +56,14 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
         .toList();
 
     final names = await _loadSurahNames();
+    final surahInfo = await _loadSurahInfo(surahId);
     final String name = names[surahId] ?? '';
     return SurahModel(
       id: surahId,
       name: name,
       versesCount: ayahModels.length,
+      revelationType: surahInfo['type'] ?? 'مكية',
+      pages: List<int>.from(surahInfo['pages'] ?? [1, 1]),
       ayahModels: ayahModels,
     );
   }
@@ -126,5 +129,21 @@ class QuranLocalDataSourceImpl implements QuranLocalDataSource {
     }
 
     return pages;
+  }
+
+  /// Load surah info (type, pages) from surahs.json
+  Future<Map<String, dynamic>> _loadSurahInfo(int surahId) async {
+    final response = await rootBundle.loadString("assets/data/surahs.json");
+    final List<dynamic> data = json.decode(response);
+
+    final surahData = data.firstWhere(
+      (surah) => surah['id'] == surahId,
+      orElse: () => {
+        'type': 'مكية',
+        'pages': [1, 1],
+      },
+    );
+
+    return surahData as Map<String, dynamic>;
   }
 }

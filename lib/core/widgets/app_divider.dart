@@ -6,6 +6,6 @@ class AppDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Divider(height: 10.h);
+    return Divider(height: 6.h);
   }
 }

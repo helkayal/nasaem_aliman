@@ -6,6 +6,7 @@ import 'package:nasaem_aliman/core/constants/app_assets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
+import '../../core/utils/number_converter.dart';
 import '../../core/widgets/custom_app_bar.dart';
 import '../../core/utils/responsive_utils.dart';
 
@@ -290,7 +291,7 @@ class _SebhaScreenState extends State<SebhaScreen>
           ),
           SizedBox(height: ResponsiveUtils.responsiveHeight(10)),
           Text(
-            '$counter',
+            NumberConverter.intToArabic(counter),
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
               fontWeight: FontWeight.bold,
               fontSize: ResponsiveUtils.responsiveFontSize(20),

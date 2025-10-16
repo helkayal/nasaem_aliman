@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/utils/number_converter.dart';
 import '../../../../core/widgets/app_divider.dart';
 import '../../domain/entities/azkar_category_entiti.dart';
 
@@ -108,7 +109,7 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
                       if (zekr.count > 1) const AppDivider(),
                       if (zekr.count > 1)
                         Text(
-                          'التكرار: ${zekr.count}',
+                          'التكرار: ${NumberConverter.intToArabic(zekr.count)}',
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                     ],
@@ -189,7 +190,10 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
         shape: BoxShape.circle,
       ),
       alignment: Alignment.center,
-      child: Text('$counter', style: Theme.of(context).textTheme.headlineSmall),
+      child: Text(
+        NumberConverter.intToArabic(counter),
+        style: Theme.of(context).textTheme.headlineSmall,
+      ),
     );
   }
 
@@ -228,12 +232,12 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
               textDirection: TextDirection.rtl,
               children: [
                 Text(
-                  '$currentPage',
+                  NumberConverter.intToArabic(currentPage),
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 Text(' / ', style: Theme.of(context).textTheme.bodyMedium),
                 Text(
-                  '$totalPages',
+                  NumberConverter.intToArabic(totalPages),
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ],

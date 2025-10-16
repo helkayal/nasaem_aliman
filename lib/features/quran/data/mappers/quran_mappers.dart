@@ -25,6 +25,8 @@ extension SurahModelMapper on SurahModel {
     id: id,
     name: name,
     versesCount: versesCount,
+    revelationType: revelationType,
+    pages: pages,
     ayahs: ayahModels.map((a) => a.toEntity()).toList(),
   );
 }

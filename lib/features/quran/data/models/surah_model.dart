@@ -4,12 +4,16 @@ class SurahModel {
   final int id;
   final String name;
   final int versesCount;
+  final String revelationType;
+  final List<int> pages;
   final List<AyahModel> ayahModels;
 
   SurahModel({
     required this.id,
     required this.name,
     required this.versesCount,
+    required this.revelationType,
+    required this.pages,
     required this.ayahModels,
   });
 
@@ -19,6 +23,8 @@ class SurahModel {
       id: json['id'] as int,
       name: (json['name'] as String?) ?? (json['name_arabic'] as String? ?? ''),
       versesCount: (json['verses_count'] as int?) ?? 0,
+      revelationType: (json['type'] as String?) ?? 'مكية',
+      pages: List<int>.from(json['pages'] as List? ?? [1, 1]),
       ayahModels: const [],
     );
   }
@@ -34,6 +40,8 @@ class SurahModel {
       id: surahId,
       name: (json['name'] as String?) ?? '',
       versesCount: ayahs.length,
+      revelationType: (json['type'] as String?) ?? 'مكية',
+      pages: List<int>.from(json['pages'] as List? ?? [1, 1]),
       ayahModels: ayahs,
     );
   }
