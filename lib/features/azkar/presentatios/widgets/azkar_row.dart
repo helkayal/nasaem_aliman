@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/number_converter.dart';
-import '../../../../core/widgets/app_number_bg.dart';
 import '../../domain/entities/azkar_category_entiti.dart';
 
 class AzkarRow extends StatelessWidget {
@@ -16,10 +15,10 @@ class AzkarRow extends StatelessWidget {
         spacing: 20,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          AppNumberBg(
-            fontScale: "medium",
-            isDark: Theme.of(context).brightness == Brightness.dark,
-            rowNumber: NumberConverter.intToArabic(category.azkar.length),
+          SizedBox(width: 8),
+          Text(
+            '${NumberConverter.intToArabic(category.azkar.length)} ${_getAzkarText(category.azkar.length)}',
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           Expanded(
             child: Text(
@@ -32,5 +31,13 @@ class AzkarRow extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String _getAzkarText(int count) {
+    if (count <= 10 && count > 2) {
+      return 'اذكار';
+    } else {
+      return 'ذكر';
+    }
   }
 }

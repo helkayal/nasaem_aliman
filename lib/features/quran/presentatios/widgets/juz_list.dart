@@ -119,7 +119,8 @@ class _JuzasListState extends State<JuzasList> {
                     .cast<Widget>(),
               ),
 
-            if (index != widget.juzList.length - 1) const AppDivider(),
+            if (index != widget.juzList.length - 1)
+              const AppDivider(height: 16),
           ],
         );
       },

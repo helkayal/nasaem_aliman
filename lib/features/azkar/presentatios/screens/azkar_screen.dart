@@ -25,7 +25,7 @@ class AzkarScreen extends StatelessWidget {
             return ListView.separated(
               padding: EdgeInsets.zero,
               itemCount: state.categories.length,
-              separatorBuilder: (_, __) => const AppDivider(),
+              separatorBuilder: (_, __) => const AppDivider(height: 16),
               itemBuilder: (context, index) {
                 final category = state.categories[index];
                 return InkWell(
