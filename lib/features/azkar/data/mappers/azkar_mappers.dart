@@ -1,5 +1,5 @@
 import '../../domain/entities/azkar_entity.dart';
-import '../../domain/entities/azkar_category_entiti.dart';
+import '../../domain/entities/azkar_category_entity.dart';
 import '../models/azkar_models.dart';
 import '../models/azkar_category_model.dart';
 
@@ -27,6 +27,7 @@ extension AzkarCategoryModelMapper on AzkarCategoryModel {
   AzkarCategoryEntity toEntity() => AzkarCategoryEntity(
     id: id,
     category: category,
+    icon: icon,
     repeatable: repeatable,
     azkar: azkar.map((a) => a.toEntity()).toList(),
   );

@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/number_converter.dart';
 import '../../../../core/widgets/app_divider.dart';
-import '../../domain/entities/azkar_category_entiti.dart';
+import '../../domain/entities/azkar_category_entity.dart';
 
 class RepeatableAzkarList extends StatefulWidget {
   const RepeatableAzkarList({super.key, required this.category});
@@ -212,18 +212,14 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
               borderRadius: BorderRadius.circular(20.r),
               color: Theme.of(context).colorScheme.secondary,
               border: Border.all(
-                color: Theme.of(
-                  context,
-                ).colorScheme.outline.withValues(alpha: 0.3),
+                color: Theme.of(context).colorScheme.primary,
                 width: 1,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Theme.of(
-                    context,
-                  ).colorScheme.shadow.withValues(alpha: .1),
-                  offset: Offset(0, 2),
-                  blurRadius: 8,
+                  color: Theme.of(context).colorScheme.primary,
+                  offset: Offset(0, 1),
+                  blurRadius: 2,
                 ),
               ],
             ),
@@ -252,24 +248,27 @@ class _RepeatableAzkarListState extends State<RepeatableAzkarList> {
     const start1 = "أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ";
     const start2 = "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم";
 
-    if (text.startsWith(start1)) {
+    // Trim the text to handle leading/trailing whitespace
+    final trimmedText = text.trim();
+
+    if (trimmedText.startsWith(start1)) {
       return [
         TextSpan(
           text: "$start1\n\n",
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
-        TextSpan(text: text.substring(start1.length).trim()),
+        TextSpan(text: trimmedText.substring(start1.length).trim()),
       ];
-    } else if (text.startsWith(start2)) {
+    } else if (trimmedText.startsWith(start2)) {
       return [
         TextSpan(
           text: "$start2\n\n",
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
-        TextSpan(text: text.substring(start2.length).trim()),
+        TextSpan(text: trimmedText.substring(start2.length).trim()),
       ];
     } else {
-      return [TextSpan(text: text)];
+      return [TextSpan(text: trimmedText)];
     }
   }
 }

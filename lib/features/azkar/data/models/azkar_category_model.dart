@@ -6,6 +6,7 @@ import 'azkar_models.dart';
 class AzkarCategoryModel {
   final int id;
   final String category;
+  final String icon;
   final bool repeatable;
   final List<AzkarModel>
   azkar; // may be empty when first created from categories list
@@ -13,6 +14,7 @@ class AzkarCategoryModel {
   const AzkarCategoryModel({
     required this.id,
     required this.category,
+    required this.icon,
     required this.repeatable,
     required this.azkar,
   });
@@ -22,6 +24,7 @@ class AzkarCategoryModel {
     return AzkarCategoryModel(
       id: json['id'] as int,
       category: json['category'] as String,
+      icon: json['icon'] as String,
       repeatable: json['repeatable'] as bool,
       azkar: (json['azkar'] is List)
           ? (json['azkar'] as List)
@@ -34,6 +37,7 @@ class AzkarCategoryModel {
   AzkarCategoryModel copyWith({List<AzkarModel>? azkar}) => AzkarCategoryModel(
     id: id,
     category: category,
+    icon: icon,
     repeatable: repeatable,
     azkar: azkar ?? this.azkar,
   );

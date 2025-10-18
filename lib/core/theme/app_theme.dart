@@ -254,7 +254,7 @@ ThemeData darkTheme() {
       brightness: Brightness.dark,
       primary: AppColors.darkBlue,
       onPrimary: AppColors.lightBlue,
-      secondary: AppColors.lightGrey,
+      secondary: AppColors.black,
       onSecondary: AppColors.blue,
       error: AppColors.pink,
       onError: AppColors.pink,

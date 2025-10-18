@@ -1,6 +1,6 @@
 // domain/usecases/get_azkar_categories.dart
 
-import '../entities/azkar_category_entiti.dart';
+import '../entities/azkar_category_entity.dart';
 import '../repositories/azkar_category_repository.dart';
 
 class GetAzkarCategories {

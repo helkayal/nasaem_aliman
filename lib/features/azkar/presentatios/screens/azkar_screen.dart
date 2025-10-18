@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/widgets/app_divider.dart';
 import '../../../../core/widgets/app_error.dart';
@@ -23,7 +24,7 @@ class AzkarScreen extends StatelessWidget {
             return const AppLoading();
           } else if (state is AzkarCategoriesLoaded) {
             return ListView.separated(
-              padding: EdgeInsets.zero,
+              padding: EdgeInsets.only(top: 8.h),
               itemCount: state.categories.length,
               separatorBuilder: (_, __) => const AppDivider(height: 16),
               itemBuilder: (context, index) {

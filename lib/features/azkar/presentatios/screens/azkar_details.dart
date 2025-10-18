@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/custom_app_bar.dart';
-import '../../domain/entities/azkar_category_entiti.dart';
+import '../../domain/entities/azkar_category_entity.dart';
 import '../widgets/repeatable_azkar_list.dart';
 
 class AzkarDetailsScreen extends StatelessWidget {

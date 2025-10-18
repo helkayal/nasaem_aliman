@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import '../../domain/entities/azkar_category_entiti.dart';
+import '../../domain/entities/azkar_category_entity.dart';
 
 abstract class AzkarCategoriesState extends Equatable {
   const AzkarCategoriesState();

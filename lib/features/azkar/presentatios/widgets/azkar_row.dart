@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/number_converter.dart';
-import '../../domain/entities/azkar_category_entiti.dart';
+import '../../../../core/utils/icon_converter.dart';
+import '../../domain/entities/azkar_category_entity.dart';
 
 class AzkarRow extends StatelessWidget {
   final AzkarCategoryEntity category;
@@ -27,7 +28,11 @@ class AzkarRow extends StatelessWidget {
               textAlign: TextAlign.right,
             ),
           ),
-          Icon(Icons.star, color: Theme.of(context).primaryColor),
+          Icon(
+            IconConverter.fromString(category.icon),
+            color: Theme.of(context).primaryColor,
+            size: 20,
+          ),
         ],
       ),
     );
