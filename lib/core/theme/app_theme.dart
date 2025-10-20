@@ -173,7 +173,7 @@ ThemeData darkTheme() {
       ),
       titleTextStyle: TextStyle(
         color: AppColors.white,
-        fontSize: ResponsiveUtils.responsiveFontSize(14),
+        fontSize: ResponsiveUtils.responsiveFontSize(18),
         fontWeight: FontWeight.bold,
         fontFamily: AppConstants.textFontFamily,
       ),

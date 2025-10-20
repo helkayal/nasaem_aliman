@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/utils/number_converter.dart';
 import '../cubit/sebha_cubit.dart';
 import '../cubit/sebha_state.dart';
 import 'saved_azkar_card.dart';
+import 'zikr_dialog.dart';
 
 class SavedAzkarHorizontalList extends StatefulWidget {
   const SavedAzkarHorizontalList({super.key});
@@ -37,46 +39,9 @@ class _SavedAzkarHorizontalListState extends State<SavedAzkarHorizontalList> {
   }
 
   Future<void> _showEditDialog(String id, String currentText) async {
-    final textController = TextEditingController(text: currentText);
-
     final result = await showDialog<String>(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'تعديل الذكر',
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextField(
-              controller: textController,
-              decoration: const InputDecoration(
-                labelText: 'نص الذكر',
-                border: OutlineInputBorder(),
-              ),
-              maxLines: 3,
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text('إلغاء'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              final text = textController.text.trim();
-
-              if (text.isNotEmpty) {
-                Navigator.of(context).pop(text);
-              }
-            },
-            child: const Text('حفظ'),
-          ),
-        ],
-      ),
+      builder: (context) => ZikrDialog.edit(currentText),
     );
 
     if (result != null && mounted) {
@@ -88,6 +53,9 @@ class _SavedAzkarHorizontalListState extends State<SavedAzkarHorizontalList> {
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.r),
+        ),
         title: Text(
           'حذف الذكر',
           style: Theme.of(context).textTheme.titleMedium,
@@ -157,16 +125,14 @@ class _SavedAzkarHorizontalListState extends State<SavedAzkarHorizontalList> {
                               Icons.arrow_back_ios,
                               size: 20.sp,
                               color: state.currentIndex > 0
-                                  ? Theme.of(context).colorScheme.primary
-                                  : Theme.of(context).colorScheme.outline,
+                                  ? Theme.of(context).colorScheme.onSurface
+                                  : Theme.of(context).colorScheme.primary,
                             ),
                           ),
                           Text(
-                            '${state.currentIndex + 1} / ${state.savedAzkar.length}',
-                            style: Theme.of(context).textTheme.bodySmall
-                                ?.copyWith(
-                                  color: Theme.of(context).colorScheme.primary,
-                                ),
+                            '${(NumberConverter.intToArabic(state.currentIndex + 1))} / ${NumberConverter.intToArabic(state.savedAzkar.length)}',
+                            // style: Theme.of(context).textTheme.titleSmall,
+                            style: Theme.of(context).textTheme.titleMedium,
                           ),
                           IconButton(
                             onPressed:
@@ -181,8 +147,8 @@ class _SavedAzkarHorizontalListState extends State<SavedAzkarHorizontalList> {
                               color:
                                   state.currentIndex <
                                       state.savedAzkar.length - 1
-                                  ? Theme.of(context).colorScheme.primary
-                                  : Theme.of(context).colorScheme.outline,
+                                  ? Theme.of(context).colorScheme.onSurface
+                                  : Theme.of(context).colorScheme.primary,
                             ),
                           ),
                         ],

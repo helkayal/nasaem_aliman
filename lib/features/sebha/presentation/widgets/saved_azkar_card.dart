@@ -27,13 +27,13 @@ class SavedAzkarCard extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           color: isSelected
-              ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.1)
+              ? Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.2)
               : Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(12.r),
           border: Border.all(
             color: isSelected
-                ? Theme.of(context).colorScheme.primary
-                : Theme.of(context).colorScheme.outline.withValues(alpha: 0.3),
+                ? Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3)
+                : Theme.of(context).colorScheme.surface.withValues(alpha: 0.1),
             width: isSelected ? 2 : 1,
           ),
           boxShadow: [
@@ -53,14 +53,11 @@ class SavedAzkarCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   zikr.text,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontSize: 14.sp,
+                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    // fontSize: 14.sp,
                     fontWeight: isSelected
                         ? FontWeight.bold
                         : FontWeight.normal,
-                    color: isSelected
-                        ? Theme.of(context).colorScheme.primary
-                        : null,
                   ),
                   textAlign: TextAlign.right,
                   maxLines: 2,
@@ -91,7 +88,7 @@ class SavedAzkarCard extends StatelessWidget {
                       child: Icon(
                         Icons.edit,
                         size: 18.sp,
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.onSurface,
                       ),
                     ),
                   ),
