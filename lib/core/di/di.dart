@@ -26,6 +26,13 @@ import 'package:nasaem_aliman/features/quran/presentatios/cubit/quran_pages_view
 // Azkar
 import 'package:nasaem_aliman/features/azkar/presentatios/cubit/azkar_category_cubit.dart';
 
+// Sebha
+import 'package:nasaem_aliman/features/sebha/data/datasources/sebha_local_datasource.dart';
+import 'package:nasaem_aliman/features/sebha/data/repositories/sebha_repository_impl.dart';
+import 'package:nasaem_aliman/features/sebha/domain/repositories/sebha_repository.dart';
+import 'package:nasaem_aliman/features/sebha/domain/usecases/sebha_usecases.dart';
+import 'package:nasaem_aliman/features/sebha/presentation/cubit/sebha_cubit.dart';
+
 final sl = GetIt.instance;
 
 Future<void> init() async {
@@ -73,5 +80,39 @@ Future<void> init() async {
   // Datasource
   sl.registerLazySingleton<AzkarCategoriesLocalDataSource>(
     () => AzkarCategoriesLocalDataSourceImpl(),
+  );
+
+  //! ---------------- Sebha ----------------
+
+  // Cubit
+  sl.registerFactory(
+    () => SebaaCubit(
+      getAllSavedAzkar: sl(),
+      saveZikr: sl(),
+      updateZikr: sl(),
+      deleteZikr: sl(),
+      getCurrentZikr: sl(),
+      setCurrentZikr: sl(),
+      hasDefaultAzkarBeenAdded: sl(),
+      markDefaultAzkarAsAdded: sl(),
+    ),
+  );
+
+  // UseCases
+  sl.registerLazySingleton(() => GetAllSavedAzkar(sl()));
+  sl.registerLazySingleton(() => SaveZikr(sl()));
+  sl.registerLazySingleton(() => UpdateZikr(sl()));
+  sl.registerLazySingleton(() => DeleteZikr(sl()));
+  sl.registerLazySingleton(() => GetCurrentZikr(sl()));
+  sl.registerLazySingleton(() => SetCurrentZikr(sl()));
+  sl.registerLazySingleton(() => HasDefaultAzkarBeenAdded(sl()));
+  sl.registerLazySingleton(() => MarkDefaultAzkarAsAdded(sl()));
+
+  // Repository
+  sl.registerLazySingleton<SebhaRepository>(() => SebhaRepositoryImpl(sl()));
+
+  // Datasource
+  sl.registerLazySingleton<SebhaLocalDataSource>(
+    () => SebhaLocalDataSourceImpl(),
   );
 }
